@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import {
   ArrowRight,
@@ -38,11 +39,11 @@ export default function GasPage() {
 
               <div>
 
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 text-blue-600">
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-green-50 text-green-700">
                   <Flame size={27} />
                 </div>
 
-                <span className="mt-7 block text-sm font-bold uppercase tracking-wider text-blue-600">
+                <span className="mt-7 block text-sm font-bold uppercase tracking-wider text-green-700">
                   Why Compare?
                 </span>
 
@@ -79,7 +80,7 @@ export default function GasPage() {
 
                       <CheckCircle2
                         size={21}
-                        className="mt-1 shrink-0 text-blue-600"
+                        className="mt-1 shrink-0 text-green-700"
                       />
 
                       <span className="text-slate-700">
@@ -110,7 +111,7 @@ export default function GasPage() {
 
                   <div className="flex items-start gap-4">
 
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-600">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-green-700">
                       <Flame size={24} />
                     </div>
 
@@ -146,7 +147,7 @@ export default function GasPage() {
 
             <div className="max-w-3xl">
 
-              <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-600">
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-700">
                 Business Gas
               </p>
 
@@ -183,7 +184,7 @@ export default function GasPage() {
                   className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
                 >
 
-                  <CheckCircle2 className="h-8 w-8 text-blue-600" />
+                  <CheckCircle2 className="h-8 w-8 text-green-700" />
 
                   <h2 className="mt-5 text-2xl font-bold text-slate-900">
                     {item.title}
@@ -222,7 +223,7 @@ export default function GasPage() {
 
               <div>
 
-                <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-600">
+                <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-700">
                   Built Around Your Business
                 </p>
 
@@ -256,7 +257,7 @@ export default function GasPage() {
                       className="flex items-center gap-3"
                     >
 
-                      <CheckCircle2 className="h-5 w-5 shrink-0 text-blue-600" />
+                      <CheckCircle2 className="h-5 w-5 shrink-0 text-green-700" />
 
                       <span className="font-medium text-slate-700">
                         {item}
@@ -283,7 +284,7 @@ export default function GasPage() {
 
             <div className="text-center">
 
-              <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-600">
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-700">
                 How It Works
               </p>
 
@@ -311,7 +312,7 @@ export default function GasPage() {
                   className="rounded-3xl bg-white p-8 shadow-sm"
                 >
 
-                  <span className="font-black text-blue-600">
+                  <span className="font-black text-green-700">
                     {number}
                   </span>
 
@@ -363,7 +364,7 @@ export default function GasPage() {
 
                 <div className="p-10 text-white md:p-14">
 
-                  <Flame className="h-10 w-10 text-blue-400" />
+                  <Flame className="h-10 w-10 text-green-400" />
 
                   <h2 className="mt-6 text-3xl font-bold md:text-4xl">
                     Explore Business Gas Options
@@ -376,7 +377,7 @@ export default function GasPage() {
 
                   <Link
                     href="/quote"
-                    className="mt-7 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-4 font-semibold text-white hover:bg-blue-700"
+                    className="mt-7 inline-flex items-center gap-2 rounded-xl bg-green-700 px-6 py-4 font-semibold text-white hover:bg-green-800"
                   >
                     Get My Gas Quote
                     <ArrowRight className="h-5 w-5" />
@@ -399,7 +400,7 @@ export default function GasPage() {
 
             <div className="max-w-3xl">
 
-              <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-600">
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-700">
                 Benefits
               </p>
 
@@ -430,7 +431,7 @@ export default function GasPage() {
 
                   <CheckCircle2
                     size={22}
-                    className="text-blue-600"
+                    className="text-green-700"
                   />
 
                   <h3 className="mt-5 font-bold text-slate-900">
@@ -464,7 +465,7 @@ export default function GasPage() {
                 className="group rounded-3xl border border-slate-200 bg-slate-50 p-8 transition hover:-translate-y-1 hover:shadow-lg"
               >
 
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-50 text-green-700">
                   <Flame className="h-6 w-6" />
                 </div>
 
@@ -477,7 +478,7 @@ export default function GasPage() {
                   gas options through one convenient enquiry.
                 </p>
 
-                <span className="mt-6 inline-flex items-center gap-2 font-semibold text-blue-600">
+                <span className="mt-6 inline-flex items-center gap-2 font-semibold text-green-700">
                   Explore Energy
                   <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
                 </span>
@@ -489,7 +490,7 @@ export default function GasPage() {
                 className="group rounded-3xl border border-slate-200 bg-slate-50 p-8 transition hover:-translate-y-1 hover:shadow-lg"
               >
 
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-50 text-green-700">
                   <CheckCircle2 className="h-6 w-6" />
                 </div>
 
@@ -502,7 +503,7 @@ export default function GasPage() {
                   find a solution aligned with your business needs.
                 </p>
 
-                <span className="mt-6 inline-flex items-center gap-2 font-semibold text-blue-600">
+                <span className="mt-6 inline-flex items-center gap-2 font-semibold text-green-700">
                   Explore Electricity
                   <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
                 </span>
@@ -531,7 +532,7 @@ export default function GasPage() {
 
             <Link
               href="/quote"
-              className="mt-8 inline-flex items-center gap-3 rounded-full bg-blue-600 px-7 py-4 font-bold text-white hover:bg-blue-500"
+              className="mt-8 inline-flex items-center gap-3 rounded-full bg-green-700 px-7 py-4 font-bold text-white hover:bg-green-800"
             >
               Get a Free Quote
               <ArrowRight size={18} />

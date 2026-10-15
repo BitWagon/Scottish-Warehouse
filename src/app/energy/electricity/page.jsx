@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import {
   ArrowRight,
@@ -38,7 +39,7 @@ export default function ElectricityPage() {
 
               <div>
 
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 text-blue-600">
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-green-50 text-green-700">
                   <Zap size={27} />
                 </div>
 
@@ -67,7 +68,7 @@ export default function ElectricityPage() {
 
                 <div className="absolute bottom-0 left-0 p-8 text-white">
 
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-700">
                     <Zap className="h-6 w-6" />
                   </div>
 
@@ -109,7 +110,7 @@ export default function ElectricityPage() {
 
                     <CheckCircle2
                       size={21}
-                      className="mt-1 shrink-0 text-blue-600"
+                      className="mt-1 shrink-0 text-green-700"
                     />
 
                     <span className="text-slate-700">
@@ -147,7 +148,7 @@ export default function ElectricityPage() {
 
               <div>
 
-                <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-600">
+                <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-700">
                   Electricity Services
                 </p>
 
@@ -182,7 +183,7 @@ export default function ElectricityPage() {
                     >
 
                       <CheckCircle2
-                        className="h-5 w-5 shrink-0 text-blue-600"
+                        className="h-5 w-5 shrink-0 text-green-700"
                       />
 
                       <span className="font-medium text-slate-700">
@@ -210,7 +211,7 @@ export default function ElectricityPage() {
 
             <div className="text-center">
 
-              <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-600">
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-700">
                 Our Process
               </p>
 
@@ -233,7 +234,7 @@ export default function ElectricityPage() {
                   className="rounded-3xl border border-slate-200 bg-slate-50 p-8 transition hover:-translate-y-1 hover:shadow-lg"
                 >
 
-                  <span className="font-black text-blue-600">
+                  <span className="font-black text-green-700">
                     {number}
                   </span>
 
@@ -260,7 +261,7 @@ export default function ElectricityPage() {
 
               <div>
 
-                <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-600">
+                <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-700">
                   Compare Electricity
                 </p>
 
@@ -276,7 +277,7 @@ export default function ElectricityPage() {
 
                 <Link
                   href="/quote"
-                  className="mt-8 inline-flex items-center gap-3 rounded-xl bg-blue-600 px-6 py-4 font-semibold text-white hover:bg-blue-700"
+                  className="mt-8 inline-flex items-center gap-3 rounded-xl bg-green-700 px-6 py-4 font-semibold text-white hover:bg-green-800"
                 >
                   Compare Electricity Options
                   <ArrowRight className="h-5 w-5" />
@@ -307,7 +308,7 @@ export default function ElectricityPage() {
 
             <div className="max-w-3xl">
 
-              <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-600">
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-700">
                 Benefits
               </p>
 
@@ -333,7 +334,7 @@ export default function ElectricityPage() {
 
                   <CheckCircle2
                     size={22}
-                    className="text-blue-600"
+                    className="text-green-700"
                   />
 
                   <h3 className="mt-5 font-bold text-slate-900">
@@ -353,7 +354,7 @@ export default function ElectricityPage() {
         {/* FINAL CTA */}
         <section className="px-6 py-24">
 
-          <div className="mx-auto max-w-5xl overflow-hidden rounded-[2rem] bg-blue-600">
+          <div className="mx-auto max-w-5xl overflow-hidden rounded-[2rem] bg-green-700">
 
             <div className="grid lg:grid-cols-2">
 
@@ -369,7 +370,7 @@ export default function ElectricityPage() {
 
                 <div className="relative flex h-full items-center p-10">
 
-                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-600 text-white">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-green-700 text-white">
                     <Zap className="h-8 w-8" />
                   </div>
 
@@ -383,7 +384,7 @@ export default function ElectricityPage() {
                   Ready to explore electricity options?
                 </h2>
 
-                <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-blue-100 lg:mx-0">
+                <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-green-100 lg:mx-0">
                   Start with a simple enquiry and tell us about your business
                   requirements.
                 </p>

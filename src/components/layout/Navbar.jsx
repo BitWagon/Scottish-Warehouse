@@ -82,26 +82,33 @@ export default function Navbar() {
       <div className="border-b border-slate-200 bg-white shadow-sm">
         <div className="mx-auto flex h-[82px] max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
           {/* Brand */}
-          <Link
-            href="/"
-            onClick={closeMenus}
-            aria-label="YourBrand Business Solutions home"
-            className="group flex shrink-0 items-center gap-3"
-          >
-            <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-green-700 text-white shadow-sm transition-colors group-hover:bg-green-800 sm:h-[50px] sm:w-[50px]">
-              <Zap size={27} strokeWidth={2.4} />
-            </span>
+          
+      <Link
+        href="/"
+        onClick={closeMenus}
+        aria-label="Scottish Warehouse home"
+        className="-ml-24 group flex shrink-0 items-center gap-0"
+      >
+        
+          <img
+            src="/logo.png"
+            alt="Scottish Warehouse logo"
+            width={150}
+            height={150}
+            className="h-25 w-25 shrink-0 object-contain sm:h-26 sm:w-26"
+          />
 
-            <span className="flex flex-col">
-              <span className="text-[21px] font-extrabold leading-tight tracking-tight text-black sm:text-[25px]">
-                YOUR<span className="text-green-700">BRAND</span>
-              </span>
+        <span className="flex flex-col">
+          <span className="text-[21px] font-extrabold leading-tight tracking-tight text-black sm:text-[25px]">
+            Scottish<span className="text-green-700">warehouse</span>
+          </span>
 
-              <span className="mt-1 text-[9px] font-bold uppercase tracking-[0.22em] text-slate-500 sm:text-[10px]">
-                Business Solutions
-              </span>
-            </span>
-          </Link>
+          <span className="mt-1 text-[9px] font-bold uppercase tracking-[0.22em] text-slate-500 sm:text-[10px]">
+            Business Solutions
+          </span>
+        </span>
+      </Link>
+
 
           {/* Desktop navigation */}
           <nav

@@ -1,4 +1,3 @@
-
 "use client";
 
 import Navbar from "@/components/layout/Navbar";
@@ -182,11 +181,13 @@ export default function QuotePage() {
 
             <div className="relative">
               <div className="absolute -bottom-4 -left-4 h-32 w-32 rounded-3xl bg-green-600" />
+
               <img
                 src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1400&q=85"
                 alt="Business professionals working together"
                 className="relative h-[360px] w-full rounded-3xl object-cover shadow-xl md:h-[480px]"
               />
+
               <div className="absolute -right-3 -top-3 rounded-2xl bg-black px-5 py-4 text-white shadow-lg md:right-5 md:top-5">
                 <p className="text-sm text-gray-300">
                   Focused on your
@@ -301,6 +302,7 @@ export default function QuotePage() {
                         <h4 className="font-bold">
                           {step.title}
                         </h4>
+
                         <p className="mt-2 text-sm leading-6 text-gray-400">
                           {step.description}
                         </p>
@@ -321,6 +323,7 @@ export default function QuotePage() {
                           size={18}
                           className="mt-0.5 shrink-0 text-green-400"
                         />
+
                         <span className="text-sm text-gray-300">
                           {detail}
                         </span>
@@ -376,6 +379,7 @@ export default function QuotePage() {
                       size={21}
                       className="mt-0.5 shrink-0 text-green-700"
                     />
+
                     <p className="text-gray-700">{item}</p>
                   </div>
                 ))}
