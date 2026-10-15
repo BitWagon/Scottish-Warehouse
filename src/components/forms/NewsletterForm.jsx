@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from "react";
@@ -9,8 +10,8 @@ export default function NewsletterForm() {
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
 
     setLoading(true);
     setMessage("");
@@ -31,8 +32,7 @@ export default function NewsletterForm() {
 
       if (!response.ok) {
         throw new Error(
-          data.message ||
-            "Unable to subscribe right now."
+          data.message || "Unable to subscribe right now."
         );
       }
 
@@ -42,10 +42,9 @@ export default function NewsletterForm() {
       );
 
       setEmail("");
-    } catch (error) {
+    } catch (err) {
       setError(
-        error.message ||
-          "Something went wrong. Please try again."
+        err.message || "Something went wrong. Please try again."
       );
     } finally {
       setLoading(false);
@@ -56,60 +55,61 @@ export default function NewsletterForm() {
     <motion.form
       onSubmit={handleSubmit}
       className="w-full"
-      initial={{
-        opacity: 0,
-        y: 20,
-      }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-      }}
-      viewport={{
-        once: true,
-        amount: 0.2,
-      }}
-      transition={{
-        duration: 0.5,
-      }}
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.4 }}
     >
+      <label
+        htmlFor="newsletter-email"
+        className="mb-2 block text-sm font-semibold text-black"
+      >
+        Email address
+      </label>
+
       <div className="flex flex-col gap-3 sm:flex-row">
         <input
+          id="newsletter-email"
+          name="email"
           type="email"
+          autoComplete="email"
           value={email}
-          onChange={(e) => {
-            setEmail(e.target.value);
+          onChange={(event) => {
+            setEmail(event.target.value);
             setMessage("");
             setError("");
           }}
           placeholder="Enter your email address"
           required
           disabled={loading}
-          className="min-w-0 flex-1 rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 disabled:cursor-not-allowed disabled:bg-slate-50"
+          className="min-w-0 flex-1 rounded-xl border border-neutral-300 bg-white px-4 py-3 text-black outline-none transition placeholder:text-neutral-400 focus:border-green-600 focus:ring-4 focus:ring-green-100 disabled:cursor-not-allowed disabled:bg-neutral-100"
         />
 
         <motion.button
           type="submit"
           disabled={loading}
-          whileHover={{
-            scale: loading ? 1 : 1.02,
-          }}
-          whileTap={{
-            scale: loading ? 1 : 0.98,
-          }}
-          className="rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-60"
+          whileHover={{ scale: loading ? 1 : 1.02 }}
+          whileTap={{ scale: loading ? 1 : 0.98 }}
+          className="rounded-xl bg-green-500 px-6 py-3 font-bold text-black transition hover:bg-green-400 disabled:cursor-not-allowed disabled:opacity-60"
         >
           {loading ? "Subscribing..." : "Subscribe"}
         </motion.button>
       </div>
 
       {error && (
-        <div className="mt-3 rounded-xl border border-red-200 bg-red-50 p-3 text-sm text-red-700">
+        <div
+          role="alert"
+          className="mt-3 rounded-xl border border-red-200 bg-red-50 p-3 text-sm text-red-700"
+        >
           {error}
         </div>
       )}
 
       {message && (
-        <div className="mt-3 rounded-xl border border-green-200 bg-green-50 p-3 text-sm text-green-700">
+        <div
+          role="status"
+          className="mt-3 rounded-xl border border-green-200 bg-green-50 p-3 text-sm text-green-800"
+        >
           {message}
         </div>
       )}

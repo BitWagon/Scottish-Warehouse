@@ -194,7 +194,7 @@ export default function Home() {
 
           <div className="relative mx-auto grid max-w-7xl gap-16 px-6 py-24 lg:grid-cols-2 lg:items-center lg:py-32">
             <div>
-              <span className="inline-flex rounded-full border border-green-500/30 bg-green-500/10 px-4 py-2 text-sm font-semibold tracking-wide text-green-300">
+              <span className="inline-flex rounded-full border border-green-500/30 bg-green-500/10 px-4 py-2 text-sm font-semibold tracking-wide text-green-400">
                 BUSINESS SOLUTIONS, SIMPLIFIED
               </span>
 
@@ -203,7 +203,7 @@ export default function Home() {
                 <span className="text-green-700">Start Here</span>
               </h1>
 
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-400">
                 Discover business energy options, explore practical ways to improve
                 energy efficiency, and compare essential services for your
                 premises. Nexa helps you start with a clear enquiry and understand
