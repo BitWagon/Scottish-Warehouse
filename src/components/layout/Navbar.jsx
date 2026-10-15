@@ -93,9 +93,10 @@ export default function Navbar() {
             </span>
 
             <span className="flex flex-col">
-              <span className="text-[21px] font-extrabold leading-tight tracking-tight text-slate-900 sm:text-[25px]">
+              <span className="text-[21px] font-extrabold leading-tight tracking-tight text-black sm:text-[25px]">
                 YOUR<span className="text-green-700">BRAND</span>
               </span>
+
               <span className="mt-1 text-[9px] font-bold uppercase tracking-[0.22em] text-slate-500 sm:text-[10px]">
                 Business Solutions
               </span>
@@ -119,12 +120,11 @@ export default function Navbar() {
                 aria-haspopup="true"
                 onClick={() => setServicesOpen((open) => !open)}
                 className={`${navLinkClass} ${
-                  servicesOpen
-                    ? "bg-green-50 text-green-800"
-                    : ""
+                  servicesOpen ? "bg-green-50 text-green-800" : ""
                 }`}
               >
                 Services
+
                 <ChevronDown
                   size={16}
                   className={`ml-0.5 transition-transform duration-200 ${
@@ -147,38 +147,42 @@ export default function Navbar() {
                       <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-green-800">
                         Our Services
                       </p>
+
                       <p className="mt-1.5 text-sm text-slate-600">
                         Practical solutions for your business.
                       </p>
                     </div>
 
                     <div className="p-2.5">
-                      {servicesList.map(({ title, description, href, Icon }) => (
-                        <Link
-                          key={href}
-                          href={href}
-                          onClick={closeMenus}
-                          className="group flex items-center gap-3 rounded-xl p-3.5 transition-colors hover:bg-green-50"
-                        >
-                          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-green-100 text-green-800 transition-colors group-hover:bg-green-700 group-hover:text-white">
-                            <Icon size={21} strokeWidth={1.9} />
-                          </span>
-
-                          <span className="min-w-0 flex-1">
-                            <span className="block text-sm font-bold text-slate-800 group-hover:text-green-800">
-                              {title}
+                      {servicesList.map(
+                        ({ title, description, href, Icon }) => (
+                          <Link
+                            key={href}
+                            href={href}
+                            onClick={closeMenus}
+                            className="group flex items-center gap-3 rounded-xl p-3.5 transition-colors hover:bg-green-50"
+                          >
+                            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-green-100 text-green-800 transition-colors group-hover:bg-green-700 group-hover:text-white">
+                              <Icon size={21} strokeWidth={1.9} />
                             </span>
-                            <span className="mt-1 block text-xs leading-5 text-slate-500">
-                              {description}
-                            </span>
-                          </span>
 
-                          <ArrowRight
-                            size={17}
-                            className="shrink-0 text-slate-300 transition-all group-hover:translate-x-1 group-hover:text-green-700"
-                          />
-                        </Link>
-                      ))}
+                            <span className="min-w-0 flex-1">
+                              <span className="block text-sm font-bold text-slate-800 group-hover:text-green-800">
+                                {title}
+                              </span>
+
+                              <span className="mt-1 block text-xs leading-5 text-slate-500">
+                                {description}
+                              </span>
+                            </span>
+
+                            <ArrowRight
+                              size={17}
+                              className="shrink-0 text-slate-300 transition-all group-hover:translate-x-1 group-hover:text-green-700"
+                            />
+                          </Link>
+                        )
+                      )}
                     </div>
 
                     <div className="border-t border-slate-100 px-5 py-3">
@@ -212,11 +216,13 @@ export default function Navbar() {
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-green-50 text-green-800 transition-colors group-hover:bg-green-100">
                 <Phone size={18} />
               </span>
+
               <span>
                 <span className="block text-[11px] font-medium text-slate-500">
                   Speak to our team
                 </span>
-                <span className="mt-0.5 block text-sm font-bold text-slate-800 transition-colors group-hover:text-green-800">
+
+                <span className="mt-0.5 block text-sm font-bold text-black transition-colors group-hover:text-green-800">
                   Call Us
                 </span>
               </span>
@@ -247,7 +253,9 @@ export default function Navbar() {
                 setMobileMenuOpen((open) => !open);
                 setMobileServicesOpen(false);
               }}
-              aria-label={mobileMenuOpen ? "Close navigation" : "Open navigation"}
+              aria-label={
+                mobileMenuOpen ? "Close navigation" : "Open navigation"
+              }
               aria-expanded={mobileMenuOpen}
               className="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 text-slate-800 transition-colors hover:border-green-200 hover:bg-green-50 hover:text-green-800"
             >
@@ -259,7 +267,10 @@ export default function Navbar() {
         {/* Mobile navigation panel */}
         {mobileMenuOpen && (
           <div className="border-t border-slate-100 bg-white px-4 pb-5 pt-3 shadow-lg sm:px-6 lg:hidden">
-            <nav aria-label="Mobile navigation" className="mx-auto max-w-7xl">
+            <nav
+              aria-label="Mobile navigation"
+              className="mx-auto max-w-7xl"
+            >
               <Link
                 href="/"
                 onClick={closeMenus}
@@ -278,6 +289,7 @@ export default function Navbar() {
                   className={`${mobileLinkClass} justify-between`}
                 >
                   <span>Services</span>
+
                   <ChevronDown
                     size={18}
                     className={`transition-transform ${
@@ -288,26 +300,30 @@ export default function Navbar() {
 
                 {mobileServicesOpen && (
                   <div className="ml-3 mt-1 space-y-1 border-l-2 border-green-100 pl-3">
-                    {servicesList.map(({ title, description, href, Icon }) => (
-                      <Link
-                        key={href}
-                        href={href}
-                        onClick={closeMenus}
-                        className="flex items-center gap-3 rounded-xl px-3 py-3 transition-colors hover:bg-green-50"
-                      >
-                        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-green-50 text-green-800">
-                          <Icon size={20} />
-                        </span>
-                        <span>
-                          <span className="block text-sm font-semibold text-slate-800">
-                            {title}
+                    {servicesList.map(
+                      ({ title, description, href, Icon }) => (
+                        <Link
+                          key={href}
+                          href={href}
+                          onClick={closeMenus}
+                          className="flex items-center gap-3 rounded-xl px-3 py-3 transition-colors hover:bg-green-50"
+                        >
+                          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-green-50 text-green-800">
+                            <Icon size={20} />
                           </span>
-                          <span className="mt-1 block text-xs text-slate-500">
-                            {description}
+
+                          <span>
+                            <span className="block text-sm font-semibold text-slate-800">
+                              {title}
+                            </span>
+
+                            <span className="mt-1 block text-xs text-slate-500">
+                              {description}
+                            </span>
                           </span>
-                        </span>
-                      </Link>
-                    ))}
+                        </Link>
+                      )
+                    )}
                   </div>
                 )}
               </div>
@@ -346,12 +362,15 @@ export default function Navbar() {
                     size={22}
                     className="mt-0.5 shrink-0 text-green-800"
                   />
+
                   <div>
-                    <p className="text-sm font-bold text-slate-900">
+                    <p className="text-sm font-bold text-black">
                       Let’s find the right solution
                     </p>
+
                     <p className="mt-1 text-xs leading-5 text-slate-600">
-                      Tell us what your business needs and get in touch with our team.
+                      Tell us what your business needs and get in touch
+                      with our team.
                     </p>
                   </div>
                 </div>

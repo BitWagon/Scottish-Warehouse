@@ -1,3 +1,4 @@
+
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Link from "next/link";
@@ -194,16 +195,16 @@ export default function Home() {
 
           <div className="relative mx-auto grid max-w-7xl gap-16 px-6 py-24 lg:grid-cols-2 lg:items-center lg:py-32">
             <div>
-              <span className="inline-flex rounded-full border border-green-500/30 bg-green-500/10 px-4 py-2 text-sm font-semibold tracking-wide text-green-300">
+              <span className="inline-flex rounded-full border border-green-700/30 bg-green-100 px-4 py-2 text-sm font-semibold tracking-wide text-green-800">
                 BUSINESS SOLUTIONS, SIMPLIFIED
               </span>
 
-              <h1 className="mt-7 text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+              <h1 className="mt-7 text-4xl font-bold leading-tight tracking-tight text-black sm:text-5xl lg:text-6xl">
                 Smarter Energy Choices for Your Business{" "}
                 <span className="text-green-700">Start Here</span>
               </h1>
 
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-700">
                 Discover business energy options, explore practical ways to improve
                 energy efficiency, and compare essential services for your
                 premises. Nexa helps you start with a clear enquiry and understand
@@ -282,7 +283,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ADDED IMAGE + CONTENT SECTION */}
+        {/* IMAGE + CONTENT SECTION */}
         <section className="bg-slate-50 py-20 md:py-24">
           <div className="mx-auto max-w-7xl px-6">
             <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
@@ -391,7 +392,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ADDED SERVICE IMAGE CARDS */}
+        {/* SERVICE IMAGE CARDS */}
         <section className="bg-white py-20 md:py-24">
           <div className="mx-auto max-w-7xl px-6">
             <div className="mx-auto max-w-3xl text-center">
@@ -512,7 +513,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* SUPPLIER / SERVICE CATEGORIES */}
+        {/* SERVICE CATEGORIES */}
         <section className="bg-white py-20">
           <div className="mx-auto max-w-4xl px-6 text-center">
             <span className="text-sm font-bold uppercase tracking-wider text-green-700">
@@ -532,7 +533,7 @@ export default function Home() {
               {["BUSINESS ENERGY", "CONNECTIVITY", "WATER", "GREEN SOLUTIONS"].map((item) => (
                 <div
                   key={item}
-                  className="rounded-2xl border border-slate-200 bg-slate-50 p-6 text-sm font-bold tracking-wider text-slate-400"
+                  className="rounded-2xl border border-slate-200 bg-slate-50 p-6 text-sm font-bold tracking-wider text-slate-600"
                 >
                   {item}
                 </div>
@@ -541,93 +542,89 @@ export default function Home() {
           </div>
         </section>
 
-        {/* TRUSTED PROVIDERS - ADDED */}
+        {/* TRUSTED PROVIDERS */}
         <section className="overflow-hidden bg-white py-12">
-         <div className="mx-auto max-w-7xl px-6">
-         <p className="text-center text-sm font-bold uppercase tracking-[0.2em] text-slate-500">
-           Trusted Providers
-         </p>
+          <div className="mx-auto max-w-7xl px-6">
+            <p className="text-center text-sm font-bold uppercase tracking-[0.2em] text-slate-500">
+              Trusted Providers
+            </p>
 
-         <div className="relative mt-8 overflow-hidden">
-         <div className="flex w-max animate-supplier-right items-center gap-12">
-
-         {[
-          {
-            name: "Worldpay",
-            image: "/images/suppliers/worldpay.png",
-          },
-          {
-            name: "Paynt",
-            image: "/images/suppliers/paynt.png",
-          },
-          {
-            name: "Drax",
-            image: "/images/suppliers/drax.png",
-          },
-          {
-            name: "BT",
-            image: "/images/suppliers/bt.png",
-          },
-          {
-            name: "British Gas Lite",
-            image: "/images/suppliers/british-gas-lite.png",
-          },
-          {
-            name: "Daisy Communications",
-            image: "/images/suppliers/daisy-communications.png",
-          },
-          {
-            name: "Greenolite",
-            image: "/images/suppliers/greenolite.png",
-          },
-
-          // Duplicate logos for smooth infinite movement
-          {
-            name: "Worldpay",
-            image: "/images/suppliers/worldpay.png",
-          },
-          {
-            name: "Paynt",
-            image: "/images/suppliers/paynt.png",
-          },
-          {
-            name: "Drax",
-            image: "/images/suppliers/drax.png",
-          },
-          {
-            name: "BT",
-            image: "/images/suppliers/bt.png",
-          },
-          {
-            name: "British Gas Lite",
-            image: "/images/suppliers/british-gas-lite.png",
-          },
-          {
-            name: "Daisy Communications",
-            image: "/images/suppliers/daisy-communications.png",
-          },
-          {
-            name: "Greenolite",
-            image: "/images/suppliers/greenolite.png",
-          },
-          ].map((supplier, index) => (
-          <div
-            key={`${supplier.name}-${index}`}
-            className="flex h-24 w-48 shrink-0 items-center justify-center bg-white px-5"
-          >
-            <img
-              src={supplier.image}
-              alt={supplier.name}
-              className="max-h-14 w-auto max-w-[170px] object-contain"
-            />
+            <div className="relative mt-8 overflow-hidden">
+              <div className="flex w-max animate-supplier-right items-center gap-12">
+                {[
+                  {
+                    name: "Worldpay",
+                    image: "/images/suppliers/worldpay.png",
+                  },
+                  {
+                    name: "Paynt",
+                    image: "/images/suppliers/paynt.png",
+                  },
+                  {
+                    name: "Drax",
+                    image: "/images/suppliers/drax.png",
+                  },
+                  {
+                    name: "BT",
+                    image: "/images/suppliers/bt.png",
+                  },
+                  {
+                    name: "British Gas Lite",
+                    image: "/images/suppliers/british-gas-lite.png",
+                  },
+                  {
+                    name: "Daisy Communications",
+                    image: "/images/suppliers/daisy-communications.png",
+                  },
+                  {
+                    name: "Greenolite",
+                    image: "/images/suppliers/greenolite.png",
+                  },
+                  // Duplicate logos for smooth infinite movement
+                  {
+                    name: "Worldpay",
+                    image: "/images/suppliers/worldpay.png",
+                  },
+                  {
+                    name: "Paynt",
+                    image: "/images/suppliers/paynt.png",
+                  },
+                  {
+                    name: "Drax",
+                    image: "/images/suppliers/drax.png",
+                  },
+                  {
+                    name: "BT",
+                    image: "/images/suppliers/bt.png",
+                  },
+                  {
+                    name: "British Gas Lite",
+                    image: "/images/suppliers/british-gas-lite.png",
+                  },
+                  {
+                    name: "Daisy Communications",
+                    image: "/images/suppliers/daisy-communications.png",
+                  },
+                  {
+                    name: "Greenolite",
+                    image: "/images/suppliers/greenolite.png",
+                  },
+                ].map((supplier, index) => (
+                  <div
+                    key={`${supplier.name}-${index}`}
+                    className="flex h-24 w-48 shrink-0 items-center justify-center bg-white px-5"
+                  >
+                    <img
+                      src={supplier.image}
+                      alt={supplier.name}
+                      className="max-h-14 w-auto max-w-[170px] object-contain"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
-        ))}
-
-             </div>
-          </div>
-        </div>
-       </section>
-        {/* END TRUSTED PROVIDERS - ADDED */}
+        </section>
 
         {/* WHY CHOOSE US */}
         <section className="bg-slate-50 py-20 md:py-24">
@@ -689,7 +686,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ADDED TRUST CONTENT */}
+        {/* TRUST CONTENT */}
         <section className="bg-white py-20 md:py-24">
           <div className="mx-auto max-w-7xl px-6">
             <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
@@ -778,7 +775,7 @@ export default function Home() {
         <section className="bg-green-950 py-20 text-white md:py-24">
           <div className="mx-auto max-w-7xl px-6">
             <div className="mx-auto max-w-3xl text-center">
-              <span className="text-sm font-bold uppercase tracking-wider text-green-500">
+              <span className="text-sm font-bold uppercase tracking-wider text-green-400">
                 How It Works
               </span>
 
@@ -811,13 +808,13 @@ export default function Home() {
                 ],
               ].map(([number, title, description]) => (
                 <div key={number}>
-                  <div className="text-5xl font-bold text-green-500/30">
+                  <div className="text-5xl font-bold text-green-500/40">
                     {number}
                   </div>
 
                   <h3 className="mt-5 text-xl font-bold">{title}</h3>
 
-                  <p className="mt-3 leading-7 text-slate-400">
+                  <p className="mt-3 leading-7 text-slate-300">
                     {description}
                   </p>
                 </div>
@@ -826,7 +823,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ADDED PROCESS IMAGE SECTION */}
+        {/* PROCESS IMAGE SECTION */}
         <section className="bg-white py-20 md:py-24">
           <div className="mx-auto max-w-7xl px-6">
             <div className="relative overflow-hidden rounded-[2rem] bg-slate-900">
@@ -838,7 +835,7 @@ export default function Home() {
 
               <div className="relative grid gap-10 p-10 md:p-16 lg:grid-cols-2 lg:items-center">
                 <div>
-                  <span className="text-sm font-bold uppercase tracking-wider text-green-500">
+                  <span className="text-sm font-bold uppercase tracking-wider text-green-400">
                     Built For Businesses
                   </span>
 
@@ -907,7 +904,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ADDED BUSINESS TYPES IMAGE SECTION */}
+        {/* BUSINESS TYPES IMAGE SECTION */}
         <section className="bg-slate-50 py-20">
           <div className="mx-auto max-w-7xl px-6">
             <div className="grid gap-6 md:grid-cols-2">
@@ -985,7 +982,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ADDED FINAL TRUST CONTENT */}
+        {/* FINAL TRUST CONTENT */}
         <section className="bg-white py-20">
           <div className="mx-auto max-w-5xl px-6 text-center">
             <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-green-50 text-green-700">

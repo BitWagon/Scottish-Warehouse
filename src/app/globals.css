@@ -6,13 +6,22 @@
 @tailwind utilities;
 
 :root {
+  color-scheme: light;
+
   --brand-green: #168343;
   --brand-green-dark: #0f5c2e;
   --brand-green-light: #eaf6ee;
+  --brand-green-hover: #116b36;
+
   --brand-white: #ffffff;
-  --page-background: #f7faf8;
+  --brand-black: #000000;
+
+  --page-background: #ffffff;
+  --section-background: #f7faf8;
+
   --text-primary: #111813;
   --text-secondary: #58635b;
+
   --border-color: #dfe7e1;
 }
 
@@ -26,7 +35,7 @@ html {
 
 body {
   margin: 0;
-  background: var(--brand-white);
+  background: var(--page-background);
   color: var(--text-primary);
   font-family: "Inter", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -48,9 +57,13 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+img {
+  max-width: 100%;
+}
+
 ::selection {
   background: var(--brand-green);
-  color: #ffffff;
+  color: var(--brand-white);
 }
 
 :focus-visible {
@@ -75,6 +88,50 @@ a {
   background: var(--brand-green-dark);
 }
 
+/* Global theme utilities */
+
+@layer components {
+  .theme-primary-button {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-green-700 px-6 py-3 font-semibold text-white transition-colors duration-200 hover:bg-green-800 focus-visible:outline-green-700;
+  }
+
+  .theme-secondary-button {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-green-700 bg-white px-6 py-3 font-semibold text-green-800 transition-colors duration-200 hover:bg-green-50;
+  }
+
+  .theme-card {
+    @apply rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:border-green-200 hover:shadow-lg;
+  }
+
+  .theme-section {
+    background: var(--section-background);
+  }
+
+  .theme-heading {
+    @apply font-bold tracking-tight text-black;
+  }
+
+  .theme-description {
+    @apply leading-7 text-slate-600;
+  }
+
+  .theme-accent {
+    color: var(--brand-green);
+  }
+
+  .theme-accent-background {
+    background: var(--brand-green);
+    color: var(--brand-white);
+  }
+
+  .theme-dark-section {
+    background: var(--brand-black);
+    color: var(--brand-white);
+  }
+}
+
+/* Supplier ticker animation */
+
 @keyframes supplier-right {
   from {
     transform: translateX(-50%);
@@ -88,6 +145,8 @@ a {
 .animate-supplier-right {
   animation: supplier-right 25s linear infinite;
 }
+
+/* Accessibility: reduce motion when requested */
 
 @media (prefers-reduced-motion: reduce) {
   *,

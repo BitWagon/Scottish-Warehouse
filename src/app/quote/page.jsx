@@ -1,555 +1,419 @@
+
 "use client";
 
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import QuoteForm from "@/components/forms/QuoteForm";
+import {
+  ArrowRight,
+  CheckCircle2,
+  Zap,
+  Wifi,
+  Droplets,
+  Recycle,
+  Wallet,
+  ShieldCheck,
+  ClipboardList,
+  MessageSquare,
+  Check,
+} from "lucide-react";
+
+const services = [
+  {
+    icon: Zap,
+    title: "Business Energy",
+    description:
+      "Explore electricity and gas options that suit your business requirements.",
+  },
+  {
+    icon: Wifi,
+    title: "Business Connectivity",
+    description:
+      "Explore broadband and phone services to keep your business connected.",
+  },
+  {
+    icon: Droplets,
+    title: "Business Water",
+    description:
+      "Find commercial water services suitable for your premises.",
+  },
+  {
+    icon: Recycle,
+    title: "Waste Management",
+    description:
+      "Explore waste collection and management solutions for your business.",
+  },
+  {
+    icon: Wallet,
+    title: "Business Finance",
+    description:
+      "Discuss potential finance options for your organisation.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Business Insurance",
+    description:
+      "Explore insurance options for your business and its requirements.",
+  },
+];
+
+const steps = [
+  {
+    number: "01",
+    title: "Submit your enquiry",
+    description:
+      "Tell us about your business and the service you are interested in.",
+  },
+  {
+    number: "02",
+    title: "Share your requirements",
+    description:
+      "Provide details to help us understand your business needs.",
+  },
+  {
+    number: "03",
+    title: "Explore your options",
+    description:
+      "Review potential solutions and decide how you would like to proceed.",
+  },
+];
+
+const helpfulDetails = [
+  "Your business type and location",
+  "The service you are interested in",
+  "Your current requirements",
+  "Your priorities and future plans",
+];
 
 export default function QuotePage() {
   return (
     <>
       <Navbar />
 
-      <main>
-        {/* Hero Section */}
-        <section className="relative overflow-hidden bg-slate-950 py-24 text-white md:py-32">
-          <div className="absolute inset-0 opacity-20">
-            <img
-              src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1800&q=85"
-              alt="Business professionals discussing business requirements"
-              className="h-full w-full object-cover"
-            />
-          </div>
-
-          <div className="absolute inset-0 bg-slate-950/80" />
+      <main className="overflow-hidden bg-white text-black">
+        {/* Hero */}
+        <section className="relative bg-black py-24 text-white md:py-32">
+          <div className="absolute -right-24 -top-24 h-80 w-80 rounded-full bg-green-500/20 blur-3xl" />
+          <div className="absolute -bottom-20 left-10 h-72 w-72 rounded-full bg-green-700/20 blur-3xl" />
 
           <div className="relative mx-auto max-w-7xl px-6">
-            <span className="text-sm font-bold uppercase tracking-wider text-blue-400">
+            <div className="inline-flex items-center gap-2 rounded-full border border-green-500/40 bg-green-500/10 px-4 py-2 text-sm font-semibold text-green-400">
+              <ClipboardList size={17} />
               Request a Quote
-            </span>
+            </div>
 
-            <h1 className="mt-5 max-w-4xl text-4xl font-bold md:text-6xl">
+            <h1 className="mt-6 max-w-4xl text-4xl font-extrabold leading-tight md:text-6xl lg:text-7xl">
               Tell Us What Your{" "}
-              <span className="text-blue-400">
+              <span className="text-green-500">
                 Business Needs
               </span>
             </h1>
 
-            <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
-              Complete the form below and we&apos;ll review your requirements
-              so suitable options can be explored.
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-300">
+              Share your requirements with our team and explore solutions
+              for your business. Complete the form to get started.
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-3">
-              <span className="rounded-full border border-slate-700 bg-slate-900/70 px-4 py-2 text-sm text-slate-300">
-                Business-focused options
-              </span>
+            <a
+              href="#quote-form"
+              className="mt-9 inline-flex items-center gap-3 rounded-xl bg-green-600 px-7 py-4 font-bold text-white transition hover:bg-green-500"
+            >
+              Request Your Quote
+              <ArrowRight size={19} />
+            </a>
 
-              <span className="rounded-full border border-slate-700 bg-slate-900/70 px-4 py-2 text-sm text-slate-300">
-                Simple enquiry process
-              </span>
-
-              <span className="rounded-full border border-slate-700 bg-slate-900/70 px-4 py-2 text-sm text-slate-300">
-                Support throughout
-              </span>
-            </div>
-          </div>
-        </section>
-
-        {/* Quote Introduction */}
-        <section className="bg-white py-20">
-          <div className="mx-auto max-w-7xl px-6">
-            <div className="grid items-center gap-12 lg:grid-cols-2">
-              <div>
-                <span className="text-sm font-bold uppercase tracking-wider text-blue-600">
-                  Start Your Enquiry
-                </span>
-
-                <h2 className="mt-4 text-3xl font-bold text-slate-900 md:text-4xl">
-                  Let&apos;s find the right solution for your business.
-                </h2>
-
-                <p className="mt-5 text-lg leading-8 text-slate-600">
-                  Tell us a little about your business and the services you
-                  are interested in. Your requirements help us understand what
-                  type of solution may be suitable for your organisation.
-                </p>
-
-                <p className="mt-4 leading-8 text-slate-600">
-                  Whether you&apos;re reviewing business energy, connectivity,
-                  water, waste management, finance, insurance or payment
-                  solutions, you can use the form to tell us what you need.
-                </p>
-
-                <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                  <div className="rounded-2xl border border-slate-200 p-5">
-                    <h3 className="font-bold text-slate-900">
-                      Tell us your requirements
-                    </h3>
-
-                    <p className="mt-2 text-sm leading-6 text-slate-600">
-                      Provide some basic information about your business and
-                      what you&apos;re looking for.
-                    </p>
-                  </div>
-
-                  <div className="rounded-2xl border border-slate-200 p-5">
-                    <h3 className="font-bold text-slate-900">
-                      Explore your options
-                    </h3>
-
-                    <p className="mt-2 text-sm leading-6 text-slate-600">
-                      Your enquiry can help identify options relevant to your
-                      business requirements.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="overflow-hidden rounded-[2rem]">
-                <img
-                  src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1400&q=85"
-                  alt="Business team working together and discussing requirements"
-                  className="h-[500px] w-full object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* What We Can Help With */}
-        <section className="bg-slate-50 py-20">
-          <div className="mx-auto max-w-7xl px-6">
-            <div className="mx-auto max-w-3xl text-center">
-              <span className="text-sm font-bold uppercase tracking-wider text-blue-600">
-                Business Requirements
-              </span>
-
-              <h2 className="mt-4 text-3xl font-bold text-slate-900 md:text-4xl">
-                Solutions for different areas of your business
-              </h2>
-
-              <p className="mt-5 leading-8 text-slate-600">
-                Businesses have different priorities depending on their
-                premises, team size, operating requirements and plans for
-                growth. Tell us which area you are interested in and provide
-                any details that may help explain what you need.
-              </p>
-            </div>
-
-            <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-10 flex flex-wrap gap-4 text-sm text-gray-300">
               {[
-                {
-                  title: "Running Costs",
-                  description:
-                    "Explore options for important business running costs such as energy, water and connectivity.",
-                },
-                {
-                  title: "Business Operations",
-                  description:
-                    "Consider services that can support the everyday requirements of your organisation and premises.",
-                },
-                {
-                  title: "Business Protection",
-                  description:
-                    "Explore solutions relating to insurance, people, property and business risks.",
-                },
-                {
-                  title: "Growth & Development",
-                  description:
-                    "Discuss requirements connected with expansion, investment, finance or changing business needs.",
-                },
+                "Simple enquiry process",
+                "Business-focused options",
+                "Support with your requirements",
               ].map((item) => (
-                <div
-                  key={item.title}
-                  className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm"
-                >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-xl font-bold text-blue-600">
-                    ✓
-                  </div>
-
-                  <h3 className="mt-5 text-xl font-bold text-slate-900">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-3 leading-7 text-slate-600">
-                    {item.description}
-                  </p>
-                </div>
+                <span key={item} className="flex items-center gap-2">
+                  <CheckCircle2 size={17} className="text-green-400" />
+                  {item}
+                </span>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Quote Form Section */}
-        <section className="bg-slate-50 py-20">
-          <div className="mx-auto max-w-7xl px-6">
-            <div className="grid gap-10 lg:grid-cols-[1fr_1.6fr]">
-              
-              {/* Left Information */}
-              <div>
-                <span className="text-sm font-bold uppercase tracking-wider text-blue-600">
-                  Free Quote
-                </span>
-
-                <h2 className="mt-4 text-3xl font-bold text-slate-900 md:text-4xl">
-                  Tell us a little about your business.
-                </h2>
-
-                <p className="mt-5 leading-8 text-slate-600">
-                  Complete the form and provide as much information as you can.
-                  This helps us understand your requirements and the type of
-                  service you are interested in.
-                </p>
-
-                <div className="mt-8 overflow-hidden rounded-3xl">
-                  <img
-                    src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1200&q=85"
-                    alt="Business professionals reviewing information together"
-                    className="h-64 w-full object-cover"
-                  />
-                </div>
-
-                <div className="mt-6 rounded-3xl bg-slate-950 p-7 text-white">
-                  <h3 className="text-xl font-bold">
-                    What happens next?
-                  </h3>
-
-                  <div className="mt-6 space-y-5">
-                    <div className="flex gap-4">
-                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-600 text-sm font-bold">
-                        01
-                      </span>
-
-                      <div>
-                        <h4 className="font-semibold">
-                          Submit your enquiry
-                        </h4>
-
-                        <p className="mt-1 text-sm leading-6 text-slate-400">
-                          Tell us about your business and the service you are
-                          interested in.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="flex gap-4">
-                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-600 text-sm font-bold">
-                        02
-                      </span>
-
-                      <div>
-                        <h4 className="font-semibold">
-                          Requirements are reviewed
-                        </h4>
-
-                        <p className="mt-1 text-sm leading-6 text-slate-400">
-                          Your information helps establish what type of
-                          solution may be relevant.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="flex gap-4">
-                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-600 text-sm font-bold">
-                        03
-                      </span>
-
-                      <div>
-                        <h4 className="font-semibold">
-                          Explore suitable options
-                        </h4>
-
-                        <p className="mt-1 text-sm leading-6 text-slate-400">
-                          You can then consider the available options and
-                          decide how you want to proceed.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* REAL DATABASE-BACKED QUOTE FORM */}
-              <div>
-                <QuoteForm />
-              </div>
-
-            </div>
-          </div>
-        </section>
-
-        {/* Why Request a Quote */}
-        <section className="bg-white py-20">
-          <div className="mx-auto max-w-7xl px-6">
-            <div className="grid items-center gap-12 lg:grid-cols-2">
-              <div className="overflow-hidden rounded-[2rem]">
-                <img
-                  src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1400&q=85"
-                  alt="Business professionals planning and reviewing business requirements"
-                  className="h-[480px] w-full object-cover"
-                />
-              </div>
-
-              <div>
-                <span className="text-sm font-bold uppercase tracking-wider text-blue-600">
-                  Why Make An Enquiry?
-                </span>
-
-                <h2 className="mt-4 text-3xl font-bold text-slate-900 md:text-4xl">
-                  Start with your business requirements.
-                </h2>
-
-                <p className="mt-5 leading-8 text-slate-600">
-                  Every organisation has different requirements. The right
-                  option can depend on factors such as the type of business
-                  you operate, your premises, the number of people in your
-                  organisation and the services you already use.
-                </p>
-
-                <p className="mt-4 leading-8 text-slate-600">
-                  Providing these details gives you a straightforward starting
-                  point for exploring potential solutions relevant to your
-                  business.
-                </p>
-
-                <div className="mt-8 space-y-4">
-                  {[
-                    "Explain what your business currently needs",
-                    "Identify the service you want to explore",
-                    "Provide details about your current requirements",
-                    "Consider options that fit your organisation",
-                  ].map((item) => (
-                    <div
-                      key={item}
-                      className="flex items-start gap-3"
-                    >
-                      <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-50 text-sm font-bold text-blue-600">
-                        ✓
-                      </span>
-
-                      <p className="text-slate-700">
-                        {item}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Information To Include */}
-        <section className="bg-slate-50 py-20">
-          <div className="mx-auto max-w-7xl px-6">
-            <div className="mx-auto max-w-3xl text-center">
-              <span className="text-sm font-bold uppercase tracking-wider text-blue-600">
-                Helpful Information
-              </span>
-
-              <h2 className="mt-4 text-3xl font-bold text-slate-900 md:text-4xl">
-                What should you include in your enquiry?
-              </h2>
-
-              <p className="mt-5 leading-8 text-slate-600">
-                The more relevant information you provide, the easier it is to
-                understand what your business is looking for. You don&apos;t
-                need to have everything prepared before making an enquiry.
+        {/* Introduction */}
+        <section className="px-6 py-20 md:py-24">
+          <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-700">
+                Start Your Enquiry
               </p>
+
+              <h2 className="mt-4 text-3xl font-extrabold leading-tight md:text-5xl">
+                Let's Find the Right Solution for Your Business
+              </h2>
+
+              <p className="mt-6 leading-8 text-gray-600">
+                Every business has different needs. Tell us which services
+                you are interested in and share a little about your
+                requirements so you can explore suitable options.
+              </p>
+
+              <p className="mt-4 leading-8 text-gray-600">
+                Whether you need energy, connectivity, water, waste
+                management, finance or insurance, this is the place to
+                begin your enquiry.
+              </p>
+
+              <div className="mt-8 space-y-4">
+                {[
+                  "Tell us about your business",
+                  "Choose the services you need",
+                  "Explain your priorities",
+                  "Explore potential solutions",
+                ].map((item) => (
+                  <div key={item} className="flex items-center gap-3">
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-green-100 text-green-700">
+                      <Check size={16} />
+                    </span>
+                    <span className="font-medium text-gray-800">
+                      {item}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-              {[
-                {
-                  title: "Business Details",
-                  description:
-                    "Let us know what type of business you operate and give some context about your organisation.",
-                },
-                {
-                  title: "Current Situation",
-                  description:
-                    "Explain what you currently use and any areas where you are looking for a different solution.",
-                },
-                {
-                  title: "Your Priorities",
-                  description:
-                    "Tell us what matters most to your business, such as flexibility, reliability, service or cost.",
-                },
-                {
-                  title: "Future Requirements",
-                  description:
-                    "Mention upcoming changes, expansion plans or other requirements that could affect your needs.",
-                },
-              ].map((item) => (
-                <div
-                  key={item.title}
-                  className="rounded-3xl bg-white p-7 shadow-sm ring-1 ring-slate-200"
-                >
-                  <h3 className="text-xl font-bold text-slate-900">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-3 leading-7 text-slate-600">
-                    {item.description}
-                  </p>
-                </div>
-              ))}
+            <div className="relative">
+              <div className="absolute -bottom-4 -left-4 h-32 w-32 rounded-3xl bg-green-600" />
+              <img
+                src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1400&q=85"
+                alt="Business professionals working together"
+                className="relative h-[360px] w-full rounded-3xl object-cover shadow-xl md:h-[480px]"
+              />
+              <div className="absolute -right-3 -top-3 rounded-2xl bg-black px-5 py-4 text-white shadow-lg md:right-5 md:top-5">
+                <p className="text-sm text-gray-300">
+                  Focused on your
+                </p>
+                <p className="font-bold text-green-400">
+                  Business Needs
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Services Section */}
-        <section className="bg-white py-20">
-          <div className="mx-auto max-w-7xl px-6">
+        {/* Services */}
+        <section className="bg-gray-50 px-6 py-20 md:py-24">
+          <div className="mx-auto max-w-7xl">
             <div className="mx-auto max-w-3xl text-center">
-              <span className="text-sm font-bold uppercase tracking-wider text-blue-600">
-                Business Services
-              </span>
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-700">
+                Our Services
+              </p>
 
-              <h2 className="mt-4 text-3xl font-bold text-slate-900 md:text-4xl">
-                What can we help you explore?
+              <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
+                What Can We Help You With?
               </h2>
 
-              <p className="mt-5 leading-8 text-slate-600">
-                Select the service that best matches your current business
-                requirements. You can also provide additional details in the
-                enquiry form.
+              <p className="mt-5 leading-8 text-gray-600">
+                Explore the service areas below and tell us which ones
+                match your business requirements.
               </p>
             </div>
 
             <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {[
-                {
-                  title: "Business Energy",
-                  description:
-                    "Explore electricity and gas options designed around your business requirements.",
-                },
-                {
-                  title: "Business Connectivity",
-                  description:
-                    "Explore broadband and phone solutions for keeping your business connected.",
-                },
-                {
-                  title: "Business Water",
-                  description:
-                    "Consider commercial water services suitable for your premises and organisation.",
-                },
-                {
-                  title: "Waste Management",
-                  description:
-                    "Explore practical waste collection and management solutions for your business.",
-                },
-                {
-                  title: "Business Finance",
-                  description:
-                    "Explore potential finance options based around your business requirements.",
-                },
-                {
-                  title: "Business Insurance",
-                  description:
-                    "Explore insurance options covering areas such as people, property and business risks.",
-                },
-              ].map((service) => (
-                <div
-                  key={service.title}
-                  className="rounded-3xl border border-slate-200 p-7 transition hover:-translate-y-1 hover:shadow-lg"
-                >
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
-                    ✓
+              {services.map((service) => {
+                const Icon = service.icon;
+
+                return (
+                  <div
+                    key={service.title}
+                    className="group rounded-3xl border border-gray-200 bg-white p-7 transition duration-300 hover:-translate-y-1 hover:border-green-600 hover:shadow-xl hover:shadow-green-900/5"
+                  >
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-green-100 text-green-700 transition group-hover:bg-green-700 group-hover:text-white">
+                      <Icon size={27} />
+                    </div>
+
+                    <h3 className="mt-6 text-xl font-bold">
+                      {service.title}
+                    </h3>
+
+                    <p className="mt-3 leading-7 text-gray-600">
+                      {service.description}
+                    </p>
+
+                    <a
+                      href="#quote-form"
+                      className="mt-5 inline-flex items-center gap-2 font-bold text-green-700 transition hover:text-green-900"
+                    >
+                      Request a Quote
+                      <ArrowRight size={17} />
+                    </a>
                   </div>
-
-                  <h3 className="mt-5 text-xl font-bold text-slate-900">
-                    {service.title}
-                  </h3>
-
-                  <p className="mt-3 leading-7 text-slate-600">
-                    {service.description}
-                  </p>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>
 
-        {/* Business Priorities */}
-        <section className="bg-slate-950 py-20 text-white">
-          <div className="mx-auto max-w-7xl px-6">
-            <div className="grid items-center gap-12 lg:grid-cols-2">
-              <div>
-                <span className="text-sm font-bold uppercase tracking-wider text-blue-400">
-                  Built Around Your Needs
-                </span>
+        {/* Quote form */}
+        <section
+          id="quote-form"
+          className="scroll-mt-24 px-6 py-20 md:py-24"
+        >
+          <div className="mx-auto max-w-7xl">
+            <div className="mx-auto mb-12 max-w-3xl text-center">
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-700">
+                Get Started
+              </p>
 
-                <h2 className="mt-4 text-3xl font-bold md:text-4xl">
-                  Your business is different. Your requirements should be too.
-                </h2>
+              <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
+                Request Your Business Quote
+              </h2>
 
-                <p className="mt-5 leading-8 text-slate-300">
-                  From small businesses and growing teams to established
-                  organisations, requirements can vary considerably. That&apos;s
-                  why your enquiry can focus on the particular service and
-                  priorities that matter to you.
+              <p className="mt-5 leading-8 text-gray-600">
+                Complete the form below with your contact information
+                and requirements. Our existing quote form is retained
+                below.
+              </p>
+            </div>
+
+            <div className="grid items-start gap-10 lg:grid-cols-[0.8fr_1.4fr]">
+              {/* Information panel */}
+              <aside className="rounded-3xl bg-black p-8 text-white md:p-10">
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-green-600">
+                  <MessageSquare size={27} />
+                </div>
+
+                <h3 className="mt-6 text-2xl font-extrabold">
+                  What Happens Next?
+                </h3>
+
+                <p className="mt-4 leading-7 text-gray-300">
+                  Your enquiry helps establish what your business needs
+                  and which options may be relevant.
                 </p>
 
-                <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                  {[
-                    "Flexible requirements",
-                    "Business-focused options",
-                    "Clear information",
-                    "Straightforward enquiry",
-                  ].map((item) => (
-                    <div
-                      key={item}
-                      className="rounded-2xl border border-slate-800 bg-slate-900 p-5"
-                    >
-                      <div className="text-lg font-bold text-blue-400">
-                        ✓
-                      </div>
+                <div className="mt-8 space-y-7">
+                  {steps.map((step) => (
+                    <div key={step.number} className="flex gap-4">
+                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-green-700 font-bold text-white">
+                        {step.number}
+                      </span>
 
-                      <h3 className="mt-3 font-semibold">
-                        {item}
-                      </h3>
+                      <div>
+                        <h4 className="font-bold">
+                          {step.title}
+                        </h4>
+                        <p className="mt-2 text-sm leading-6 text-gray-400">
+                          {step.description}
+                        </p>
+                      </div>
                     </div>
                   ))}
                 </div>
+
+                <div className="mt-9 border-t border-white/15 pt-6">
+                  <p className="font-semibold text-green-400">
+                    Helpful information to include
+                  </p>
+
+                  <div className="mt-4 space-y-3">
+                    {helpfulDetails.map((detail) => (
+                      <div key={detail} className="flex gap-3">
+                        <CheckCircle2
+                          size={18}
+                          className="mt-0.5 shrink-0 text-green-400"
+                        />
+                        <span className="text-sm text-gray-300">
+                          {detail}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </aside>
+
+              {/* Existing quote form component */}
+              <div className="rounded-3xl border border-gray-200 bg-white p-5 shadow-sm md:p-8">
+                <QuoteForm />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Why request a quote */}
+        <section className="bg-gray-50 px-6 py-20 md:py-24">
+          <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
+            <div className="overflow-hidden rounded-3xl">
+              <img
+                src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1400&q=85"
+                alt="Business team discussing plans"
+                className="h-[350px] w-full object-cover md:h-[460px]"
+              />
+            </div>
+
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-700">
+                Why Request a Quote?
+              </p>
+
+              <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
+                Start With What Matters to Your Business
+              </h2>
+
+              <p className="mt-5 leading-8 text-gray-600">
+                Your requirements depend on your organisation, premises,
+                budget and future plans. Sharing the details helps you
+                start exploring the services that may suit your situation.
+              </p>
+
+              <div className="mt-8 space-y-4">
+                {[
+                  "Explain your current business requirements",
+                  "Identify the services you want to explore",
+                  "Share your priorities and expectations",
+                  "Consider options relevant to your organisation",
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-3">
+                    <CheckCircle2
+                      size={21}
+                      className="mt-0.5 shrink-0 text-green-700"
+                    />
+                    <p className="text-gray-700">{item}</p>
+                  </div>
+                ))}
               </div>
 
-              <div className="overflow-hidden rounded-[2rem]">
-                <img
-                  src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1400&q=85"
-                  alt="Professional business team working in a modern office"
-                  className="h-[500px] w-full object-cover"
-                />
-              </div>
+              <a
+                href="#quote-form"
+                className="mt-9 inline-flex items-center gap-2 rounded-xl bg-green-700 px-6 py-3.5 font-bold text-white transition hover:bg-green-600"
+              >
+                Fill Out the Form
+                <ArrowRight size={18} />
+              </a>
             </div>
           </div>
         </section>
 
         {/* Final CTA */}
-        <section className="bg-blue-600 py-20 text-white">
-          <div className="mx-auto max-w-5xl px-6 text-center">
-            <h2 className="text-3xl font-bold md:text-4xl">
-              Ready to explore your options?
+        <section className="bg-green-700 px-6 py-20 text-white md:py-24">
+          <div className="mx-auto max-w-4xl text-center">
+            <p className="font-bold uppercase tracking-[0.2em] text-green-100">
+              Let's Get Started
+            </p>
+
+            <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">
+              Ready to Explore Your Options?
             </h2>
 
-            <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-blue-100">
-              Complete the enquiry form above and tell us what your business
-              needs. We&apos;ll review the information provided so suitable
-              options can be explored.
+            <p className="mx-auto mt-5 max-w-2xl leading-8 text-green-50">
+              Tell us what your business needs and take the first step
+              towards exploring suitable solutions.
             </p>
 
             <a
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-
-                window.scrollTo({
-                  top: 0,
-                  behavior: "smooth",
-                });
-              }}
-              className="mt-8 inline-flex rounded-xl bg-white px-7 py-4 font-semibold text-blue-600 transition hover:bg-slate-100"
+              href="#quote-form"
+              className="mt-8 inline-flex items-center gap-3 rounded-xl bg-white px-7 py-4 font-bold text-green-800 transition hover:bg-gray-100"
             >
               Request a Quote
+              <ArrowRight size={19} />
             </a>
           </div>
         </section>

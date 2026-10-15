@@ -1,448 +1,354 @@
-"use client";
 
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import ContactForm from "@/components/forms/ContactForm";
+import Link from "next/link";
+import {
+  ArrowRight,
+  Mail,
+  Phone,
+  MapPin,
+  Clock,
+  MessageSquare,
+  Send,
+  CheckCircle2,
+} from "lucide-react";
+
+const contactDetails = [
+  {
+    icon: Phone,
+    title: "Call Us",
+    description: "Speak directly with our team.",
+    value: "+92 333 6516071",
+    href: "tel:+923336516071",
+  },
+  {
+    icon: Mail,
+    title: "Email Us",
+    description: "Send us your questions anytime.",
+    value: "info@nexa.com",
+    href: "mailto:info@nexa.com",
+  },
+  {
+    icon: MapPin,
+    title: "Our Location",
+    description: "Serving businesses with reliable solutions.",
+    value: "Pakistan",
+    href: null,
+  },
+];
 
 export default function ContactPage() {
   return (
     <>
       <Navbar />
 
-      <main>
-        {/* Hero Section */}
-        <section className="relative overflow-hidden bg-slate-900 py-24 md:py-32">
-          <div className="absolute inset-0 opacity-20">
-            <img
-              src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1800&q=85"
-              alt="Business professionals meeting and discussing business matters"
-              className="h-full w-full object-cover"
-            />
+      <main className="overflow-hidden bg-white text-black">
+        {/* Hero */}
+        <section className="relative bg-black px-6 py-24 text-white md:py-32">
+          <div className="absolute -right-24 -top-24 h-80 w-80 rounded-full bg-green-500/20 blur-3xl" />
+          <div className="absolute -bottom-20 left-10 h-64 w-64 rounded-full bg-green-700/20 blur-3xl" />
+
+          <div className="relative mx-auto max-w-7xl">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-green-500/40 bg-green-500/10 px-4 py-2 text-sm font-semibold text-green-400">
+              <MessageSquare size={16} />
+              Let's Talk
+            </div>
+
+            <h1 className="max-w-4xl text-4xl font-extrabold leading-tight md:text-6xl lg:text-7xl">
+              Let's Build Something{" "}
+              <span className="text-green-500">Better Together.</span>
+            </h1>
+
+            <p className="mt-6 max-w-2xl text-base leading-8 text-gray-300 md:text-lg">
+              Have a question or need a solution for your business? Contact
+              our team and let's discuss how we can help your business grow.
+            </p>
+
+            <div className="mt-9 flex flex-wrap gap-4">
+              <a
+                href="#contact-form"
+                className="inline-flex items-center gap-2 rounded-xl bg-green-600 px-6 py-3.5 font-bold text-white transition hover:bg-green-500"
+              >
+                Contact Our Team
+                <ArrowRight size={18} />
+              </a>
+
+              <a
+                href="tel:+923336516071"
+                className="inline-flex items-center gap-2 rounded-xl border border-white/25 px-6 py-3.5 font-semibold text-white transition hover:border-green-500 hover:text-green-400"
+              >
+                <Phone size={18} />
+                Call Us
+              </a>
+            </div>
           </div>
+        </section>
 
-          <div className="absolute inset-0 bg-slate-900/85" />
+        {/* Contact details */}
+        <section className="px-6 py-16 md:py-20">
+          <div className="mx-auto max-w-7xl">
+            <div className="mb-10 max-w-2xl">
+              <p className="font-bold uppercase tracking-[0.2em] text-green-700">
+                Get In Touch
+              </p>
+              <h2 className="mt-3 text-3xl font-extrabold md:text-4xl">
+                We're Here to Help
+              </h2>
+              <p className="mt-4 leading-7 text-gray-600">
+                Choose the best way to reach us. Our team is ready to hear
+                about your needs and answer your questions.
+              </p>
+            </div>
 
-          <div className="relative mx-auto max-w-7xl px-6">
-            <div className="max-w-3xl">
-              <span className="text-sm font-semibold uppercase tracking-wider text-blue-400">
-                Contact Us
-              </span>
+            <div className="grid gap-6 md:grid-cols-3">
+              {contactDetails.map((item) => {
+                const Icon = item.icon;
 
-              <h1 className="mt-5 text-4xl font-bold text-white md:text-6xl">
-                Let&apos;s talk about your
-                <span className="text-blue-400"> business.</span>
-              </h1>
+                return (
+                  <div
+                    key={item.title}
+                    className="group rounded-2xl border border-gray-200 bg-white p-7 transition duration-300 hover:-translate-y-1 hover:border-green-500 hover:shadow-xl hover:shadow-green-900/5"
+                  >
+                    <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-green-100 text-green-700 transition group-hover:bg-green-700 group-hover:text-white">
+                      <Icon size={26} />
+                    </div>
 
-              <p className="mt-6 text-lg leading-8 text-slate-300">
-                Have a question or need help finding the right service?
-                Contact our team and tell us what you need.
+                    <h3 className="text-xl font-bold">{item.title}</h3>
+                    <p className="mt-2 text-sm leading-6 text-gray-600">
+                      {item.description}
+                    </p>
+
+                    {item.href ? (
+                      <a
+                        href={item.href}
+                        className="mt-5 inline-block break-words font-bold text-green-700 transition hover:text-green-900"
+                      >
+                        {item.value}
+                      </a>
+                    ) : (
+                      <p className="mt-5 font-bold text-green-700">
+                        {item.value}
+                      </p>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Contact form and side panel */}
+        <section
+          id="contact-form"
+          className="bg-gray-50 px-6 py-16 md:py-24"
+        >
+          <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-5">
+            {/* Left panel */}
+            <div className="relative overflow-hidden rounded-3xl bg-black p-8 text-white md:p-10 lg:col-span-2">
+              <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-green-500/20 blur-2xl" />
+
+              <div className="relative">
+                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-green-600">
+                  <MessageSquare size={27} />
+                </div>
+
+                <h2 className="text-3xl font-extrabold">
+                  Tell Us About Your Project
+                </h2>
+
+                <p className="mt-5 leading-7 text-gray-300">
+                  Tell us what your business needs. We'll help you explore
+                  suitable solutions and the next steps.
+                </p>
+
+                <div className="mt-10 space-y-5">
+                  {[
+                    "Business energy solutions",
+                    "Connectivity and internet",
+                    "Business water services",
+                    "General business enquiries",
+                  ].map((service) => (
+                    <div key={service} className="flex items-center gap-3">
+                      <CheckCircle2
+                        size={20}
+                        className="shrink-0 text-green-400"
+                      />
+                      <span className="text-sm text-gray-200">{service}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-10 border-t border-white/15 pt-6">
+                  <p className="text-sm text-gray-400">
+                    Prefer to speak with someone?
+                  </p>
+                  <a
+                    href="tel:+923336516071"
+                    className="mt-2 inline-flex items-center gap-2 font-bold text-green-400 hover:text-green-300"
+                  >
+                    <Phone size={17} />
+                    +92 333 6516071
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Right form */}
+            <div className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm md:p-10 lg:col-span-3">
+              <h2 className="text-2xl font-extrabold md:text-3xl">
+                Send Us a Message
+              </h2>
+              <p className="mt-3 leading-7 text-gray-600">
+                Fill out the form below and tell us how we can assist you.
               </p>
 
-              <div className="mt-8 flex flex-wrap gap-3">
-                <span className="rounded-full border border-slate-700 bg-slate-950/70 px-4 py-2 text-sm text-slate-300">
-                  Business-focused support
-                </span>
-
-                <span className="rounded-full border border-slate-700 bg-slate-950/70 px-4 py-2 text-sm text-slate-300">
-                  Straightforward enquiries
-                </span>
-
-                <span className="rounded-full border border-slate-700 bg-slate-950/70 px-4 py-2 text-sm text-slate-300">
-                  Support when you need it
-                </span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Introduction */}
-        <section className="bg-white py-20">
-          <div className="mx-auto max-w-7xl px-6">
-            <div className="grid items-center gap-12 lg:grid-cols-2">
-              <div>
-                <span className="text-sm font-semibold uppercase tracking-wider text-blue-600">
-                  Get In Touch
-                </span>
-
-                <h2 className="mt-3 text-3xl font-bold text-slate-900 md:text-4xl">
-                  How can we help?
-                </h2>
-
-                <p className="mt-4 text-lg leading-8 text-slate-600">
-                  Complete the form and send us your enquiry. Our team can
-                  review your message and get back to you.
-                </p>
-
-                <p className="mt-4 leading-8 text-slate-600">
-                  Whether you have a question about one of our business
-                  services, want to discuss your requirements, or simply need
-                  more information before making a decision, you can contact
-                  us using the form.
-                </p>
-
-                <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                  <div className="rounded-2xl border border-slate-200 p-5">
-                    <h3 className="font-bold text-slate-900">
-                      General Enquiries
-                    </h3>
-
-                    <p className="mt-2 text-sm leading-6 text-slate-600">
-                      Ask a question about our services, enquiry process or
-                      how we may be able to help your business.
-                    </p>
+              <form
+                action="mailto:info@nexa.com"
+                method="post"
+                encType="text/plain"
+                className="mt-8 space-y-6"
+              >
+                <div className="grid gap-6 sm:grid-cols-2">
+                  <div>
+                    <label
+                      htmlFor="name"
+                      className="mb-2 block text-sm font-semibold text-gray-800"
+                    >
+                      Full Name *
+                    </label>
+                    <input
+                      id="name"
+                      name="Name"
+                      type="text"
+                      placeholder="Enter your full name"
+                      required
+                      className="w-full rounded-xl border border-gray-300 bg-white px-4 py-3.5 text-black outline-none transition placeholder:text-gray-400 focus:border-green-600 focus:ring-2 focus:ring-green-600/15"
+                    />
                   </div>
 
-                  <div className="rounded-2xl border border-slate-200 p-5">
-                    <h3 className="font-bold text-slate-900">
-                      Business Requirements
-                    </h3>
-
-                    <p className="mt-2 text-sm leading-6 text-slate-600">
-                      Tell us about a particular business requirement and
-                      provide details about what you are looking for.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="overflow-hidden rounded-[2rem]">
-                <img
-                  src="https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1400&q=85"
-                  alt="Business professionals communicating in a modern office"
-                  className="h-[480px] w-full object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section className="bg-slate-50 py-20">
-          <div className="mx-auto max-w-7xl px-6">
-            <div className="grid gap-10 lg:grid-cols-5">
-              
-              {/* Contact Information */}
-              <div className="lg:col-span-2">
-                <span className="text-sm font-semibold uppercase tracking-wider text-blue-600">
-                  Contact Information
-                </span>
-
-                <h2 className="mt-3 text-3xl font-bold text-slate-900">
-                  We&apos;re here to help.
-                </h2>
-
-                <p className="mt-4 leading-7 text-slate-600">
-                  If you have a question or would like to discuss your
-                  requirements, use the details below or send us a message
-                  through the contact form.
-                </p>
-
-                <div className="mt-8 space-y-5">
-                  <div className="rounded-2xl border border-slate-200 bg-white p-5">
-                    <p className="text-sm text-slate-500">Email</p>
-
-                    <p className="mt-1 font-semibold text-slate-900">
-                      hello@example.com
-                    </p>
-
-                    <p className="mt-2 text-sm leading-6 text-slate-500">
-                      Send us your general enquiry or business question.
-                    </p>
-                  </div>
-
-                  <div className="rounded-2xl border border-slate-200 bg-white p-5">
-                    <p className="text-sm text-slate-500">Phone</p>
-
-                    <p className="mt-1 font-semibold text-slate-900">
-                      +44 0000 000000
-                    </p>
-
-                    <p className="mt-2 text-sm leading-6 text-slate-500">
-                      Contact us to discuss your requirements.
-                    </p>
-                  </div>
-
-                  <div className="rounded-2xl border border-slate-200 bg-white p-5">
-                    <p className="text-sm text-slate-500">
-                      Business Hours
-                    </p>
-
-                    <p className="mt-1 font-semibold text-slate-900">
-                      Monday - Friday
-                    </p>
-
-                    <p className="mt-2 text-sm leading-6 text-slate-500">
-                      Our business enquiries are handled during normal
-                      working hours.
-                    </p>
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="mb-2 block text-sm font-semibold text-gray-800"
+                    >
+                      Email Address *
+                    </label>
+                    <input
+                      id="email"
+                      name="Email"
+                      type="email"
+                      placeholder="you@example.com"
+                      required
+                      className="w-full rounded-xl border border-gray-300 bg-white px-4 py-3.5 text-black outline-none transition placeholder:text-gray-400 focus:border-green-600 focus:ring-2 focus:ring-green-600/15"
+                    />
                   </div>
                 </div>
 
-                <div className="mt-6 overflow-hidden rounded-3xl">
-                  <img
-                    src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85"
-                    alt="Professional business team working together"
-                    className="h-64 w-full object-cover"
+                <div className="grid gap-6 sm:grid-cols-2">
+                  <div>
+                    <label
+                      htmlFor="phone"
+                      className="mb-2 block text-sm font-semibold text-gray-800"
+                    >
+                      Phone Number
+                    </label>
+                    <input
+                      id="phone"
+                      name="Phone"
+                      type="tel"
+                      placeholder="Enter your phone number"
+                      className="w-full rounded-xl border border-gray-300 bg-white px-4 py-3.5 text-black outline-none transition placeholder:text-gray-400 focus:border-green-600 focus:ring-2 focus:ring-green-600/15"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="service"
+                      className="mb-2 block text-sm font-semibold text-gray-800"
+                    >
+                      Service Needed *
+                    </label>
+                    <select
+                      id="service"
+                      name="Service"
+                      required
+                      defaultValue=""
+                      className="w-full rounded-xl border border-gray-300 bg-white px-4 py-3.5 text-black outline-none transition focus:border-green-600 focus:ring-2 focus:ring-green-600/15"
+                    >
+                      <option value="" disabled>
+                        Select a service
+                      </option>
+                      <option value="Business Energy">
+                        Business Energy
+                      </option>
+                      <option value="Connectivity">Connectivity</option>
+                      <option value="Business Water">Business Water</option>
+                      <option value="Other">Other Enquiry</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="message"
+                    className="mb-2 block text-sm font-semibold text-gray-800"
+                  >
+                    Your Message *
+                  </label>
+                  <textarea
+                    id="message"
+                    name="Message"
+                    rows={5}
+                    required
+                    placeholder="Tell us a little about what you need..."
+                    className="w-full resize-y rounded-xl border border-gray-300 bg-white px-4 py-3.5 text-black outline-none transition placeholder:text-gray-400 focus:border-green-600 focus:ring-2 focus:ring-green-600/15"
                   />
                 </div>
-              </div>
 
-              {/* REAL DATABASE-BACKED CONTACT FORM */}
-              <div className="lg:col-span-3">
-                <ContactForm />
-              </div>
-
-            </div>
-          </div>
-        </section>
-
-        {/* How We Can Help */}
-        <section className="bg-white py-20">
-          <div className="mx-auto max-w-7xl px-6">
-            <div className="mx-auto max-w-3xl text-center">
-              <span className="text-sm font-semibold uppercase tracking-wider text-blue-600">
-                Business Support
-              </span>
-
-              <h2 className="mt-3 text-3xl font-bold text-slate-900 md:text-4xl">
-                What can you contact us about?
-              </h2>
-
-              <p className="mt-5 leading-8 text-slate-600">
-                Our contact page is designed for businesses looking for
-                information, guidance or support around the services they may
-                need.
-              </p>
-            </div>
-
-            <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-              {[
-                {
-                  title: "Service Questions",
-                  description:
-                    "Have questions about business energy, connectivity, water, waste, finance, insurance or payment solutions?",
-                },
-                {
-                  title: "Business Requirements",
-                  description:
-                    "Tell us about your organisation and the type of service or solution you are currently looking for.",
-                },
-                {
-                  title: "General Enquiries",
-                  description:
-                    "Need more information before making an enquiry? Send us your question and provide some context.",
-                },
-                {
-                  title: "Existing Enquiries",
-                  description:
-                    "If you have already made an enquiry, you can use the contact form to provide additional information.",
-                },
-              ].map((item) => (
-                <div
-                  key={item.title}
-                  className="rounded-3xl border border-slate-200 p-7 transition hover:-translate-y-1 hover:shadow-lg"
+                <button
+                  type="submit"
+                  className="inline-flex w-full items-center justify-center gap-3 rounded-xl bg-green-700 px-6 py-4 font-bold text-white transition hover:bg-green-600 sm:w-auto"
                 >
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-lg font-bold text-blue-600">
-                    ✓
-                  </div>
+                  Send Message
+                  <Send size={18} />
+                </button>
 
-                  <h3 className="mt-5 text-xl font-bold text-slate-900">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-3 leading-7 text-slate-600">
-                    {item.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Process */}
-        <section className="bg-slate-950 py-20 text-white">
-          <div className="mx-auto max-w-7xl px-6">
-            <div className="grid items-center gap-12 lg:grid-cols-2">
-              <div>
-                <span className="text-sm font-semibold uppercase tracking-wider text-blue-400">
-                  Simple Process
-                </span>
-
-                <h2 className="mt-3 text-3xl font-bold md:text-4xl">
-                  Getting in touch is straightforward.
-                </h2>
-
-                <p className="mt-5 leading-8 text-slate-300">
-                  You don&apos;t need to know exactly what solution you need
-                  before contacting us. Start by explaining your question,
-                  requirements or current situation.
+                <p className="text-xs leading-5 text-gray-500">
+                  This form uses your device's configured email application.
+                  For direct website submissions, connect it to a backend or
+                  form service.
                 </p>
-
-                <div className="mt-8 space-y-6">
-                  <div className="flex gap-4">
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-600 text-sm font-bold">
-                      01
-                    </span>
-
-                    <div>
-                      <h3 className="font-bold">
-                        Tell us what you need
-                      </h3>
-
-                      <p className="mt-1 text-sm leading-6 text-slate-400">
-                        Provide a few details about your question or business
-                        requirement.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-4">
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-600 text-sm font-bold">
-                      02
-                    </span>
-
-                    <div>
-                      <h3 className="font-bold">
-                        We review your enquiry
-                      </h3>
-
-                      <p className="mt-1 text-sm leading-6 text-slate-400">
-                        Your message gives us useful context about what you are
-                        looking for.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-4">
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-600 text-sm font-bold">
-                      03
-                    </span>
-
-                    <div>
-                      <h3 className="font-bold">
-                        Discuss the next steps
-                      </h3>
-
-                      <p className="mt-1 text-sm leading-6 text-slate-400">
-                        You can then continue the conversation based on your
-                        particular requirements.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="overflow-hidden rounded-[2rem]">
-                <img
-                  src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1400&q=85"
-                  alt="Business team discussing requirements together"
-                  className="h-[500px] w-full object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Service Areas */}
-        <section className="bg-slate-50 py-20">
-          <div className="mx-auto max-w-7xl px-6">
-            <div className="mx-auto max-w-3xl text-center">
-              <span className="text-sm font-semibold uppercase tracking-wider text-blue-600">
-                Our Service Areas
-              </span>
-
-              <h2 className="mt-3 text-3xl font-bold text-slate-900 md:text-4xl">
-                Support across key business services
-              </h2>
-
-              <p className="mt-5 leading-8 text-slate-600">
-                If your enquiry relates to one of the areas below, mention it
-                in your message so you can provide the most relevant
-                information.
-              </p>
-            </div>
-
-            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {[
-                {
-                  title: "Business Energy",
-                  description:
-                    "Questions about electricity, gas or wider business energy requirements.",
-                },
-                {
-                  title: "Business Connectivity",
-                  description:
-                    "Enquiries about broadband, business phone and communication requirements.",
-                },
-                {
-                  title: "Business Water",
-                  description:
-                    "Questions about commercial water services and premises requirements.",
-                },
-                {
-                  title: "Waste Management",
-                  description:
-                    "Enquiries about business waste collection and practical waste management.",
-                },
-                {
-                  title: "Business Finance",
-                  description:
-                    "Questions about potential finance solutions and business funding requirements.",
-                },
-                {
-                  title: "Business Insurance",
-                  description:
-                    "Enquiries about business protection, property, people and professional risks.",
-                },
-              ].map((service) => (
-                <div
-                  key={service.title}
-                  className="rounded-3xl bg-white p-7 shadow-sm ring-1 ring-slate-200"
-                >
-                  <h3 className="text-xl font-bold text-slate-900">
-                    {service.title}
-                  </h3>
-
-                  <p className="mt-3 leading-7 text-slate-600">
-                    {service.description}
-                  </p>
-                </div>
-              ))}
+              </form>
             </div>
           </div>
         </section>
 
         {/* Final CTA */}
-        <section className="bg-blue-600 py-20 text-white">
-          <div className="mx-auto max-w-5xl px-6 text-center">
-            <h2 className="text-3xl font-bold md:text-4xl">
-              Have a question about your business requirements?
-            </h2>
+        <section className="px-6 py-16 md:py-20">
+          <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-7 rounded-3xl bg-green-700 p-8 text-white md:flex-row md:items-center md:p-12">
+            <div>
+              <p className="font-semibold text-green-100">
+                Ready to get started?
+              </p>
+              <h2 className="mt-2 text-3xl font-extrabold md:text-4xl">
+                Let's Talk About Your Business.
+              </h2>
+              <p className="mt-3 max-w-xl leading-7 text-green-50">
+                Contact us today to discuss your requirements and find the
+                right solution.
+              </p>
+            </div>
 
-            <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-blue-100">
-              Send us a message and tell us what you need. Whether you have a
-              general question or are exploring a specific business service,
-              we&apos;re ready to hear from you.
-            </p>
-
-            <a
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-
-                window.scrollTo({
-                  top: 0,
-                  behavior: "smooth",
-                });
-              }}
-              className="mt-8 inline-flex rounded-xl bg-white px-7 py-4 font-semibold text-blue-600 transition hover:bg-slate-100"
+            <Link
+              href="/quote"
+              className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-white px-6 py-4 font-bold text-green-800 transition hover:bg-gray-100"
             >
-              Contact Us
-            </a>
+              Get a Quote
+              <ArrowRight size={18} />
+            </Link>
           </div>
         </section>
       </main>
-      
 
       <Footer />
     </>

@@ -88,7 +88,7 @@ export default function AboutPage() {
       icon: Search,
       title: "Explore Your Options",
       description:
-        "We help you explore relevant options across the service categories available through Nexa.",
+        "Explore relevant options across the service categories available through Nexa.",
     },
     {
       number: "03",
@@ -103,229 +103,271 @@ export default function AboutPage() {
     <>
       <Navbar />
 
-      <main>
-        {/* HERO */}
-        <section className="relative overflow-hidden bg-slate-950 py-24 text-white md:py-32">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.22),transparent_35%)]" />
+      <main className="overflow-hidden bg-white text-black">
+        {/* Hero */}
+        <section className="relative overflow-hidden bg-black py-24 text-white md:py-32">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(22,163,74,0.22),transparent_40%)]" />
+          <div className="absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-green-600/10 blur-3xl" />
 
-          <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-6 lg:grid-cols-2">
-            <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-blue-400/20 bg-blue-400/10 px-4 py-2 text-sm font-semibold text-blue-300">
-                <Building2 className="h-4 w-4" />
-                About Nexa Business Solutions
-              </div>
+          <div className="relative mx-auto max-w-7xl px-6">
+            <div className="grid items-center gap-14 lg:grid-cols-2">
+              <div>
+                <span className="inline-flex items-center gap-2 rounded-full border border-green-500/30 bg-green-500/10 px-4 py-2 text-sm font-bold text-green-400">
+                  <Building2 size={17} />
+                  About Nexa
+                </span>
 
-              <h1 className="mt-6 max-w-4xl text-4xl font-bold leading-tight md:text-6xl">
-                Making Business Services
-                <span className="text-blue-400"> Easier to Compare</span>
-              </h1>
+                <h1 className="mt-7 text-4xl font-black leading-tight tracking-tight md:text-6xl">
+                  Business Solutions.
+                  <span className="mt-2 block text-green-500">
+                    Made Simpler.
+                  </span>
+                </h1>
 
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl">
-                We help UK businesses explore essential services through a
-                simpler comparison and enquiry process, giving business owners
-                a clearer way to understand their options.
-              </p>
+                <p className="mt-6 max-w-xl text-lg leading-8 text-neutral-300">
+                  We help businesses explore energy, connectivity, water and
+                  payment solutions in one convenient place, making it easier
+                  to understand available options and decide on the next step.
+                </p>
 
-              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-                <Link
-                  href="/quote"
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-7 py-4 font-semibold text-white transition hover:bg-blue-700"
-                >
-                  Get a Quote
-                  <ArrowRight className="h-5 w-5" />
-                </Link>
+                <div className="mt-9 flex flex-wrap gap-4">
+                  <Link
+                    href="/quote"
+                    className="inline-flex items-center gap-2 rounded-xl bg-green-600 px-6 py-4 font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-green-700"
+                  >
+                    Explore Your Options
+                    <ArrowRight size={18} />
+                  </Link>
 
-                <Link
-                  href="/services"
-                  className="inline-flex items-center justify-center rounded-xl border border-slate-700 px-7 py-4 font-semibold text-white transition hover:bg-slate-900"
-                >
-                  Explore Services
-                </Link>
-              </div>
-
-              <div className="mt-10 flex flex-wrap gap-x-8 gap-y-4 text-sm text-slate-400">
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-blue-400" />
-                  Simple enquiry process
-                </div>
-
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-blue-400" />
-                  Multiple service categories
-                </div>
-
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-blue-400" />
-                  Built for UK businesses
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center gap-2 rounded-xl border border-white/20 px-6 py-4 font-bold text-white transition-colors hover:border-green-500 hover:bg-white/5"
+                  >
+                    Contact Us
+                  </Link>
                 </div>
               </div>
-            </div>
 
-            {/* HERO IMAGE */}
-            <div className="relative">
-              <div className="absolute -inset-4 rounded-[2rem] bg-blue-600/20 blur-2xl" />
+              <div className="relative">
+                <div className="absolute -inset-4 rounded-[2rem] bg-green-500/10 blur-2xl" />
 
-              <div className="relative overflow-hidden rounded-[2rem] border border-slate-800 bg-slate-900 shadow-2xl">
-                <img
-                  src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85"
-                  alt="Business team working together"
-                  className="h-[420px] w-full object-cover"
-                />
+                <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-neutral-950 p-7 shadow-2xl md:p-9">
+                  <div className="flex items-center gap-4 border-b border-white/10 pb-6">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-green-600 text-white">
+                      <Building2 size={29} />
+                    </div>
 
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
+                    <div>
+                      <p className="text-xl font-extrabold text-white">
+                        One Business. Multiple Needs.
+                      </p>
+                      <p className="mt-1 text-sm text-neutral-400">
+                        Explore solutions in one place.
+                      </p>
+                    </div>
+                  </div>
 
-                <div className="absolute bottom-6 left-6 right-6 rounded-2xl border border-white/10 bg-slate-950/80 p-5 backdrop-blur-md">
-                  <p className="text-sm font-semibold text-blue-400">
-                    Business made simpler
-                  </p>
+                  <div className="mt-6 grid grid-cols-2 gap-4">
+                    {services.map((service) => {
+                      const Icon = service.icon;
 
-                  <p className="mt-1 text-lg font-bold text-white">
-                    One place to explore essential business services.
-                  </p>
+                      return (
+                        <div
+                          key={service.title}
+                          className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 transition-colors hover:border-green-500/40 hover:bg-green-500/5"
+                        >
+                          <Icon className="h-7 w-7 text-green-500" />
+
+                          <h3 className="mt-4 text-sm font-bold text-white">
+                            {service.title}
+                          </h3>
+
+                          <p className="mt-2 text-xs leading-5 text-neutral-400">
+                            Business service options
+                          </p>
+                        </div>
+                      );
+                    })}
+                  </div>
+
+                  <div className="mt-5 flex items-center gap-3 rounded-xl bg-green-600/10 p-4">
+                    <CheckCircle2 className="h-5 w-5 shrink-0 text-green-500" />
+                    <p className="text-sm leading-6 text-neutral-300">
+                      A straightforward starting point for your business
+                      service enquiries.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* WHO WE ARE */}
-        <section className="bg-white py-20 md:py-28">
+        {/* Introduction */}
+        <section className="bg-white py-20 md:py-24">
           <div className="mx-auto grid max-w-7xl items-center gap-14 px-6 lg:grid-cols-2">
             <div>
-              <span className="text-sm font-bold uppercase tracking-wider text-blue-600">
+              <span className="text-sm font-extrabold uppercase tracking-[0.2em] text-green-700">
                 Who We Are
               </span>
 
-              <h2 className="mt-4 text-3xl font-bold leading-tight text-slate-900 md:text-5xl">
-                Business Comparison
-                <span className="text-blue-600"> Without the Complexity</span>
+              <h2 className="mt-4 text-3xl font-black leading-tight tracking-tight text-black md:text-5xl">
+                Helping Businesses Find Their Way Forward
               </h2>
 
-              <div className="mt-6 space-y-5 text-lg leading-8 text-slate-600">
-                <p>
-                  At Nexa Business Solutions, we believe business owners
-                  should spend less time searching for providers and more time
-                  growing their businesses.
-                </p>
+              <p className="mt-6 text-lg leading-8 text-neutral-600">
+                Running a business means making decisions about services that
+                support your everyday operations. Finding and comparing
+                different options can take time.
+              </p>
 
-                <p>
-                  Essential business services can often involve researching
-                  different providers, understanding different options and
-                  working out which solution is right for your business.
-                </p>
+              <p className="mt-4 leading-8 text-neutral-600">
+                Nexa provides a starting point for exploring business energy,
+                connectivity, water and payment services. Our aim is to make
+                the process clearer, more organised and easier to navigate.
+              </p>
 
-                <p>
-                  Nexa brings these service categories together through a
-                  straightforward comparison and enquiry journey, helping
-                  businesses explore their options in one place.
-                </p>
-              </div>
+              <div className="mt-8 flex items-start gap-4 rounded-2xl border border-green-100 bg-green-50 p-5">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-green-700 text-white">
+                  <Target size={24} />
+                </div>
 
-              <div className="mt-8">
-                <Link
-                  href="/quote"
-                  className="inline-flex items-center gap-2 font-semibold text-blue-600 transition hover:text-blue-700"
-                >
-                  Start your enquiry
-                  <ArrowRight className="h-5 w-5" />
-                </Link>
+                <div>
+                  <h3 className="font-extrabold text-black">Our Purpose</h3>
+                  <p className="mt-2 text-sm leading-7 text-neutral-600">
+                    To help businesses understand their options and take the
+                    next step with greater clarity.
+                  </p>
+                </div>
               </div>
             </div>
 
             <div className="relative">
-              <div className="grid grid-cols-2 gap-5">
-                <div className="overflow-hidden rounded-3xl">
-                  <img
-                    src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=85"
-                    alt="Business professionals meeting"
-                    className="h-72 w-full object-cover"
-                  />
-                </div>
+              <div className="absolute -bottom-5 -left-5 h-40 w-40 rounded-3xl bg-green-100" />
 
-                <div className="mt-10 rounded-3xl bg-slate-950 p-7 text-white">
-                  <Users className="h-9 w-9 text-blue-400" />
+              <div className="relative overflow-hidden rounded-3xl border border-neutral-200 shadow-xl">
+                <img
+                  src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1400&q=85"
+                  alt="Business professionals working together"
+                  className="h-[380px] w-full object-cover md:h-[470px]"
+                />
 
-                  <p className="mt-6 text-2xl font-bold">
-                    Business-first
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent p-7 pt-20 md:p-9 md:pt-24">
+                  <p className="text-2xl font-black text-white md:text-3xl">
+                    Your Business.
+                    <span className="block text-green-400">
+                      Your Next Step.
+                    </span>
                   </p>
-
-                  <p className="mt-3 leading-7 text-slate-300">
-                    Our approach is designed around making essential service
-                    decisions easier for business owners.
-                  </p>
-                </div>
-
-                <div className="rounded-3xl bg-blue-600 p-7 text-white">
-                  <Target className="h-9 w-9" />
-
-                  <p className="mt-6 text-2xl font-bold">
-                    Clearer Choices
-                  </p>
-
-                  <p className="mt-3 leading-7 text-blue-100">
-                    Explore relevant service categories through a simple,
-                    structured process.
-                  </p>
-                </div>
-
-                <div className="overflow-hidden rounded-3xl">
-                  <img
-                    src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=85"
-                    alt="Business people collaborating"
-                    className="h-72 w-full object-cover"
-                  />
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* SERVICES */}
-        <section className="bg-slate-50 py-20 md:py-28">
+        {/* Mission and vision */}
+        <section className="bg-green-50/70 py-20 md:py-24">
           <div className="mx-auto max-w-7xl px-6">
             <div className="mx-auto max-w-3xl text-center">
-              <span className="text-sm font-bold uppercase tracking-wider text-blue-600">
-                What We Help With
+              <span className="text-sm font-extrabold uppercase tracking-[0.2em] text-green-800">
+                Our Direction
               </span>
 
-              <h2 className="mt-4 text-3xl font-bold text-slate-900 md:text-5xl">
-                Essential Services for Modern Businesses
+              <h2 className="mt-4 text-3xl font-black tracking-tight text-black md:text-4xl">
+                Built Around Business Needs
               </h2>
 
-              <p className="mt-5 text-lg leading-8 text-slate-600">
-                From keeping your business connected to managing everyday
-                essentials, Nexa helps you explore a range of important
-                business services.
+              <p className="mt-4 leading-8 text-neutral-600">
+                Our approach centres on making it easier to explore relevant
+                services and understand the options available.
               </p>
             </div>
 
-            <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-12 grid gap-7 md:grid-cols-2">
+              <div className="group rounded-3xl border border-green-100 bg-white p-8 shadow-sm transition-all hover:-translate-y-1 hover:border-green-300 hover:shadow-xl hover:shadow-green-900/5 md:p-10">
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-green-700 text-white transition-transform group-hover:scale-105">
+                  <Target size={28} />
+                </div>
+
+                <h3 className="mt-6 text-2xl font-black text-black">
+                  Our Mission
+                </h3>
+
+                <p className="mt-4 leading-8 text-neutral-600">
+                  To provide businesses with a straightforward way to explore
+                  essential service categories, understand their options and
+                  make informed decisions about their requirements.
+                </p>
+              </div>
+
+              <div className="group rounded-3xl border border-neutral-200 bg-black p-8 text-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl md:p-10">
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-green-600 text-white transition-transform group-hover:scale-105">
+                  <Eye size={28} />
+                </div>
+
+                <h3 className="mt-6 text-2xl font-black text-white">
+                  Our Vision
+                </h3>
+
+                <p className="mt-4 leading-8 text-neutral-300">
+                  To create a convenient starting point where businesses can
+                  discover relevant service options and move forward with
+                  greater confidence.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Services */}
+        <section className="bg-white py-20 md:py-24">
+          <div className="mx-auto max-w-7xl px-6">
+            <div className="max-w-3xl">
+              <span className="text-sm font-extrabold uppercase tracking-[0.2em] text-green-700">
+                What We Offer
+              </span>
+
+              <h2 className="mt-4 text-3xl font-black tracking-tight text-black md:text-5xl">
+                Solutions for the Way Your Business Works
+              </h2>
+
+              <p className="mt-5 text-lg leading-8 text-neutral-600">
+                From keeping your business connected to managing essential
+                services, explore the solutions available through our
+                platform.
+              </p>
+            </div>
+
+            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {services.map((service) => {
                 const Icon = service.icon;
 
                 return (
                   <div
                     key={service.title}
-                    className="group rounded-3xl border border-slate-200 bg-white p-7 transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl"
+                    className="group rounded-3xl border border-neutral-200 bg-white p-7 transition-all duration-300 hover:-translate-y-2 hover:border-green-300 hover:shadow-xl hover:shadow-green-900/10"
                   >
-                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 transition group-hover:bg-blue-600 group-hover:text-white">
-                      <Icon className="h-7 w-7" />
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-green-100 text-green-800 transition-colors group-hover:bg-green-700 group-hover:text-white">
+                      <Icon size={27} />
                     </div>
 
-                    <h3 className="mt-6 text-xl font-bold text-slate-900">
+                    <h3 className="mt-6 text-xl font-extrabold text-black">
                       {service.title}
                     </h3>
 
-                    <p className="mt-3 leading-7 text-slate-600">
+                    <p className="mt-3 text-sm leading-7 text-neutral-600">
                       {service.description}
                     </p>
 
                     <Link
-                      href="/services"
-                      className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-blue-600"
+                      href="/quote"
+                      className="mt-6 inline-flex items-center gap-2 text-sm font-extrabold text-green-800 transition-colors hover:text-green-950"
                     >
-                      Learn more
-                      <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+                      Explore Service
+                      <ArrowRight
+                        size={17}
+                        className="transition-transform group-hover:translate-x-1"
+                      />
                     </Link>
                   </div>
                 );
@@ -334,31 +376,81 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* WHY NEXA */}
-        <section className="bg-white py-20 md:py-28">
+        {/* How it works */}
+        <section className="bg-neutral-50 py-20 md:py-24">
           <div className="mx-auto max-w-7xl px-6">
-            <div className="grid gap-14 lg:grid-cols-[0.8fr_1.2fr]">
+            <div className="mx-auto max-w-3xl text-center">
+              <span className="text-sm font-extrabold uppercase tracking-[0.2em] text-green-700">
+                How It Works
+              </span>
+
+              <h2 className="mt-4 text-3xl font-black tracking-tight text-black md:text-4xl">
+                Simple From Start to Finish
+              </h2>
+
+              <p className="mt-4 leading-8 text-neutral-600">
+                A clear process helps you move from identifying a need to
+                exploring potential solutions.
+              </p>
+            </div>
+
+            <div className="mt-12 grid gap-6 md:grid-cols-3">
+              {steps.map((step) => {
+                const Icon = step.icon;
+
+                return (
+                  <div
+                    key={step.number}
+                    className="relative rounded-3xl border border-neutral-200 bg-white p-8 transition-all hover:-translate-y-1 hover:border-green-300 hover:shadow-xl hover:shadow-green-900/5"
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="text-4xl font-black text-green-700">
+                        {step.number}
+                      </span>
+
+                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-100 text-green-800">
+                        <Icon size={23} />
+                      </div>
+                    </div>
+
+                    <h3 className="mt-7 text-xl font-extrabold text-black">
+                      {step.title}
+                    </h3>
+
+                    <p className="mt-3 leading-7 text-neutral-600">
+                      {step.description}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits */}
+        <section className="bg-white py-20 md:py-24">
+          <div className="mx-auto max-w-7xl px-6">
+            <div className="grid items-start gap-12 lg:grid-cols-[0.8fr_1.2fr]">
               <div>
-                <span className="text-sm font-bold uppercase tracking-wider text-blue-600">
+                <span className="text-sm font-extrabold uppercase tracking-[0.2em] text-green-700">
                   Why Nexa
                 </span>
 
-                <h2 className="mt-4 text-3xl font-bold leading-tight text-slate-900 md:text-5xl">
-                  A Better Way to Explore Business Services
+                <h2 className="mt-4 text-3xl font-black leading-tight tracking-tight text-black md:text-5xl">
+                  One Place for Multiple Business Needs
                 </h2>
 
-                <p className="mt-6 text-lg leading-8 text-slate-600">
-                  We focus on simplifying the comparison journey so you can
-                  spend less time navigating different service options and
-                  more time concentrating on your business.
+                <p className="mt-6 text-lg leading-8 text-neutral-600">
+                  We aim to make the process of exploring business services
+                  easier, clearer and more convenient.
                 </p>
 
                 <Link
-                  href="/quote"
-                  className="mt-8 inline-flex items-center gap-2 rounded-xl bg-slate-950 px-6 py-4 font-semibold text-white transition hover:bg-slate-800"
+                  href="/contact"
+                  className="mt-8 inline-flex items-center gap-2 rounded-xl bg-black px-6 py-4 font-bold text-white transition-colors hover:bg-green-800"
                 >
-                  Start an Enquiry
-                  <ArrowRight className="h-5 w-5" />
+                  Talk to Our Team
+                  <ArrowRight size={18} />
                 </Link>
               </div>
 
@@ -369,17 +461,17 @@ export default function AboutPage() {
                   return (
                     <div
                       key={benefit.title}
-                      className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition hover:shadow-lg"
+                      className="rounded-2xl border border-neutral-200 bg-white p-6 transition-all hover:border-green-300 hover:shadow-lg hover:shadow-green-900/5"
                     >
-                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white">
-                        <Icon className="h-6 w-6" />
+                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-100 text-green-800">
+                        <Icon size={24} />
                       </div>
 
-                      <h3 className="mt-5 text-xl font-bold text-slate-900">
+                      <h3 className="mt-5 text-lg font-extrabold text-black">
                         {benefit.title}
                       </h3>
 
-                      <p className="mt-3 leading-7 text-slate-600">
+                      <p className="mt-3 text-sm leading-7 text-neutral-600">
                         {benefit.description}
                       </p>
                     </div>
@@ -390,156 +482,92 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* PROCESS */}
-        <section className="bg-slate-950 py-20 text-white md:py-28">
-          <div className="mx-auto max-w-7xl px-6">
-            <div className="mx-auto max-w-3xl text-center">
-              <span className="text-sm font-bold uppercase tracking-wider text-blue-400">
-                How It Works
+        {/* How we can help */}
+        <section className="bg-green-50/70 py-20 md:py-24">
+          <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-2">
+            <div className="overflow-hidden rounded-3xl border border-green-100 shadow-xl shadow-green-900/10">
+              <img
+                src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=85"
+                alt="Business discussion and consultation"
+                className="h-[350px] w-full object-cover md:h-[430px]"
+              />
+            </div>
+
+            <div>
+              <span className="text-sm font-extrabold uppercase tracking-[0.2em] text-green-700">
+                Need Help?
               </span>
 
-              <h2 className="mt-4 text-3xl font-bold md:text-5xl">
-                A Simple Three-Step Journey
+              <h2 className="mt-4 text-3xl font-black tracking-tight text-black md:text-4xl">
+                Turn Information Into Your Next Business Step
               </h2>
 
-              <p className="mt-5 text-lg leading-8 text-slate-300">
-                We keep the process straightforward, helping you move from
-                your initial enquiry to exploring your business service
-                options.
+              <p className="mt-5 leading-8 text-neutral-600">
+                Learning about your options is a useful starting point. If
+                you are ready to discuss your requirements, make an enquiry
+                and tell us which services your business currently uses or
+                is considering.
               </p>
-            </div>
 
-            <div className="mt-14 grid gap-6 md:grid-cols-3">
-              {steps.map((step) => {
-                const Icon = step.icon;
+              <p className="mt-4 leading-8 text-neutral-600">
+                We can use the information you provide to better understand
+                what you are looking for and help you explore relevant options.
+              </p>
 
-                return (
-                  <div
-                    key={step.number}
-                    className="relative rounded-3xl border border-slate-800 bg-slate-900 p-8"
-                  >
-                    <div className="flex items-center justify-between">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600">
-                        <Icon className="h-6 w-6" />
-                      </div>
-
-                      <span className="text-4xl font-black text-slate-800">
-                        {step.number}
-                      </span>
-                    </div>
-
-                    <h3 className="mt-7 text-xl font-bold">
-                      {step.title}
-                    </h3>
-
-                    <p className="mt-3 leading-7 text-slate-400">
-                      {step.description}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* MISSION / VISION */}
-        <section className="bg-slate-50 py-20 md:py-28">
-          <div className="mx-auto max-w-7xl px-6">
-            <div className="grid gap-6 md:grid-cols-2">
-              <div className="rounded-3xl bg-white p-8 shadow-sm md:p-12">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 text-blue-600">
-                  <Target className="h-7 w-7" />
-                </div>
-
-                <h2 className="mt-7 text-3xl font-bold text-slate-900">
-                  Our Mission
-                </h2>
-
-                <p className="mt-5 text-lg leading-8 text-slate-600">
-                  To make business comparison simple, transparent and
-                  accessible, helping businesses explore essential services
-                  without unnecessary complexity.
-                </p>
-
-                <div className="mt-7 space-y-3">
-                  <div className="flex items-start gap-3">
-                    <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-blue-600" />
-                    <span className="text-slate-600">
-                      Simple and straightforward enquiries
-                    </span>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-blue-600" />
-                    <span className="text-slate-600">
-                      Multiple essential business services
-                    </span>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-blue-600" />
-                    <span className="text-slate-600">
-                      A clearer way to explore your options
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="rounded-3xl bg-slate-950 p-8 text-white shadow-sm md:p-12">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-500/10 text-blue-400">
-                  <Eye className="h-7 w-7" />
-                </div>
-
-                <h2 className="mt-7 text-3xl font-bold">
-                  Our Vision
-                </h2>
-
-                <p className="mt-5 text-lg leading-8 text-slate-300">
-                  To become a trusted destination for businesses looking for
-                  smarter and simpler ways to explore and manage essential
-                  services.
-                </p>
-
-                <div className="mt-8 rounded-2xl border border-slate-800 bg-slate-900 p-6">
-                  <p className="text-lg font-semibold">
-                    "Helping businesses make clearer choices, one enquiry at a
-                    time."
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* FINAL CTA */}
-        <section className="bg-white py-20 md:py-28">
-          <div className="mx-auto max-w-5xl px-6">
-            <div className="relative overflow-hidden rounded-[2rem] bg-blue-600 px-7 py-14 text-center text-white md:px-14 md:py-20">
-              <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-white/10" />
-              <div className="absolute -bottom-24 -left-16 h-64 w-64 rounded-full bg-white/10" />
-
-              <div className="relative">
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-white/10">
-                  <Zap className="h-8 w-8" />
-                </div>
-
-                <h2 className="mt-7 text-3xl font-bold md:text-5xl">
-                  Ready to Explore Your Options?
-                </h2>
-
-                <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-blue-100">
-                  Tell us what your business needs and start exploring
-                  essential service options through a simple enquiry process.
-                </p>
-
+              <div className="mt-8 flex flex-wrap gap-4">
                 <Link
                   href="/quote"
-                  className="mt-8 inline-flex items-center gap-2 rounded-xl bg-white px-7 py-4 font-bold text-blue-600 transition hover:bg-slate-100"
+                  className="inline-flex items-center gap-2 rounded-xl bg-green-700 px-6 py-3.5 font-bold text-white transition-colors hover:bg-green-800"
                 >
-                  Get a Quote
-                  <ArrowRight className="h-5 w-5" />
+                  Request a Quote
+                  <ArrowRight size={18} />
+                </Link>
+
+                <Link
+                  href="/contact"
+                  className="rounded-xl border border-neutral-300 bg-white px-6 py-3.5 font-bold text-black transition-colors hover:border-green-600 hover:text-green-800"
+                >
+                  Contact Us
                 </Link>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Final CTA */}
+        <section className="relative overflow-hidden bg-green-800 py-20 text-white md:py-24">
+          <div className="absolute -right-20 -top-24 h-80 w-80 rounded-full bg-green-400/20 blur-3xl" />
+          <div className="absolute -bottom-24 -left-20 h-72 w-72 rounded-full bg-black/20 blur-3xl" />
+
+          <div className="relative mx-auto max-w-4xl px-6 text-center">
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-white/20 bg-white/10 text-white">
+              <Users size={32} />
+            </div>
+
+            <h2 className="mt-6 text-3xl font-black tracking-tight md:text-5xl">
+              Ready to Explore Your Business Options?
+            </h2>
+
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-green-100">
+              Tell us what your business needs and explore suitable service
+              options for your organisation.
+            </p>
+
+            <div className="mt-8 flex flex-wrap justify-center gap-4">
+              <Link
+                href="/quote"
+                className="inline-flex items-center gap-2 rounded-xl bg-white px-7 py-4 font-extrabold text-green-900 transition-all hover:-translate-y-0.5 hover:bg-green-50"
+              >
+                Request a Quote
+                <ArrowRight size={18} />
+              </Link>
+
+              <Link
+                href="/contact"
+                className="rounded-xl border border-white/40 px-7 py-4 font-bold text-white transition-colors hover:bg-white/10"
+              >
+                Get in Touch
+              </Link>
             </div>
           </div>
         </section>
@@ -549,4 +577,3 @@ export default function AboutPage() {
     </>
   );
 }
-
