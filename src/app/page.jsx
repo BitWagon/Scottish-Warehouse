@@ -58,25 +58,25 @@ const services = [
     icon: Wifi,
   },
   {
-    title: "Business Phone",
+    title: "Home Electricity",
     description:
-      "Explore flexible business communication solutions for keeping your team and customers connected.",
-    href: "/connectivity/phone-line",
-    icon: Phone,
+      "Explore home electricity options and find a supply plan that suits your household needs.",
+    href: "/energy/electricity",
+    icon: Zap,
   },
   {
-    title: "Business Water",
+    title: "Water Supply",
     description:
-      "Compare commercial water services and discover options suitable for your premises.",
+      "Find information about water supply services and options for your home.",
     href: "/water",
     icon: Droplets,
   },
   {
-    title: "Waste Management",
+    title: "Home Gas",
     description:
-      "Find practical waste collection and management solutions for your business.",
-    href: "/waste",
-    icon: Trash2,
+      "Explore home gas options and find a supply plan that suits your household needs.",
+    href: "/energy/gas",
+    icon: Zap,
   },
 ];
 

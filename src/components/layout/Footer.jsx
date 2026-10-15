@@ -90,9 +90,6 @@ export default function Footer() {
               <Link href="/blog" className="block transition hover:translate-x-1 hover:text-green-400">
                 Blog
               </Link>
-              <Link href="/newsletter" className="block transition hover:translate-x-1 hover:text-green-400">
-                Newsletter
-              </Link>
             </div>
           </div>
 
@@ -115,17 +112,8 @@ export default function Footer() {
               <Link href="/connectivity" className="block transition hover:translate-x-1 hover:text-green-400">
                 Connectivity
               </Link>
-              <Link href="/connectivity/broadband" className="block transition hover:translate-x-1 hover:text-green-400">
-                Business Broadband
-              </Link>
-              <Link href="/connectivity/phone-line" className="block transition hover:translate-x-1 hover:text-green-400">
-                Business Phone Line
-              </Link>
               <Link href="/water" className="block transition hover:translate-x-1 hover:text-green-400">
                 Business Water
-              </Link>
-              <Link href="/card-machine" className="block transition hover:translate-x-1 hover:text-green-400">
-                Card Machines
               </Link>
             </div>
           </div>
@@ -145,12 +133,6 @@ export default function Footer() {
               </Link>
               <Link href="/water" className="block transition hover:translate-x-1 hover:text-green-400">
                 Water Supply
-              </Link>
-              <Link href="/waste" className="block transition hover:translate-x-1 hover:text-green-400">
-                Waste Management
-              </Link>
-              <Link href="/newsletter" className="block transition hover:translate-x-1 hover:text-green-400">
-                Free Newsletter
               </Link>
             </div>
           </div>
