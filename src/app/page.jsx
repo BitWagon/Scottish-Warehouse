@@ -18,7 +18,6 @@ import {
   Zap,
   Wifi,
   Droplets,
-  CreditCard,
   Phone,
   Trash2,
   ChevronDown,
@@ -78,13 +77,6 @@ const services = [
       "Find practical waste collection and management solutions for your business.",
     href: "/waste",
     icon: Trash2,
-  },
-  {
-    title: "Card Machines",
-    description:
-      "Explore convenient payment solutions that help your customers pay quickly and securely.",
-    href: "/card-machine",
-    icon: CreditCard,
   },
 ];
 
@@ -185,7 +177,7 @@ const extraFeatures = [
   {
     title: "Practical Solutions",
     description:
-      "From everyday utilities to connectivity and payment services, we help you explore solutions that fit your operation.",
+      "From everyday utilities to connectivity and energy-efficiency services, we help you explore solutions that fit your operation.",
     icon: Lightbulb,
   },
 ];
@@ -197,31 +189,31 @@ export default function Home() {
 
       <main>
         {/* HERO */}
-        <section className="relative overflow-hidden bg-slate-950 text-white">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(37,99,235,0.18),transparent_35%),radial-gradient(circle_at_80%_70%,rgba(14,165,233,0.12),transparent_35%)]" />
+        <section className="relative overflow-hidden bg-gradient-to-br from-green-50 via-white to-emerald-50 text-slate-900">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(22,163,74,0.10),transparent_35%),radial-gradient(circle_at_85%_75%,rgba(16,185,129,0.10),transparent_35%)]" />
 
           <div className="relative mx-auto grid max-w-7xl gap-16 px-6 py-24 lg:grid-cols-2 lg:items-center lg:py-32">
             <div>
-              <span className="inline-flex rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold tracking-wide text-blue-300">
+              <span className="inline-flex rounded-full border border-green-500/30 bg-green-500/10 px-4 py-2 text-sm font-semibold tracking-wide text-green-300">
                 BUSINESS SOLUTIONS, SIMPLIFIED
               </span>
 
               <h1 className="mt-7 text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-                Find Better Business Deals{" "}
-                <span className="text-blue-400">Without the Hassle</span>
+                Smarter Energy Choices for Your Business{" "}
+                <span className="text-green-700">Start Here</span>
               </h1>
 
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-                We help UK businesses compare essential services, discover
-                competitive options, and make informed decisions with
-                confidence. From energy and connectivity to water and payment
-                solutions, we make business comparison simple.
+                Discover business energy options, explore practical ways to improve
+                energy efficiency, and compare essential services for your
+                premises. Nexa helps you start with a clear enquiry and understand
+                the options available for your business.
               </p>
 
               <div className="mt-9 flex flex-col gap-4 sm:flex-row">
                 <Link
                   href="/quote"
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-4 font-semibold text-white transition hover:bg-blue-700"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-green-700 px-7 py-4 font-semibold text-white shadow-lg shadow-green-700/20 transition hover:-translate-y-0.5 hover:bg-green-800"
                 >
                   Get Your Free Quote
                   <ArrowRight className="h-5 w-5" />
@@ -229,7 +221,7 @@ export default function Home() {
 
                 <Link
                   href="/services"
-                  className="inline-flex items-center justify-center rounded-xl border border-slate-700 px-6 py-4 font-semibold text-white transition hover:border-blue-400 hover:bg-white/5"
+                  className="inline-flex items-center justify-center rounded-xl border border-green-200 bg-white px-7 py-4 font-semibold text-slate-800 transition hover:border-green-500 hover:bg-green-50"
                 >
                   Explore Our Services
                 </Link>
@@ -238,7 +230,7 @@ export default function Home() {
 
             {/* HERO IMAGE */}
             <div className="relative hidden min-h-[500px] lg:block">
-              <div className="absolute right-10 top-10 h-72 w-72 rounded-full bg-blue-600/20 blur-3xl" />
+              <div className="absolute right-10 top-10 h-72 w-72 rounded-full bg-green-700/20 blur-3xl" />
 
               <div className="absolute right-0 top-0 h-[400px] w-[520px] overflow-hidden rounded-[2rem] border border-white/10 shadow-2xl">
                 <img
@@ -251,7 +243,7 @@ export default function Home() {
 
                 <div className="absolute bottom-6 left-6 right-6 rounded-2xl border border-white/10 bg-slate-950/80 p-5 backdrop-blur">
                   <div className="flex items-center gap-3">
-                    <CheckCircle2 className="h-6 w-6 text-blue-400" />
+                    <CheckCircle2 className="h-6 w-6 text-green-500" />
                     <div>
                       <p className="font-semibold">
                         Business Services Made Simple
@@ -272,12 +264,12 @@ export default function Home() {
           <div className="mx-auto max-w-7xl px-6">
             <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
               <div>
-                <span className="text-sm font-bold uppercase tracking-wider text-blue-600">
+                <span className="text-sm font-bold uppercase tracking-wider text-green-700">
                   One Place. Multiple Solutions.
                 </span>
 
                 <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 md:text-5xl">
-                  Everything Your Business Needs, In One Place
+                  Essential Services for a More Efficient Business
                 </h2>
               </div>
 
@@ -303,7 +295,7 @@ export default function Home() {
               </div>
 
               <div>
-                <span className="text-sm font-bold uppercase tracking-wider text-blue-600">
+                <span className="text-sm font-bold uppercase tracking-wider text-green-700">
                   Built Around Your Business
                 </span>
 
@@ -314,7 +306,7 @@ export default function Home() {
                 <p className="mt-6 text-lg leading-8 text-slate-600">
                   Every business has different priorities. A growing office
                   may need dependable broadband, while a restaurant may be
-                  focused on energy, water, waste and payment solutions.
+                  focused on energy, water and waste management.
                 </p>
 
                 <p className="mt-5 text-lg leading-8 text-slate-600">
@@ -331,7 +323,7 @@ export default function Home() {
                     "Clear information",
                   ].map((item) => (
                     <div key={item} className="flex items-center gap-3">
-                      <CheckCircle2 className="h-5 w-5 shrink-0 text-blue-600" />
+                      <CheckCircle2 className="h-5 w-5 shrink-0 text-green-700" />
                       <span className="font-medium text-slate-700">
                         {item}
                       </span>
@@ -347,7 +339,7 @@ export default function Home() {
         <section className="bg-slate-50 py-20 md:py-24">
           <div className="mx-auto max-w-7xl px-6">
             <div className="mx-auto max-w-3xl text-center">
-              <span className="text-sm font-bold uppercase tracking-wider text-blue-600">
+              <span className="text-sm font-bold uppercase tracking-wider text-green-700">
                 Our Services
               </span>
 
@@ -372,7 +364,7 @@ export default function Home() {
                     href={service.href}
                     className="group rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl"
                   >
-                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 transition duration-300 group-hover:scale-110">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-green-50 text-green-700 transition duration-300 group-hover:scale-110">
                       <Icon className="h-7 w-7" />
                     </div>
 
@@ -380,7 +372,7 @@ export default function Home() {
                       {String(index + 1).padStart(2, "0")}
                     </span>
 
-                    <h3 className="mt-2 text-xl font-bold text-slate-900 group-hover:text-blue-600">
+                    <h3 className="mt-2 text-xl font-bold text-slate-900 group-hover:text-green-700">
                       {service.title}
                     </h3>
 
@@ -388,7 +380,7 @@ export default function Home() {
                       {service.description}
                     </p>
 
-                    <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-blue-600">
+                    <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-green-700">
                       Learn More
                       <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
                     </div>
@@ -403,7 +395,7 @@ export default function Home() {
         <section className="bg-white py-20 md:py-24">
           <div className="mx-auto max-w-7xl px-6">
             <div className="mx-auto max-w-3xl text-center">
-              <span className="text-sm font-bold uppercase tracking-wider text-blue-600">
+              <span className="text-sm font-bold uppercase tracking-wider text-green-700">
                 Business Essentials
               </span>
 
@@ -412,9 +404,8 @@ export default function Home() {
               </h2>
 
               <p className="mt-5 text-lg leading-8 text-slate-600">
-                From keeping your premises connected to managing everyday
-                utilities and accepting payments, we help you explore the
-                services your business depends on.
+                From business energy and water to connectivity and waste management, we help
+                you explore the services your business depends on.
               </p>
             </div>
 
@@ -429,7 +420,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-7">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-50 text-green-700">
                     <Zap className="h-6 w-6" />
                   </div>
 
@@ -438,13 +429,13 @@ export default function Home() {
                   </h3>
 
                   <p className="mt-3 leading-7 text-slate-600">
-                    Explore business energy, electricity, gas and water
-                    solutions based around your business requirements.
+                    Explore business electricity, gas and water options suited to your
+                    premises and operating requirements.
                   </p>
 
                   <Link
                     href="/energy"
-                    className="mt-5 inline-flex items-center gap-2 font-semibold text-blue-600"
+                    className="mt-5 inline-flex items-center gap-2 font-semibold text-green-700"
                   >
                     Explore Energy
                     <ArrowRight className="h-4 w-4" />
@@ -462,7 +453,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-7">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-50 text-green-700">
                     <Wifi className="h-6 w-6" />
                   </div>
 
@@ -477,7 +468,7 @@ export default function Home() {
 
                   <Link
                     href="/connectivity/broadband"
-                    className="mt-5 inline-flex items-center gap-2 font-semibold text-blue-600"
+                    className="mt-5 inline-flex items-center gap-2 font-semibold text-green-700"
                   >
                     Explore Connectivity
                     <ArrowRight className="h-4 w-4" />
@@ -495,24 +486,24 @@ export default function Home() {
                 </div>
 
                 <div className="p-7">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
-                    <CreditCard className="h-6 w-6" />
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-50 text-green-700">
+                    <Lightbulb className="h-6 w-6" />
                   </div>
 
                   <h3 className="mt-5 text-2xl font-bold text-slate-900">
-                    Payments
+                    Greener Business
                   </h3>
 
                   <p className="mt-3 leading-7 text-slate-600">
-                    Explore payment solutions designed to make accepting
-                    customer payments convenient for your business.
+                    Explore energy-efficiency ideas and greener solutions that may
+                    help your business manage consumption and plan for the future.
                   </p>
 
                   <Link
-                    href="/card-machine"
-                    className="mt-5 inline-flex items-center gap-2 font-semibold text-blue-600"
+                    href="/energy"
+                    className="mt-5 inline-flex items-center gap-2 font-semibold text-green-700"
                   >
-                    Explore Payments
+                    Explore Energy
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                 </div>
@@ -524,7 +515,7 @@ export default function Home() {
         {/* SUPPLIER / SERVICE CATEGORIES */}
         <section className="bg-white py-20">
           <div className="mx-auto max-w-4xl px-6 text-center">
-            <span className="text-sm font-bold uppercase tracking-wider text-blue-600">
+            <span className="text-sm font-bold uppercase tracking-wider text-green-700">
               Compare Options
             </span>
 
@@ -538,7 +529,7 @@ export default function Home() {
             </p>
 
             <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
-              {["ENERGY", "CONNECTIVITY", "WATER", "PAYMENTS"].map((item) => (
+              {["BUSINESS ENERGY", "CONNECTIVITY", "WATER", "GREEN SOLUTIONS"].map((item) => (
                 <div
                   key={item}
                   className="rounded-2xl border border-slate-200 bg-slate-50 p-6 text-sm font-bold tracking-wider text-slate-400"
@@ -643,7 +634,7 @@ export default function Home() {
           <div className="mx-auto max-w-7xl px-6">
             <div className="grid gap-14 lg:grid-cols-[.9fr_1.1fr] lg:items-center">
               <div>
-                <span className="text-sm font-bold uppercase tracking-wider text-blue-600">
+                <span className="text-sm font-bold uppercase tracking-wider text-green-700">
                   Why Nexa
                 </span>
 
@@ -659,7 +650,7 @@ export default function Home() {
 
                 <Link
                   href="/about"
-                  className="mt-8 inline-flex items-center gap-2 font-semibold text-blue-600"
+                  className="mt-8 inline-flex items-center gap-2 font-semibold text-green-700"
                 >
                   Learn more about us
                   <ArrowRight className="h-4 w-4" />
@@ -676,7 +667,7 @@ export default function Home() {
                       className="rounded-3xl border border-slate-200 bg-white p-7 transition duration-300 hover:-translate-y-1 hover:shadow-lg"
                     >
                       <div className="flex items-center justify-between">
-                        <span className="text-sm font-bold text-blue-600">
+                        <span className="text-sm font-bold text-green-700">
                           {benefit.number}
                         </span>
 
@@ -703,7 +694,7 @@ export default function Home() {
           <div className="mx-auto max-w-7xl px-6">
             <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
               <div>
-                <span className="text-sm font-bold uppercase tracking-wider text-blue-600">
+                <span className="text-sm font-bold uppercase tracking-wider text-green-700">
                   The Nexa Approach
                 </span>
 
@@ -732,7 +723,7 @@ export default function Home() {
                         key={feature.title}
                         className="flex gap-4 rounded-2xl border border-slate-200 bg-slate-50 p-5"
                       >
-                        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-600 text-white">
+                        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-green-700 text-white">
                           <Icon className="h-5 w-5" />
                         </div>
 
@@ -762,7 +753,7 @@ export default function Home() {
 
                 <div className="absolute -bottom-6 left-6 right-6 rounded-3xl border border-slate-200 bg-white p-6 shadow-2xl md:left-10 md:right-10">
                   <div className="flex items-start gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-green-50 text-green-700">
                       <ShieldCheck className="h-6 w-6" />
                     </div>
 
@@ -784,10 +775,10 @@ export default function Home() {
         </section>
 
         {/* HOW IT WORKS */}
-        <section className="bg-slate-950 py-20 text-white md:py-24">
+        <section className="bg-green-950 py-20 text-white md:py-24">
           <div className="mx-auto max-w-7xl px-6">
             <div className="mx-auto max-w-3xl text-center">
-              <span className="text-sm font-bold uppercase tracking-wider text-blue-400">
+              <span className="text-sm font-bold uppercase tracking-wider text-green-500">
                 How It Works
               </span>
 
@@ -820,7 +811,7 @@ export default function Home() {
                 ],
               ].map(([number, title, description]) => (
                 <div key={number}>
-                  <div className="text-5xl font-bold text-blue-500/30">
+                  <div className="text-5xl font-bold text-green-500/30">
                     {number}
                   </div>
 
@@ -847,7 +838,7 @@ export default function Home() {
 
               <div className="relative grid gap-10 p-10 md:p-16 lg:grid-cols-2 lg:items-center">
                 <div>
-                  <span className="text-sm font-bold uppercase tracking-wider text-blue-400">
+                  <span className="text-sm font-bold uppercase tracking-wider text-green-500">
                     Built For Businesses
                   </span>
 
@@ -865,7 +856,7 @@ export default function Home() {
 
                   <Link
                     href="/quote"
-                    className="mt-8 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-4 font-semibold text-white transition hover:bg-blue-700"
+                    className="mt-8 inline-flex items-center gap-2 rounded-full bg-green-700 px-7 py-4 font-semibold text-white shadow-lg shadow-green-700/20 transition hover:-translate-y-0.5 hover:bg-green-800"
                   >
                     Start Your Enquiry
                     <ArrowRight className="h-5 w-5" />
@@ -880,7 +871,7 @@ export default function Home() {
         <section className="bg-white py-20 md:py-24">
           <div className="mx-auto max-w-7xl px-6">
             <div className="text-center">
-              <span className="text-sm font-bold uppercase tracking-wider text-blue-600">
+              <span className="text-sm font-bold uppercase tracking-wider text-green-700">
                 Business Types
               </span>
 
@@ -902,9 +893,9 @@ export default function Home() {
                 return (
                   <div
                     key={industry.name}
-                    className="flex items-center gap-4 rounded-2xl border border-slate-200 p-5 transition hover:border-blue-200 hover:bg-blue-50"
+                    className="flex items-center gap-4 rounded-2xl border border-slate-200 p-5 transition hover:border-green-200 hover:bg-green-50"
                   >
-                    <Icon className="h-6 w-6 text-blue-600" />
+                    <Icon className="h-6 w-6 text-green-700" />
 
                     <span className="font-semibold text-slate-800">
                       {industry.name}
@@ -930,7 +921,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
 
                 <div className="absolute bottom-0 left-0 p-8 text-white">
-                  <p className="text-sm font-semibold uppercase tracking-wider text-blue-300">
+                  <p className="text-sm font-semibold uppercase tracking-wider text-green-300">
                     For Growing Businesses
                   </p>
 
@@ -939,8 +930,8 @@ export default function Home() {
                   </h3>
 
                   <p className="mt-3 max-w-lg text-slate-300">
-                    Explore payment, connectivity, energy and other essential
-                    business services for your operation.
+                    Explore energy, connectivity and other essential business
+                    services for your operation.
                   </p>
                 </div>
               </div>
@@ -955,7 +946,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
 
                 <div className="absolute bottom-0 left-0 p-8 text-white">
-                  <p className="text-sm font-semibold uppercase tracking-wider text-blue-300">
+                  <p className="text-sm font-semibold uppercase tracking-wider text-green-300">
                     Business Services
                   </p>
 
@@ -965,7 +956,7 @@ export default function Home() {
 
                   <p className="mt-3 max-w-lg text-slate-300">
                     Discover practical options around utilities,
-                    connectivity, payments and day-to-day business needs.
+                    connectivity, water and day-to-day business needs.
                   </p>
                 </div>
               </div>
@@ -974,7 +965,7 @@ export default function Home() {
         </section>
 
         {/* STATISTICS / VALUE */}
-        <section className="bg-blue-600 py-16 text-white">
+        <section className="bg-green-700 py-16 text-white">
           <div className="mx-auto grid max-w-7xl gap-8 px-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
               "Multiple Service Categories",
@@ -997,11 +988,11 @@ export default function Home() {
         {/* ADDED FINAL TRUST CONTENT */}
         <section className="bg-white py-20">
           <div className="mx-auto max-w-5xl px-6 text-center">
-            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-50 text-blue-600">
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-green-50 text-green-700">
               <Building2 className="h-8 w-8" />
             </div>
 
-            <span className="mt-6 block text-sm font-bold uppercase tracking-wider text-blue-600">
+            <span className="mt-6 block text-sm font-bold uppercase tracking-wider text-green-700">
               Your Business. Your Choice.
             </span>
 
@@ -1019,7 +1010,7 @@ export default function Home() {
             <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
               <Link
                 href="/quote"
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-7 py-4 font-semibold text-white transition hover:bg-blue-700"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-green-700 px-7 py-4 font-semibold text-white transition hover:bg-green-800"
               >
                 Get My Free Quote
                 <ArrowRight className="h-5 w-5" />
@@ -1027,7 +1018,7 @@ export default function Home() {
 
               <Link
                 href="/services"
-                className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 px-7 py-4 font-semibold text-slate-900 transition hover:border-blue-300 hover:bg-blue-50"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 px-7 py-4 font-semibold text-slate-900 transition hover:border-green-300 hover:bg-green-50"
               >
                 View All Services
               </Link>
@@ -1038,7 +1029,7 @@ export default function Home() {
         {/* CTA */}
         <section className="bg-white py-20">
           <div className="mx-auto max-w-5xl px-6">
-            <div className="overflow-hidden rounded-[2rem] bg-slate-950 p-10 text-center text-white md:p-16">
+            <div className="overflow-hidden rounded-[2rem] bg-green-950 p-10 text-center text-white shadow-xl md:p-16">
               <h2 className="text-3xl font-bold md:text-5xl">
                 Ready to Find a Better Business Solution?
               </h2>
@@ -1050,7 +1041,7 @@ export default function Home() {
 
               <Link
                 href="/quote"
-                className="mt-8 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-7 py-4 font-semibold transition hover:bg-blue-700"
+                className="mt-8 inline-flex items-center gap-2 rounded-full bg-green-700 px-7 py-4 font-semibold text-white shadow-lg shadow-green-700/20 transition hover:-translate-y-0.5 hover:bg-green-800"
               >
                 Get My Free Quote
                 <ArrowRight className="h-5 w-5" />
@@ -1063,7 +1054,7 @@ export default function Home() {
         <section className="bg-slate-50 py-20 md:py-24">
           <div className="mx-auto max-w-4xl px-6">
             <div className="text-center">
-              <span className="text-sm font-bold uppercase tracking-wider text-blue-600">
+              <span className="text-sm font-bold uppercase tracking-wider text-green-700">
                 FAQ
               </span>
 
