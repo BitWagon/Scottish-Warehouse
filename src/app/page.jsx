@@ -541,93 +541,54 @@ export default function Home() {
           </div>
         </section>
 
-        {/* TRUSTED PROVIDERS - ADDED */}
-        <section className="overflow-hidden bg-white py-12">
-         <div className="mx-auto max-w-7xl px-6">
-         <p className="text-center text-sm font-bold uppercase tracking-[0.2em] text-slate-500">
-           Trusted Providers
-         </p>
+        
 
-         <div className="relative mt-8 overflow-hidden">
-         <div className="flex w-max animate-supplier-right items-center gap-12">
+{/* TRUSTED PROVIDERS */}
+<section className="overflow-hidden bg-white py-12">
+  <div className="mx-auto max-w-7xl px-6">
+    <p className="text-center text-sm font-bold uppercase tracking-[0.2em] text-slate-500">
+      Trusted Providers
+    </p>
 
-         {[
-          {
-            name: "Worldpay",
-            image: "/images/suppliers/worldpay.png",
-          },
-          {
-            name: "Paynt",
-            image: "/images/suppliers/paynt.png",
-          },
-          {
-            name: "Drax",
-            image: "/images/suppliers/drax.png",
-          },
-          {
-            name: "BT",
-            image: "/images/suppliers/bt.png",
-          },
-          {
-            name: "British Gas Lite",
-            image: "/images/suppliers/british-gas-lite.png",
-          },
-          {
-            name: "Daisy Communications",
-            image: "/images/suppliers/daisy-communications.png",
-          },
-          {
-            name: "Greenolite",
-            image: "/images/suppliers/greenolite.png",
-          },
-
-          // Duplicate logos for smooth infinite movement
-          {
-            name: "Worldpay",
-            image: "/images/suppliers/worldpay.png",
-          },
-          {
-            name: "Paynt",
-            image: "/images/suppliers/paynt.png",
-          },
-          {
-            name: "Drax",
-            image: "/images/suppliers/drax.png",
-          },
-          {
-            name: "BT",
-            image: "/images/suppliers/bt.png",
-          },
-          {
-            name: "British Gas Lite",
-            image: "/images/suppliers/british-gas-lite.png",
-          },
-          {
-            name: "Daisy Communications",
-            image: "/images/suppliers/daisy-communications.png",
-          },
-          {
-            name: "Greenolite",
-            image: "/images/suppliers/greenolite.png",
-          },
-          ].map((supplier, index) => (
+    <div className="relative mt-40 overflow-hidden">
+      <div className="flex w-max animate-supplier-right items-center gap-10">
+        {[
+          { name: "Provider 1", image: "/providers/WhatsApp Image 2026-10-15 at 11.07.16 PM.jpeg" },
+          { name: "Provider 2", image: "/providers/images (1).jpg" },
+          { name: "Provider 3", image: "/providers/images (2).png" },
+          { name: "Provider 4", image: "/providers/images.jpg" },
+          { name: "Provider 5", image: "/providers/images.png" },
+          { name: "Provider 6", image: "/providers/logo.png" },
+          { name: "Provider 7", image: "/providers/Screenshot 2026-10-16 040309.png" },
+        
+        ].concat([
+          { name: "Provider 1", image: "/providers/WhatsApp Image 2026-10-15 at 11.07.16 PM.jpeg" },
+          { name: "Provider 2", image: "/providers/images (1).jpg" },
+          { name: "Provider 3", image: "/providers/images (2).png" },
+          { name: "Provider 4", image: "/providers/images.jpg" },
+          { name: "Provider 5", image: "/providers/images.png" },
+          { name: "Provider 6", image: "/providers/logo.png" },
+          { name: "Provider 7", image: "/providers/Screenshot 2026-10-16 040309.png" },
+          
+        ]).map((provider, index) => (
           <div
-            key={`${supplier.name}-${index}`}
-            className="flex h-24 w-48 shrink-0 items-center justify-center bg-white px-5"
+            key={`${provider.name}-${index}`}
+            className="flex h-32 w-52 shrink-0 items-center justify-center rounded-xl border border-slate-100 bg-white p-5"
           >
             <img
-              src={supplier.image}
-              alt={supplier.name}
-              className="max-h-14 w-auto max-w-[170px] object-contain"
+              src={provider.image}
+              alt={provider.name}
+              className="h-60 w-full object-contain"
             />
           </div>
         ))}
+      </div>
+    </div>
+  </div>
+</section>
+{/* END TRUSTED PROVIDERS */}
 
-             </div>
-          </div>
-        </div>
-       </section>
-        {/* END TRUSTED PROVIDERS - ADDED */}
+
 
         {/* WHY CHOOSE US */}
         <section className="bg-slate-50 py-20 md:py-24">
