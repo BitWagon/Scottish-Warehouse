@@ -7,13 +7,13 @@
 
 :root {
   --brand-green: #168343;
-  --brand-green-dark: #106b35;
+  --brand-green-dark: #0f5c2e;
   --brand-green-light: #eaf6ee;
   --brand-white: #ffffff;
   --page-background: #f7faf8;
-  --text-primary: #17251c;
-  --text-secondary: #647067;
-  --border-color: #e1e9e3;
+  --text-primary: #111813;
+  --text-secondary: #58635b;
+  --border-color: #dfe7e1;
 }
 
 * {
