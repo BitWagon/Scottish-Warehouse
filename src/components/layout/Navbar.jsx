@@ -215,7 +215,7 @@ export default function Navbar() {
           {/* Desktop contact and quote actions */}
           <div className="hidden shrink-0 items-center gap-4 xl:flex">
             <a
-              href="tel:+923336516071"
+              href="tel:02080874905"
               className="group flex items-center gap-2.5"
             >
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-green-50 text-green-800 transition-colors group-hover:bg-green-100">

@@ -23,7 +23,7 @@ export default function Footer() {
               href="/"
               className="inline-block text-2xl font-black tracking-tight"
             >
-              Bra<span className="text-green-400">nd</span>
+              Scotish<span className="text-green-400">warehouse</span>
             </Link>
 
             <p className="mt-5 max-w-xs text-sm leading-7 text-slate-400">
