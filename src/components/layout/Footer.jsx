@@ -114,20 +114,27 @@ export default function Footer() {
 
             <div className="mt-5 space-y-5 text-sm text-slate-400">
               <a
-                href="tel:+443336516071"
+                href="tel:02080874905"
                 className="flex items-start gap-3 transition hover:text-white"
               >
                 <Phone size={18} className="mt-0.5 shrink-0 text-green-400" />
-                <span>03336516071</span>
+                <span>02080874905</span>
               </a>
 
               <a
-                href="mailto:accounts@brandsolution.co.uk"
-                className="flex items-start gap-3 transition hover:text-white"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=support%40scotishwarehouse.co.uk&su=Business%20Enquiry"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Email support@scotishwarehouse.co.uk using Gmail"
+                title="Open a new email in Gmail"
+                className="group flex items-start gap-3 transition hover:text-white"
               >
-                <Mail size={18} className="mt-0.5 shrink-0 text-green-400" />
+                <Mail size={18} className="mt-0.5 shrink-0 text-green-400 transition group-hover:text-green-300" />
                 <span className="break-all">
-                  accounts@brandsolution.co.uk
+                  support@scotishwarehouse.co.uk
+                  <span className="mt-1 block text-xs text-slate-500 transition group-hover:text-green-300">
+                    Send us an email
+                  </span>
                 </span>
               </a>
 

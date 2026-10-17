@@ -98,7 +98,7 @@ export default function Navbar() {
 
             <span className="flex flex-col">
               <span className="text-[21px] font-extrabold leading-tight tracking-tight text-black sm:text-[25px]">
-                Scottish<span className="text-green-700">warehouse</span>
+                Scotish<span className="text-green-700">warehouse</span>
               </span>
 
               <span className="mt-1 text-[9px] font-bold uppercase tracking-[0.22em] text-slate-500 sm:text-[10px]">
