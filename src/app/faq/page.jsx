@@ -10,7 +10,6 @@ import {
   Wifi,
   Droplets,
   Trash2,
-  CreditCard,
   ShieldCheck,
   MessageCircle,
   FileCheck,
@@ -119,13 +118,6 @@ const serviceAreas = [
       "Explore commercial waste collection and management options for your organisation.",
     href: "/waste",
     icon: Trash2,
-  },
-  {
-    title: "Card Machines & Payments",
-    description:
-      "Discover payment solutions that can support customer transactions and business operations.",
-    href: "/card-machine",
-    icon: CreditCard,
   },
   {
     title: "Other Business Services",

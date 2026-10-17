@@ -14,37 +14,6 @@ export default function Footer() {
 
   return (
     <footer className="bg-black text-white">
-      {/* Newsletter */}
-      <div className="border-b border-white/10 bg-slate-950">
-        <div className="mx-auto max-w-7xl px-6 py-10 lg:px-8">
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-            <div className="max-w-2xl">
-              <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-400">
-                Stay Updated
-              </p>
-
-              <h2 className="mt-2 text-2xl font-bold text-white md:text-3xl">
-                Get useful business insights in your inbox
-              </h2>
-
-              <p className="mt-3 text-sm leading-7 text-slate-400">
-                Subscribe to our free newsletter for useful business
-                updates, service information, practical tips and
-                insights for businesses across the UK.
-              </p>
-            </div>
-
-            <Link
-              href="/newsletter"
-              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-green-700 px-7 py-3.5 text-sm font-bold text-white transition hover:bg-green-800"
-            >
-              Subscribe to Newsletter
-              <ArrowUpRight size={17} />
-            </Link>
-          </div>
-        </div>
-      </div>
-
       {/* Main Footer */}
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-5">

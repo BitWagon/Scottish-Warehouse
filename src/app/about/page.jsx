@@ -8,9 +8,9 @@ import {
   Target,
   Eye,
   Zap,
+  Flame,
   Wifi,
   Droplets,
-  CreditCard,
   Building2,
   Search,
   MessageSquare,
@@ -26,25 +26,25 @@ export default function AboutPage() {
       icon: Zap,
       title: "Business Energy",
       description:
-        "Explore energy solutions and compare options that can help your business manage its ongoing energy costs.",
+        "Review business electricity and gas options, and check the rates, contract length and terms before choosing a provider.",
     },
     {
       icon: Wifi,
-      title: "Business Connectivity",
+      title: "Broadband & Connectivity",
       description:
-        "Find connectivity and communication solutions designed to keep your business connected and productive.",
+        "Explore broadband and connectivity options for the day-to-day needs of your home or business.",
+    },
+    {
+      icon: Flame,
+      title: "Home Gas",
+      description:
+        "Find information about domestic gas options and compare the plans available for your address.",
     },
     {
       icon: Droplets,
-      title: "Business Water",
+      title: "Home Electricity & Water",
       description:
-        "Explore water service options and find solutions suited to the needs of your business.",
-    },
-    {
-      icon: CreditCard,
-      title: "Payment Solutions",
-      description:
-        "Discover payment solutions that can help your business provide a smoother experience for customers.",
+        "Explore household electricity and water supply information, subject to availability in your area.",
     },
   ];
 
@@ -88,7 +88,7 @@ export default function AboutPage() {
       icon: Search,
       title: "Explore Your Options",
       description:
-        "Explore relevant options across the service categories available through Nexa.",
+        "Explore relevant options across the service categories available through Scottishwarehouse.",
     },
     {
       number: "03",
@@ -114,7 +114,7 @@ export default function AboutPage() {
               <div>
                 <span className="inline-flex items-center gap-2 rounded-full border border-green-500/30 bg-green-500/10 px-4 py-2 text-sm font-bold text-green-400">
                   <Building2 size={17} />
-                  About Nexa
+                  About Scottishwarehouse
                 </span>
 
                 <h1 className="mt-7 text-4xl font-black leading-tight tracking-tight md:text-6xl">
@@ -125,9 +125,10 @@ export default function AboutPage() {
                 </h1>
 
                 <p className="mt-6 max-w-xl text-lg leading-8 text-neutral-300">
-                  We help businesses explore energy, connectivity, water and
-                  payment solutions in one convenient place, making it easier
-                  to understand available options and decide on the next step.
+                  Scottishwarehouse helps visitors explore energy, broadband,
+                  home gas, electricity and water service information in one
+                  place. Use our service pages to understand the options to
+                  check and the details to review before making a decision.
                 </p>
 
                 <div className="mt-9 flex flex-wrap gap-4">
@@ -159,10 +160,10 @@ export default function AboutPage() {
 
                     <div>
                       <p className="text-xl font-extrabold text-white">
-                        One Business. Multiple Needs.
+                        Services for Home and Business
                       </p>
                       <p className="mt-1 text-sm text-neutral-400">
-                        Explore solutions in one place.
+                        Explore service information and next steps.
                       </p>
                     </div>
                   </div>
@@ -193,8 +194,7 @@ export default function AboutPage() {
                   <div className="mt-5 flex items-center gap-3 rounded-xl bg-green-600/10 p-4">
                     <CheckCircle2 className="h-5 w-5 shrink-0 text-green-500" />
                     <p className="text-sm leading-6 text-neutral-300">
-                      A straightforward starting point for your business
-                      service enquiries.
+                      A clear starting point for exploring service options.
                     </p>
                   </div>
                 </div>
@@ -212,19 +212,21 @@ export default function AboutPage() {
               </span>
 
               <h2 className="mt-4 text-3xl font-black leading-tight tracking-tight text-black md:text-5xl">
-                Helping Businesses Find Their Way Forward
+Clear Information for Everyday Service Decisions
               </h2>
 
               <p className="mt-6 text-lg leading-8 text-neutral-600">
-                Running a business means making decisions about services that
-                support your everyday operations. Finding and comparing
-                different options can take time.
+Choosing energy, broadband or household utilities often means checking
+                prices, availability, contract terms and the needs of your
+                property. It helps to know what to look for before you choose.
               </p>
 
               <p className="mt-4 leading-8 text-neutral-600">
-                Nexa provides a starting point for exploring business energy,
-                connectivity, water and payment services. Our aim is to make
-                the process clearer, more organised and easier to navigate.
+                Scottishwarehouse brings together information about business
+                energy, broadband and selected home services, including gas,
+                electricity and water. We aim to make the first steps easier
+                by helping you identify which details to compare and where to
+                continue your enquiry.
               </p>
 
               <div className="mt-8 flex items-start gap-4 rounded-2xl border border-green-100 bg-green-50 p-5">
@@ -235,8 +237,8 @@ export default function AboutPage() {
                 <div>
                   <h3 className="font-extrabold text-black">Our Purpose</h3>
                   <p className="mt-2 text-sm leading-7 text-neutral-600">
-                    To help businesses understand their options and take the
-                    next step with greater clarity.
+                    To make service information easier to navigate so visitors
+                    can ask better questions and review options with care.
                   </p>
                 </div>
               </div>
@@ -274,12 +276,13 @@ export default function AboutPage() {
               </span>
 
               <h2 className="mt-4 text-3xl font-black tracking-tight text-black md:text-4xl">
-                Built Around Business Needs
+Practical Information for Home and Business
               </h2>
 
               <p className="mt-4 leading-8 text-neutral-600">
-                Our approach centres on making it easier to explore relevant
-                services and understand the options available.
+Our approach is to explain the service areas covered by the website and
+                encourage visitors to check availability, pricing and terms with
+                the relevant provider before committing.
               </p>
             </div>
 
@@ -294,9 +297,9 @@ export default function AboutPage() {
                 </h3>
 
                 <p className="mt-4 leading-8 text-neutral-600">
-                  To provide businesses with a straightforward way to explore
-                  essential service categories, understand their options and
-                  make informed decisions about their requirements.
+                  To give visitors a clear starting point for exploring energy,
+                  broadband and household utility services, with an emphasis on
+                  checking the details that matter to their circumstances.
                 </p>
               </div>
 
@@ -310,9 +313,9 @@ export default function AboutPage() {
                 </h3>
 
                 <p className="mt-4 leading-8 text-neutral-300">
-                  To create a convenient starting point where businesses can
-                  discover relevant service options and move forward with
-                  greater confidence.
+                  To make it easier for households and businesses to find the
+                  right service information and understand the next steps before
+                  choosing an available option.
                 </p>
               </div>
             </div>
@@ -328,13 +331,13 @@ export default function AboutPage() {
               </span>
 
               <h2 className="mt-4 text-3xl font-black tracking-tight text-black md:text-5xl">
-                Solutions for the Way Your Business Works
+Explore Our Service Areas
               </h2>
 
               <p className="mt-5 text-lg leading-8 text-neutral-600">
-                From keeping your business connected to managing essential
-                services, explore the solutions available through our
-                platform.
+Explore the service areas covered by Scottishwarehouse. Availability and
+                plan details can vary by address, provider and eligibility, so
+                always review the specific terms before making a choice.
               </p>
             </div>
 
@@ -385,12 +388,12 @@ export default function AboutPage() {
               </span>
 
               <h2 className="mt-4 text-3xl font-black tracking-tight text-black md:text-4xl">
-                Simple From Start to Finish
+A Clear Way to Get Started
               </h2>
 
               <p className="mt-4 leading-8 text-neutral-600">
-                A clear process helps you move from identifying a need to
-                exploring potential solutions.
+Start with the service you need, gather the relevant details, then check
+                the options and terms before making a decision.
               </p>
             </div>
 
@@ -433,16 +436,16 @@ export default function AboutPage() {
             <div className="grid items-start gap-12 lg:grid-cols-[0.8fr_1.2fr]">
               <div>
                 <span className="text-sm font-extrabold uppercase tracking-[0.2em] text-green-700">
-                  Why Nexa
+                  Why Scottishwarehouse
                 </span>
 
                 <h2 className="mt-4 text-3xl font-black leading-tight tracking-tight text-black md:text-5xl">
-                  One Place for Multiple Business Needs
+A Useful Starting Point for Service Research
                 </h2>
 
                 <p className="mt-6 text-lg leading-8 text-neutral-600">
-                  We aim to make the process of exploring business services
-                  easier, clearer and more convenient.
+                  Find the relevant service area, understand what to compare,
+                  and follow up with the provider about availability and terms.
                 </p>
 
                 <Link
@@ -499,19 +502,19 @@ export default function AboutPage() {
               </span>
 
               <h2 className="mt-4 text-3xl font-black tracking-tight text-black md:text-4xl">
-                Turn Information Into Your Next Business Step
+Know What to Check Before You Choose
               </h2>
 
               <p className="mt-5 leading-8 text-neutral-600">
-                Learning about your options is a useful starting point. If
-                you are ready to discuss your requirements, make an enquiry
-                and tell us which services your business currently uses or
-                is considering.
+Before selecting an energy, broadband or home utility service, check the
+                price, contract length, service availability and any additional
+                charges that may apply to your situation.
               </p>
 
               <p className="mt-4 leading-8 text-neutral-600">
-                We can use the information you provide to better understand
-                what you are looking for and help you explore relevant options.
+Use the relevant service or contact page to continue your enquiry. Share
+                only the details needed to explain what service you are looking
+                for, and review any offer carefully before agreeing to it.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
@@ -545,12 +548,12 @@ export default function AboutPage() {
             </div>
 
             <h2 className="mt-6 text-3xl font-black tracking-tight md:text-5xl">
-              Ready to Explore Your Business Options?
+Ready to Explore Your Service Options?
             </h2>
 
             <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-green-100">
-              Tell us what your business needs and explore suitable service
-              options for your organisation.
+Choose a service area to get started, then check which options are
+              available for your home or business and review the terms carefully.
             </p>
 
             <div className="mt-8 flex flex-wrap justify-center gap-4">
