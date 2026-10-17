@@ -20,6 +20,23 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+## Deploy with Dokploy
+
+Create a Dokploy application using the **Dockerfile** build type and the
+repository root as the build context. Dokploy will use the `Dockerfile` in
+this directory. Configure the application/container port as **3000**, then
+add your domain and enable HTTPS in Dokploy.
+
+Set the required application secrets in Dokploy's environment variables:
+
+- `MONGODB_URI`
+- `ADMIN_EMAIL`
+- `ADMIN_PASSWORD`
+- `ADMIN_SESSION_SECRET` (use a long, random value)
+
+Do not commit environment files or pass secrets as Docker build arguments; the
+Docker build context excludes local `.env*` files.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
