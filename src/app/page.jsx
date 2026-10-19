@@ -203,7 +203,7 @@ export default function Home() {
                 <span className="text-green-700">Start Here</span>
               </h1>
 
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-400">
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-500">
                 Discover business energy options, explore practical ways to improve
                 energy efficiency, and compare essential services for your
                 premises. Nexa helps you start with a clear enquiry and understand

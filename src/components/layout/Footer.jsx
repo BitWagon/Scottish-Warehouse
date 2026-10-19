@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 
 export default function Footer() {
-  const whatsappNumber = "923336516071";
+  const whatsappNumber = "7828728445";
   const whatsappUrl = `https://wa.me/${whatsappNumber}`;
 
   return (
