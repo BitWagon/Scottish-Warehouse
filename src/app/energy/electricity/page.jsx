@@ -11,9 +11,9 @@ import Footer from "@/components/layout/Footer";
 import ServiceHero from "@/components/services/ServiceHero";
 
 export const metadata = {
-  title: "Business Electricity | Your Brand",
+  title: "Business Electricity Comparison | Scotishwarehouse",
   description:
-    "Explore business electricity solutions.",
+    "Compare business electricity quotes, understand pricing structures and prepare for contract renewal with Scotishwarehouse.",
 };
 
 export default function ElectricityPage() {
@@ -25,9 +25,9 @@ export default function ElectricityPage() {
 
         <ServiceHero
           badge="Business Electricity"
-          title="Electricity solutions"
-          highlight="for your business."
-          description="Explore electricity options designed around your business requirements and operating needs."
+          title="Business electricity"
+          highlight="made simpler."
+          description="Explore business electricity quotations with a clear breakdown of unit rates, daily standing charges, contract duration and estimated annual costs."
         />
 
         {/* Why Compare */}
@@ -44,13 +44,11 @@ export default function ElectricityPage() {
                 </div>
 
                 <h2 className="mt-7 text-4xl font-black text-slate-900">
-                  Find an electricity solution that fits
+                  Compare Business Electricity with Clarity
                 </h2>
 
                 <p className="mt-6 text-lg leading-8 text-slate-600">
-                  Every business has different requirements.
-                  Explore your options and find an approach that
-                  works for your organisation.
+                  Whether you run a small shop, an office or multiple premises, your electricity requirements are unique. Explore available contract types, expected usage and the costs that shape your business electricity bill.
                 </p>
 
               </div>
@@ -77,9 +75,8 @@ export default function ElectricityPage() {
                   </h3>
 
                   <p className="mt-2 max-w-md leading-7 text-slate-200">
-                    Explore electricity options designed around your
-                    organisation's requirements.
-                  </p>
+                  Make sense of electricity rates, standing charges and contract features before choosing your next plan.
+                </p>
 
                 </div>
 
@@ -97,10 +94,10 @@ export default function ElectricityPage() {
               <div className="mt-7 grid gap-5 md:grid-cols-2">
 
                 {[
-                  "Understand available options",
-                  "Review solutions around your requirements",
-                  "Make an informed decision",
-                  "Get support throughout the process",
+                  "Compare unit rates and standing charges",
+                  "Consider contract length and renewal dates",
+                  "Understand fixed and variable pricing",
+                  "Get guidance through the comparison process",
                 ].map((item) => (
 
                   <div
@@ -149,32 +146,32 @@ export default function ElectricityPage() {
               <div>
 
                 <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-700">
-                  Electricity Services
+                  The lowest unit rate does not always mean the lowest overall bill. Review your expected annual consumption, daily standing charge, meter type and contract duration together to compare electricity options more effectively.
                 </p>
 
                 <h2 className="mt-4 text-4xl font-black text-slate-900 md:text-5xl">
-                  Explore Better Electricity Options
+                  Electricity Contracts That Suit the Way You Work
                 </h2>
 
                 <p className="mt-6 text-lg leading-8 text-slate-600">
-                  Explore electricity solutions suitable for your organisation
-                  and compare available options based on your business
-                  requirements.
+                  A business electricity quote is about more than the unit rate.
+                  Compare unit rates, standing charges, estimated annual costs and contract
+                  terms alongside your business's expected consumption.
                 </p>
 
                 <p className="mt-5 text-lg leading-8 text-slate-600">
-                  Whether you're reviewing an existing arrangement or looking
-                  for a new solution, understanding your available choices can
-                  help you make a more informed decision.
+                  Whether your current contract is approaching renewal or
+                  you're arranging supply for new premises, we help you
+                  understand the choices available before you decide.
                 </p>
 
                 <div className="mt-8 space-y-4">
 
                   {[
-                    "Compare available electricity options",
-                    "Understand different commercial plans",
-                    "Explore solutions around your requirements",
-                    "Choose with greater confidence",
+                    "Review tariffs suited to your usage",
+                    "Compare unit rates and daily standing charges",
+                    "Check contract duration and renewal terms",
+                    "Understand the details before committing",
                   ].map((item) => (
 
                     <div
@@ -216,7 +213,7 @@ export default function ElectricityPage() {
               </p>
 
               <h2 className="mt-4 text-4xl font-black text-slate-900">
-                Getting started is simple
+                Three straightforward steps
               </h2>
 
             </div>
@@ -224,9 +221,9 @@ export default function ElectricityPage() {
             <div className="mt-14 grid gap-6 md:grid-cols-3">
 
               {[
-                ["01", "Share your requirements"],
-                ["02", "Explore suitable options"],
-                ["03", "Choose your solution"],
+                ["01", "Tell us about your business"],
+                ["02", "Review available electricity quotes"],
+                ["03", "Decide on the right next step"],
               ].map(([number, title]) => (
 
                 <div
@@ -266,13 +263,14 @@ export default function ElectricityPage() {
                 </p>
 
                 <h2 className="mt-4 text-4xl font-black text-slate-900 md:text-5xl">
-                  Make Your Electricity Decision With Confidence
+                  Know What You Are Comparing
                 </h2>
 
                 <p className="mt-6 text-lg leading-8 text-slate-600">
-                  Finding the right electricity solution can take time.
-                  We make it easier to explore different commercial options
-                  and understand what may be suitable for your business.
+                  An attractive unit rate is only part of the picture. Daily
+                  standing charges, contract duration and expected consumption
+                  can all affect your overall electricity costs. We help you
+                  review these details before making a decision.
                 </p>
 
                 <Link
@@ -313,7 +311,7 @@ export default function ElectricityPage() {
               </p>
 
               <h2 className="mt-4 text-4xl font-black text-slate-900">
-                A simpler approach to business electricity
+                Clearer comparisons, confident decisions
               </h2>
 
             </div>
@@ -321,10 +319,10 @@ export default function ElectricityPage() {
             <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
 
               {[
-                "Business-focused options",
-                "Clear information",
-                "Simple enquiry process",
-                "Dedicated support",
+                "Tariffs matched to business needs",
+                "Transparent cost considerations",
+                "Straightforward quote enquiries",
+                "Guidance when reviewing options",
               ].map((item) => (
 
                 <div
@@ -381,12 +379,12 @@ export default function ElectricityPage() {
               <div className="p-10 text-center md:p-16 lg:text-left">
 
                 <h2 className="text-4xl font-black text-white md:text-5xl">
-                  Ready to explore electricity options?
+                  Ready to review your electricity costs?
                 </h2>
 
                 <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-green-100 lg:mx-0">
-                  Start with a simple enquiry and tell us about your business
-                  requirements.
+                  Tell us about your premises, current contract and expected
+                  electricity usage. We can help you explore suitable options.
                 </p>
 
                 <Link

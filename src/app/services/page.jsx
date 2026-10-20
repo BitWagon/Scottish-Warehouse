@@ -5,85 +5,85 @@ import Link from "next/link";
 import {
   ArrowRight,
   Zap,
-  Wifi,
-  Phone,
   Droplets,
-  Trash2,
-  CreditCard,
-  BriefcaseBusiness,
-  ShieldCheck,
+  RefreshCw,
+  BadgePoundSterling,
+  Leaf,
+  Gauge,
+  Lightbulb,
+  ArrowLeftRight,
 } from "lucide-react";
 
 const services = [
   {
     title: "Business Energy",
     description:
-      "Explore commercial energy options designed around your business requirements.",
+      "Review business electricity and gas quotes, including unit rates, standing charges, annual consumption and the difference between fixed and variable terms.",
     href: "/energy",
     icon: Zap,
   },
   {
     title: "Business Electricity",
     description:
-      "Compare electricity options and explore plans suitable for your business.",
+      "Understand how meter type, daily charges, usage patterns and contract duration can affect your business electricity costs.",
     href: "/energy/electricity",
     icon: Zap,
   },
   {
     title: "Business Gas",
     description:
-      "Explore business gas solutions without the need to contact multiple suppliers individually.",
+      "Compare business gas offers using estimated annual costs, unit prices, standing charges and your current contract end date.",
     href: "/energy/gas",
     icon: Zap,
   },
   {
-    title: "Business Broadband",
+    title: "Business Energy Contract Renewals",
     description:
-      "Find connectivity options built around speed, reliability and business requirements.",
-    href: "/connectivity/broadband",
-    icon: Wifi,
+      "Review your existing energy agreement before it expires. Explore electricity and gas renewal options, compare pricing structures and plan your next business energy contract with confidence.",
+    href: "/energy",
+    icon: RefreshCw,
   },
   {
-    title: "Business Phone",
+    title: "Fixed & Variable Energy Tariffs",
     description:
-      "Explore communication solutions designed to keep your team and customers connected.",
-    href: "/connectivity/phone-line",
-    icon: Phone,
+      "Understand fixed and variable business energy tariffs. Compare unit rates, standing charges and contract terms to find an option suited to your usage and budget.",
+    href: "/energy",
+    icon: BadgePoundSterling,
   },
   {
     title: "Business Water",
     description:
-      "Compare commercial water services and explore suitable options for your premises.",
+      "Explore business water services with attention to your premises, usage requirements and available supply options.",
     href: "/water",
     icon: Droplets,
   },
   {
-    title: "Waste Management",
+    title: "Renewable Business Electricity",
     description:
-      "Explore practical waste collection and management solutions for businesses.",
-    href: "/waste",
-    icon: Trash2,
+      "Explore renewable-backed electricity tariffs and understand how available greener energy choices could support your business sustainability goals.",
+    href: "/energy/electricity",
+    icon: Leaf,
   },
   {
-    title: "Card Machines",
+    title: "Smart Meters & Energy Monitoring",
     description:
-      "Explore convenient payment solutions for accepting customer payments.",
-    href: "/card-machine",
-    icon: CreditCard,
+      "Learn how smart meters and consumption data can help you understand energy use, reduce estimated billing and identify opportunities to manage costs.",
+    href: "/energy",
+    icon: Gauge,
   },
   {
-    title: "Business Finance",
+    title: "Business Energy Efficiency",
     description:
-      "Explore business finance options and understand potential solutions for your requirements.",
-    href: "/finance",
-    icon: BriefcaseBusiness,
+      "Discover practical ways to reduce unnecessary energy consumption, improve efficiency and make smarter use of electricity and gas across your premises.",
+    href: "/energy",
+    icon: Lightbulb,
   },
   {
-    title: "Business Insurance",
+    title: "Business Energy Switching Support",
     description:
-      "Explore business insurance solutions designed around different business requirements.",
-    href: "/insurance",
-    icon: ShieldCheck,
+      "Explore alternative suppliers with greater clarity. Review your current contract, understand the switching process and compare available options before deciding.",
+    href: "/energy",
+    icon: ArrowLeftRight,
   },
 ];
 
@@ -97,7 +97,7 @@ export default function ServicesPage() {
           badge="Business Services"
           title="Business Solutions"
           highlight="Made Simpler"
-          description="Explore essential business services through one straightforward comparison and enquiry process."
+          description="From business electricity and gas to contract renewals, greener tariffs and smarter energy use, explore your options with clear comparisons and practical guidance."
         />
 
         <section className="bg-slate-50 py-20">

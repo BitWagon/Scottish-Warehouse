@@ -12,9 +12,9 @@ import Footer from "@/components/layout/Footer";
 import ServiceHero from "@/components/services/ServiceHero";
 
 export const metadata = {
-  title: "Business Energy | Your Brand",
+  title: "Business Energy | Scotishwarehouse",
   description:
-    "Explore business electricity and gas solutions.",
+    "Compare business electricity and gas options with Scotishwarehouse. Explore contracts and make informed decisions for your business.",
 };
 
 export default function EnergyPage() {
@@ -27,7 +27,7 @@ export default function EnergyPage() {
           badge="Business Energy"
           title="Power your business"
           highlight="with confidence."
-          description="Explore electricity and gas solutions designed around your organisation's requirements."
+          description="Explore business electricity and gas options with transparent comparisons of pricing, contract terms and renewal choices."
         />
 
         <section className="bg-white py-20">
@@ -38,15 +38,12 @@ export default function EnergyPage() {
               </span>
 
               <h2 className="mt-4 text-3xl font-bold text-black md:text-5xl">
-                Explore Energy Options With Confidence
-              </h2>
+                  Business Energy, Made Easier to Understand
+                </h2>
 
               <p className="mt-6 text-lg leading-8 text-slate-600">
-                Business energy requirements can vary considerably.
-                Comparing available options can help you understand
-                what is available and identify solutions that fit
-                your circumstances.
-              </p>
+                  Choosing an energy contract involves more than comparing one headline rate. We help you examine electricity and gas quotes, daily standing charges, estimated annual usage, fixed and variable pricing, and renewal dates before you decide.
+                </p>
 
               <div className="mt-8 space-y-4">
                 {[
@@ -82,8 +79,7 @@ export default function EnergyPage() {
                 </h3>
 
                 <p className="mt-2 max-w-md text-slate-200">
-                  Explore suitable electricity and gas options for your
-                  organisation.
+                  Understand your options and make a more informed choice about your next business energy contract.
                 </p>
               </div>
             </div>
@@ -98,8 +94,8 @@ export default function EnergyPage() {
               </p>
 
               <h2 className="mt-4 text-4xl font-black text-black md:text-5xl">
-                Choose the energy service you need
-              </h2>
+                  Explore Electricity and Gas Options for Your Business
+                </h2>
             </div>
 
             <div className="mt-14 grid gap-6 md:grid-cols-2">
@@ -125,8 +121,7 @@ export default function EnergyPage() {
                   </h3>
 
                   <p className="mt-4 leading-7 text-slate-600">
-                    Explore electricity solutions suitable for your
-                    organisation.
+                    Review electricity quotations alongside your annual usage, standing charges, contract duration and any available renewable electricity options.
                   </p>
 
                   <div className="mt-7 flex items-center gap-2 font-bold text-green-700">
@@ -161,7 +156,7 @@ export default function EnergyPage() {
                   </h3>
 
                   <p className="mt-4 leading-7 text-slate-600">
-                    Explore gas options for your business requirements.
+                    Compare business gas contracts by unit price, standing charge, estimated consumption and renewal conditions to understand the full picture.
                   </p>
 
                   <div className="mt-7 flex items-center gap-2 font-bold text-green-700">
@@ -242,9 +237,7 @@ export default function EnergyPage() {
                 </p>
 
                 <p className="mt-5 text-lg leading-8 text-slate-600">
-                  We make it easier to explore electricity and gas options
-                  through a straightforward comparison process designed
-                  around your business circumstances.
+                  Whether you are reviewing an existing contract, approaching renewal or setting up a new premises, Scotishwarehouse helps you compare available options and understand the next steps before making a decision.
                 </p>
 
                 <div className="mt-8 space-y-4">
@@ -287,7 +280,7 @@ export default function EnergyPage() {
               </h2>
 
               <p className="mt-4 max-w-2xl leading-7 text-slate-300">
-                Tell us about your business and explore your available options.
+                Share a few details about your business energy needs and take the next step towards comparing electricity and gas options.
               </p>
             </div>
 

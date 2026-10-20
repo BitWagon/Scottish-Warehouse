@@ -5,39 +5,39 @@ import { motion } from "framer-motion";
 import {
   ArrowUpRight,
   Zap,
-  Wifi,
-  Droplets,
-  CreditCard,
+  Leaf,
+  Gauge,
+  RefreshCw,
 } from "lucide-react";
 
 const services = [
   {
     title: "Business Energy",
     description:
-      "Explore electricity and gas solutions for your business.",
+      "Compare business electricity and gas options with clearer guidance on tariffs, contract terms and potential costs.",
     icon: Zap,
     href: "/energy",
   },
   {
-    title: "Connectivity",
+    title: "Business Electricity",
     description:
-      "Reliable broadband and communication solutions.",
-    icon: Wifi,
-    href: "/connectivity",
+      "Explore electricity tariffs, unit rates and standing charges to find an option that suits your business.",
+    icon: Gauge,
+    href: "/energy/electricity",
   },
   {
-    title: "Business Water",
+    title: "Business Gas",
     description:
-      "Find suitable water and waste solutions.",
-    icon: Droplets,
-    href: "/water",
+      "Review business gas tariffs, renewal dates and contract options with confidence.",
+    icon: RefreshCw,
+    href: "/energy/gas",
   },
   {
-    title: "Card Machines",
+    title: "Greener Energy Choices",
     description:
-      "Modern payment solutions for your business.",
-    icon: CreditCard,
-    href: "/card-machine",
+      "Learn about renewable electricity options and practical steps towards more efficient energy use.",
+    icon: Leaf,
+    href: "/energy",
   },
 ];
 
@@ -54,12 +54,12 @@ export default function ServiceCategories() {
           </p>
 
           <h2 className="mt-4 text-4xl font-black tracking-tight text-slate-900 md:text-5xl">
-            Everything your business needs
+            Smarter energy choices for your business
           </h2>
 
           <p className="mt-5 text-lg leading-8 text-slate-600">
-            Explore our range of business solutions designed
-            to simplify your everyday operations.
+            From electricity and gas comparisons to contract renewals and greener energy options,
+            discover straightforward guidance to help your business make informed decisions.
           </p>
 
         </div>

@@ -32,28 +32,28 @@ const services = [
   {
     title: "Business Energy",
     description:
-      "Compare commercial energy options and explore solutions suited to your business requirements.",
+      "Compare business electricity and gas options with a clearer understanding of unit prices, daily standing charges, contract terms and renewal timing.",
     href: "/energy",
     icon: Zap,
   },
   {
     title: "Business Electricity",
     description:
-      "Explore electricity plans from a range of providers and find an option aligned with your business needs.",
+      "Explore electricity contracts for your premises, including fixed-price options, variable rates and day-and-night meter arrangements.",
     href: "/energy/electricity",
     icon: Zap,
   },
   {
     title: "Business Gas",
     description:
-      "Compare business gas options without spending hours contacting different suppliers.",
+      "Review business gas quotes against estimated annual consumption, standing charges and the terms that determine your total costs.",
     href: "/energy/gas",
     icon: Zap,
   },
   {
     title: "Business Broadband",
     description:
-      "Find reliable connectivity solutions designed around your team's speed and performance requirements.",
+      "Explore broadband connections based on availability, expected speeds and the communication needs of your business.",
     href: "/connectivity/broadband",
     icon: Wifi,
   },
@@ -85,28 +85,28 @@ const benefits = [
     number: "01",
     title: "Save Time",
     description:
-      "Let our team handle the research and comparison while you focus on your business.",
+      "Spend less time navigating supplier options. Tell us what your business needs and we’ll help you explore the available choices.",
     icon: Clock3,
   },
   {
     number: "02",
     title: "Compare Options",
     description:
-      "Explore suitable solutions from a range of business service providers.",
+      "Review important differences in service options, contract terms and suitability before making a decision.",
     icon: BarChart3,
   },
   {
     number: "03",
     title: "Expert Support",
     description:
-      "Get clear guidance to help you understand your available options.",
+      "Ask questions, understand your options and move forward with greater confidence.",
     icon: Headphones,
   },
   {
     number: "04",
     title: "Simple Switching",
     description:
-      "Once you've selected an option, we'll help guide you through the next steps.",
+      "If you decide to proceed, we’ll explain the next steps and what to expect from the switching process.",
     icon: RefreshCw,
   },
 ];
@@ -204,10 +204,10 @@ export default function Home() {
               </h1>
 
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-500">
-                Discover business energy options, explore practical ways to improve
-                energy efficiency, and compare essential services for your
-                premises. Nexa helps you start with a clear enquiry and understand
-                the options available for your business.
+                Take control of your business energy decisions with clearer comparisons and practical guidance.
+                Scotishwarehouse helps you explore electricity, gas and essential
+                utilities, review the costs behind each offer and understand
+                your next steps before choosing a contract.
               </p>
 
               <div className="mt-9 flex flex-col gap-4 sm:flex-row">
@@ -310,7 +310,7 @@ export default function Home() {
                 </p>
 
                 <p className="mt-5 text-lg leading-8 text-slate-600">
-                  Nexa helps bring these requirements together, making it
+                  Scotishwarehouse helps bring these requirements together, making it
                   easier for businesses to explore their options without
                   dealing with multiple enquiries separately.
                 </p>

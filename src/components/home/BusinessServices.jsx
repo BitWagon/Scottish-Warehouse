@@ -6,28 +6,28 @@ const services = [
     number: "01",
     title: "Energy Solutions",
     description:
-      "Explore electricity and gas solutions designed for businesses.",
+      "Compare business electricity and gas quotes with a clear view of fixed and variable contracts, unit rates, standing charges and renewal options.",
     href: "/energy",
   },
   {
     number: "02",
     title: "Connectivity",
     description:
-      "Keep your team connected with reliable business broadband and phone services.",
+      "Explore business broadband and phone options to support everyday operations, customer calls and reliable communication.",
     href: "/connectivity",
   },
   {
     number: "03",
     title: "Water Services",
     description:
-      "Explore business water solutions designed around your requirements.",
+      "Review business water services and explore options suited to your premises, usage and operational needs.",
     href: "/water",
   },
   {
     number: "04",
     title: "Payment Solutions",
     description:
-      "Modern payment solutions for businesses that accept card payments.",
+      "Explore card payment solutions that help your business accept payments conveniently, whether in-store or on the move.",
     href: "/card-machine",
   },
 ];
@@ -45,8 +45,8 @@ export default function BusinessServices() {
           </p>
 
           <h2 className="mt-4 text-4xl font-black text-slate-900 md:text-5xl">
-            Solutions built around your business
-          </h2>
+                  Energy and Essential Services, Explained Clearly
+                </h2>
 
         </div>
 

@@ -11,9 +11,9 @@ import Footer from "@/components/layout/Footer";
 import ServiceHero from "@/components/services/ServiceHero";
 
 export const metadata = {
-  title: "Business Gas | Your Brand",
+  title: "Business Gas Comparison | Scotishwarehouse",
   description:
-    "Explore business gas solutions.",
+    "Explore business gas quotes, understand estimated annual costs and review contract options with Scotishwarehouse.",
 };
 
 export default function GasPage() {
@@ -25,9 +25,9 @@ export default function GasPage() {
 
         <ServiceHero
           badge="Business Gas"
-          title="Gas solutions"
-          highlight="for modern businesses."
-          description="Explore business gas options and find a solution that aligns with your organisation's requirements."
+          title="Business gas"
+          highlight="comparison made clearer."
+          description="Make a more informed business gas decision. Compare unit rates, standing charges, fixed-term options and renewal conditions for your premises."
         />
 
         {/* Why Compare */}
@@ -48,29 +48,24 @@ export default function GasPage() {
                 </span>
 
                 <h2 className="mt-4 text-4xl font-black text-slate-900 md:text-5xl">
-                  Explore Your Business Gas Options
+                  Business Gas Options, Clearly Explained
                 </h2>
 
                 <p className="mt-6 text-lg leading-8 text-slate-600">
-                  Business gas requirements can vary depending on your
-                  premises, operations and energy usage. Comparing available
-                  options can help you understand what is available and find
-                  a solution that fits your organisation.
+                  A good business gas comparison looks at the full picture: unit rates, daily standing charges, estimated annual consumption, contract length and the date your current agreement ends.
                 </p>
 
                 <p className="mt-5 text-lg leading-8 text-slate-600">
-                  Whether you operate a restaurant, office, retail premises
-                  or another commercial property, exploring your options can
-                  help you make a more informed decision.
+                  From hospitality and food businesses to commercial premises, we help you explore gas options in the context of how your business actually uses energy.
                 </p>
 
                 <div className="mt-8 space-y-4">
 
                   {[
-                    "Business-focused gas solutions",
-                    "Clear and simple information",
-                    "Options based on your requirements",
-                    "Support during the process",
+                    "Compare unit rates and standing charges",
+                    "Understand fixed-term contract details",
+                    "Review options around your gas usage",
+                    "Guidance through your enquiry",
                   ].map((item) => (
 
                     <div
@@ -122,8 +117,8 @@ export default function GasPage() {
                       </h3>
 
                       <p className="mt-1 text-sm leading-6 text-slate-300">
-                        Explore options around your organisation's energy
-                        requirements.
+                        Understand business gas pricing and contract choices
+                        before making your next decision.
                       </p>
 
                     </div>
@@ -152,12 +147,13 @@ export default function GasPage() {
               </p>
 
               <h2 className="mt-4 text-4xl font-black text-slate-900 md:text-5xl">
-                A simpler way to explore gas options
-              </h2>
+                  Understand Your Business Gas Choices
+                </h2>
 
               <p className="mt-5 text-lg leading-8 text-slate-600">
-                Tell us about your business requirements and explore suitable
-                gas solutions through one straightforward enquiry.
+                Share a few details about your premises and current contract.
+                We'll help you explore available gas options and understand
+                the key terms before you decide what works for your business.
               </p>
 
             </div>
@@ -167,15 +163,15 @@ export default function GasPage() {
               {[
                 {
                   title: "Compare",
-                  text: "Explore available business gas solutions through one enquiry.",
+                  text: "Review available gas options based on your business details and usage.",
                 },
                 {
                   title: "Understand",
-                  text: "Review options clearly before deciding how to proceed.",
+                  text: "Consider unit rates, standing charges, contract lengths and key conditions.",
                 },
                 {
                   title: "Move Forward",
-                  text: "Get guidance on the next steps once you've selected an option.",
+                  text: "Understand the next steps if you choose to proceed with an option.",
                 },
               ].map((item) => (
 
@@ -228,28 +224,28 @@ export default function GasPage() {
                 </p>
 
                 <h2 className="mt-4 text-4xl font-black text-slate-900 md:text-5xl">
-                  Gas Options Designed Around Your Requirements
+                  Business Gas That Works for Your Operations
                 </h2>
 
                 <p className="mt-6 text-lg leading-8 text-slate-600">
-                  Different organisations use gas in different ways. Your
-                  requirements may depend on your premises, working
-                  environment, equipment and day-to-day operations.
+                  From cooking and hot water to heating commercial spaces,
+                  gas usage varies across businesses. A suitable contract
+                  should reflect how and when your premises use energy.
                 </p>
 
                 <p className="mt-5 text-lg leading-8 text-slate-600">
-                  Our approach is designed to make it easier to explore
-                  available options and understand the choices that may be
-                  suitable for your business.
+                  We help you focus on the details that matter: your estimated
+                  consumption, existing agreement, preferred contract length
+                  and the overall costs of available options.
                 </p>
 
                 <div className="mt-8 grid gap-4 sm:grid-cols-2">
 
                   {[
-                    "Commercial gas options",
-                    "Business-focused solutions",
-                    "Clear information",
-                    "Simple enquiry process",
+                    "Business gas tariff comparisons",
+                    "Contract renewal guidance",
+                    "Clear pricing information",
+                    "Straightforward enquiry",
                   ].map((item) => (
 
                     <div
@@ -293,8 +289,9 @@ export default function GasPage() {
               </h2>
 
               <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-600">
-                Start with a simple enquiry and explore your business gas
-                options through a clear and straightforward process.
+                Reviewing your business gas options starts with a few
+                details. We make it easier to understand the choices and
+                decide on the next step.
               </p>
 
             </div>
@@ -322,13 +319,13 @@ export default function GasPage() {
 
                   <p className="mt-3 leading-7 text-slate-600">
                     {number === "01" &&
-                      "Share some basic information about your business and your gas requirements."}
+                      "Tell us about your premises, estimated usage and current gas contract."}
 
                     {number === "02" &&
-                      "Explore available options and review the solutions that may suit your organisation."}
+                      "Compare available rates, standing charges and contract terms."}
 
                     {number === "03" &&
-                      "Once you've selected an option, understand the next steps and move forward."}
+                      "If you find a suitable option, we explain the next steps clearly."}
                   </p>
 
                 </div>
@@ -371,8 +368,9 @@ export default function GasPage() {
                   </h2>
 
                   <p className="mt-4 max-w-2xl leading-8 text-slate-300">
-                    Tell us about your business requirements and start
-                    exploring suitable options for your organisation.
+                    Looking to review your business gas contract? Tell us about
+                    your requirements and explore options with a clearer
+                    understanding of pricing and terms.
                   </p>
 
                   <Link
@@ -405,12 +403,13 @@ export default function GasPage() {
               </p>
 
               <h2 className="mt-4 text-4xl font-black text-slate-900">
-                A simpler approach to business gas
+                Make your next gas decision more informed
               </h2>
 
               <p className="mt-5 text-lg leading-8 text-slate-600">
-                We aim to make the process easier by helping businesses
-                explore options without unnecessary complexity.
+                Scotishwarehouse helps businesses approach gas comparisons
+                with straightforward information, relevant options and
+                support throughout the enquiry.
               </p>
 
             </div>
@@ -418,10 +417,10 @@ export default function GasPage() {
             <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
 
               {[
-                "Business-focused solutions",
-                "Clear information",
-                "Simple enquiry process",
-                "Dedicated support",
+                "Contract renewal guidance",
+                "Clear pricing information",
+                "Straightforward enquiry",
+                "Help with next steps",
               ].map((item) => (
 
                 <div
@@ -439,8 +438,8 @@ export default function GasPage() {
                   </h3>
 
                   <p className="mt-3 text-sm leading-6 text-slate-600">
-                    Explore your requirements and understand your available
-                    business gas options.
+                    Understand your gas usage, review available terms
+                    and consider options for your business.
                   </p>
 
                 </div>
@@ -474,8 +473,8 @@ export default function GasPage() {
                 </h3>
 
                 <p className="mt-4 leading-7 text-slate-600">
-                  Explore business energy solutions including electricity and
-                  gas options through one convenient enquiry.
+                  Explore business electricity and gas options and understand
+                  the key factors that can affect your energy costs.
                 </p>
 
                 <span className="mt-6 inline-flex items-center gap-2 font-semibold text-green-700">
@@ -499,8 +498,8 @@ export default function GasPage() {
                 </h3>
 
                 <p className="mt-4 leading-7 text-slate-600">
-                  Explore electricity options from different providers and
-                  find a solution aligned with your business needs.
+                  Compare electricity contract features, including unit rates,
+                  standing charges and contract lengths.
                 </p>
 
                 <span className="mt-6 inline-flex items-center gap-2 font-semibold text-green-700">
@@ -526,8 +525,9 @@ export default function GasPage() {
             </h2>
 
             <p className="mx-auto mt-5 max-w-xl text-lg leading-8 text-slate-400">
-              Start your enquiry today and tell us what your organisation
-              needs. We'll help you explore suitable business gas options.
+              Tell us about your business and current gas arrangements.
+              We'll help you review available options and understand
+              what to consider before making a decision.
             </p>
 
             <Link
