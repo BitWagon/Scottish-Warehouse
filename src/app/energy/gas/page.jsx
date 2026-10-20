@@ -22,6 +22,24 @@ export default function GasPage() {
       <Navbar />
 
       <main>
+        <style>{`
+          @keyframes swGasPhotoEnter {
+            from { opacity: 0; transform: translateY(16px) scale(0.98); filter: brightness(0.94); }
+            to { opacity: 1; transform: translateY(0) scale(1); filter: brightness(1); }
+          }
+          .sw-gas-photo {
+            animation: swGasPhotoEnter 850ms ease-out both;
+            transition: transform 700ms ease, filter 700ms ease;
+          }
+          .sw-gas-photo:hover, .group:hover .sw-gas-photo {
+            transform: scale(1.05);
+            filter: brightness(1.07) saturate(1.06);
+          }
+          @media (prefers-reduced-motion: reduce) {
+            .sw-gas-photo { animation: none; transition: none; }
+          }
+        `}</style>
+
 
         <ServiceHero
           badge="Business Gas"
@@ -97,7 +115,7 @@ export default function GasPage() {
                   <img
                     src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1200&q=85"
                     alt="Commercial kitchen and business gas usage"
-                    className="h-[520px] w-full object-cover transition duration-700 hover:scale-105"
+                    className="sw-gas-photo h-[520px] w-full object-cover transition duration-700 hover:scale-105"
                   />
 
                 </div>
@@ -212,7 +230,7 @@ export default function GasPage() {
                 <img
                   src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=85"
                   alt="Modern business workplace"
-                  className="h-[450px] w-full object-cover transition duration-700 hover:scale-105"
+                  className="sw-gas-photo h-[450px] w-full object-cover transition duration-700 hover:scale-105"
                 />
 
               </div>
@@ -352,7 +370,7 @@ export default function GasPage() {
                   <img
                     src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=85"
                     alt="Business hospitality environment"
-                    className="absolute inset-0 h-full w-full object-cover"
+                    className="sw-gas-photo absolute inset-0 h-full w-full object-cover"
                   />
 
                   <div className="absolute inset-0 bg-slate-950/50" />

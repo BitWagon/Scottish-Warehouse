@@ -93,7 +93,7 @@ export default function Navbar() {
               alt="Scottish Warehouse logo"
               width={100}
               height={40}
-              className="-mr-3 h-10 w-[100px] shrink-0 object-contain"
+              className="-mr-3 h-10 w-[100px] shrink-0 object-contain transition-[transform,filter] duration-500 ease-out motion-safe:group-hover:scale-105 motion-safe:group-hover:-translate-y-0.5 motion-safe:group-hover:brightness-110 motion-reduce:transition-none"
             />
 
             <span className="flex flex-col">

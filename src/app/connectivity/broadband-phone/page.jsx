@@ -49,6 +49,25 @@ const phoneFeatures = [
 export default function BroadbandPhonePage() {
   return (
     <>
+      <style>{`
+        @keyframes sw-photo-enter {
+          from { opacity: 0; transform: translateY(18px) scale(0.98); }
+          to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .sw-photo-animate {
+          animation: sw-photo-enter 850ms ease-out both;
+          transition: transform 550ms ease, filter 550ms ease;
+          will-change: transform;
+        }
+        .sw-photo-animate:hover {
+          transform: scale(1.045);
+          filter: brightness(1.06) saturate(1.06);
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .sw-photo-animate { animation: none; transition: none; }
+          .sw-photo-animate:hover { transform: none; filter: none; }
+        }
+      `}</style>
       <Navbar />
 
       <main>
@@ -115,7 +134,7 @@ export default function BroadbandPhonePage() {
                   <img
                     src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=85"
                     alt="Business broadband and network technology"
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover sw-photo-animate"
                   />
 
                   <div className="absolute inset-0 bg-slate-950/30" />
@@ -171,7 +190,7 @@ export default function BroadbandPhonePage() {
                   <img
                     src="https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1200&q=85"
                     alt="Business communication and phone meeting"
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover sw-photo-animate"
                   />
 
                   <div className="absolute inset-0 bg-slate-950/30" />
@@ -309,7 +328,7 @@ export default function BroadbandPhonePage() {
                 <img
                   src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85"
                   alt="Business team working together and communicating"
-                  className="h-[500px] w-full object-cover"
+                  className="h-[500px] w-full object-cover sw-photo-animate"
                 />
               </div>
             </div>

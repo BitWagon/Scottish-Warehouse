@@ -63,7 +63,7 @@ export default function BusinessPhoneLinePage() {
                 <img
                   src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1200&q=85"
                   alt="Business team communicating and collaborating in an office"
-                  className="h-80 w-full object-cover"
+                  className="h-80 w-full object-cover sw-photo-animate"
                 />
 
                 <div className="p-10 min-h-[420px] flex flex-col justify-center">
@@ -212,7 +212,7 @@ export default function BusinessPhoneLinePage() {
                 <img
                   src="https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1200&q=85"
                   alt="Professionals communicating during a business meeting"
-                  className="h-[520px] w-full object-cover"
+                  className="h-[520px] w-full object-cover sw-photo-animate"
                 />
               </div>
             </div>
@@ -226,7 +226,7 @@ export default function BusinessPhoneLinePage() {
                 <img
                   src="https://images.unsplash.com/photo-1573496799515-eebbb63814f2?auto=format&fit=crop&w=1200&q=85"
                   alt="Business professional using phone for work communication"
-                  className="h-72 w-full object-cover"
+                  className="h-72 w-full object-cover sw-photo-animate"
                 />
 
                 <div className="p-8">
@@ -249,7 +249,7 @@ export default function BusinessPhoneLinePage() {
                 <img
                   src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=85"
                   alt="Business team working with digital communication technology"
-                  className="h-72 w-full object-cover"
+                  className="h-72 w-full object-cover sw-photo-animate"
                 />
 
                 <div className="p-8">
@@ -305,6 +305,26 @@ export default function BusinessPhoneLinePage() {
           </div>
         </section>
       </main>
+
+      <style>{`
+        @keyframes swPhotoReveal {
+          from { opacity: 0; transform: translateY(18px) scale(0.985); }
+          to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .sw-photo-animate {
+          animation: swPhotoReveal 850ms ease-out both;
+          transition: transform 450ms ease, filter 450ms ease;
+          will-change: transform;
+        }
+        .sw-photo-animate:hover {
+          transform: scale(1.035);
+          filter: brightness(1.055) saturate(1.07);
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .sw-photo-animate { animation: none; transition: none; }
+          .sw-photo-animate:hover { transform: none; filter: none; }
+        }
+      `}</style>
 
       <Footer />
     </>

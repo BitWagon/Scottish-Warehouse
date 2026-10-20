@@ -175,7 +175,23 @@ const faqs = [
 export default function WastePage() {
   return (
     <>
-      <Navbar />
+      
+<style>{`
+  @keyframes swPhotoReveal {
+    from { opacity: 0; transform: translateY(18px) scale(0.985); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  .sw-photo-animate {
+    animation: swPhotoReveal 850ms ease-out both;
+    transition: transform 550ms ease, filter 550ms ease;
+  }
+  .sw-photo-animate:hover { filter: brightness(1.055) saturate(1.08); }
+  .sw-photo-zoom:hover { transform: scale(1.035); }
+  @media (prefers-reduced-motion: reduce) {
+    .sw-photo-animate { animation: none; transition: none; }
+  }
+`}</style>
+<Navbar />
 
       <main className="min-h-screen bg-white text-black">
         {/* HERO */}
@@ -241,7 +257,7 @@ export default function WastePage() {
                 <img
                   src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=1200&q=85"
                   alt="Recycling and responsible commercial waste management"
-                  className="h-[380px] w-full rounded-3xl object-cover shadow-xl md:h-[480px]"
+                  className="h-[380px] w-full rounded-3xl object-cover shadow-xl md:h-[480px] sw-photo-animate sw-photo-zoom"
                 />
 
                 <div className="absolute -bottom-6 left-4 right-4 rounded-2xl border border-green-100 bg-white p-5 shadow-xl sm:left-8 sm:right-8">
@@ -345,7 +361,7 @@ export default function WastePage() {
                       <img
                         src={service.image}
                         alt={service.alt}
-                        className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                        className="h-full w-full object-cover transition duration-500 group-hover:scale-105 sw-photo-animate"
                         loading="lazy"
                       />
                     </div>
@@ -385,7 +401,7 @@ export default function WastePage() {
               <img
                 src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=1200&q=85"
                 alt="Recycling materials as part of business waste management"
-                className="h-[380px] w-full object-cover md:h-[500px]"
+                className="h-[380px] w-full object-cover md:h-[500px] sw-photo-animate sw-photo-zoom"
                 loading="lazy"
               />
             </div>
@@ -524,7 +540,7 @@ export default function WastePage() {
                 <img
                   src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=85"
                   alt="Environmental sustainability and responsible waste practices"
-                  className="h-[420px] w-full object-cover md:h-[560px]"
+                  className="h-[420px] w-full object-cover md:h-[560px] sw-photo-animate sw-photo-zoom"
                   loading="lazy"
                 />
               </div>

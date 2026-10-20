@@ -35,7 +35,7 @@ export default function PrivacyPage() {
                 <img
                   src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1400&q=85"
                   alt="Online privacy and data security"
-                  className="h-[380px] w-full rounded-3xl object-cover shadow-2xl"
+                  className="h-[380px] w-full rounded-3xl object-cover shadow-2xl sw-privacy-photo"
                 />
               </div>
             </div>
@@ -50,7 +50,7 @@ export default function PrivacyPage() {
                 <img
                   src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1400&q=85"
                   alt="Business documents and privacy information"
-                  className="h-[400px] w-full rounded-3xl object-cover"
+                  className="h-[400px] w-full rounded-3xl object-cover sw-privacy-photo"
                 />
               </div>
 
@@ -328,7 +328,7 @@ export default function PrivacyPage() {
                 <img
                   src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=85"
                   alt="Secure business technology and information"
-                  className="h-[470px] w-full rounded-3xl object-cover"
+                  className="h-[470px] w-full rounded-3xl object-cover sw-privacy-photo"
                 />
               </div>
             </div>
@@ -343,7 +343,7 @@ export default function PrivacyPage() {
                 <img
                   src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1400&q=85"
                   alt="Person reviewing privacy and business documents"
-                  className="h-[430px] w-full rounded-3xl object-cover"
+                  className="h-[430px] w-full rounded-3xl object-cover sw-privacy-photo"
                 />
               </div>
 
@@ -482,7 +482,7 @@ export default function PrivacyPage() {
                 <img
                   src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1400&q=85"
                   alt="Business professionals working together"
-                  className="h-[430px] w-full rounded-3xl object-cover"
+                  className="h-[430px] w-full rounded-3xl object-cover sw-privacy-photo"
                 />
               </div>
             </div>
@@ -543,6 +543,24 @@ export default function PrivacyPage() {
         </section>
       </main>
 
+      <style>{`
+        @keyframes swPrivacyPhotoEnter {
+          from { opacity: 0; transform: translateY(18px) scale(0.985); }
+          to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .sw-privacy-photo {
+          animation: swPrivacyPhotoEnter 850ms ease-out both;
+          transition: transform 550ms ease, filter 550ms ease;
+        }
+        .sw-privacy-photo:hover {
+          transform: scale(1.045);
+          filter: brightness(1.07) saturate(1.06);
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .sw-privacy-photo { animation: none; transition: none; }
+          .sw-privacy-photo:hover { transform: none; filter: none; }
+        }
+      `}</style>
       <Footer />
     </>
   );

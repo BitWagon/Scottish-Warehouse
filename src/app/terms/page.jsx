@@ -36,7 +36,7 @@ export default function TermsPage() {
                 <img
                   src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1400&q=85"
                   alt="Business documents and terms and conditions"
-                  className="h-[380px] w-full rounded-3xl object-cover shadow-2xl"
+                  className="h-[380px] w-full rounded-3xl object-cover shadow-2xl sw-terms-photo"
                 />
               </div>
             </div>
@@ -51,7 +51,7 @@ export default function TermsPage() {
                 <img
                   src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1400&q=85"
                   alt="Business professionals reviewing information"
-                  className="h-[410px] w-full rounded-3xl object-cover"
+                  className="h-[410px] w-full rounded-3xl object-cover sw-terms-photo"
                 />
               </div>
 
@@ -357,7 +357,7 @@ export default function TermsPage() {
                 <img
                   src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1400&q=85"
                   alt="Business team discussing service options"
-                  className="h-[470px] w-full rounded-3xl object-cover"
+                  className="h-[470px] w-full rounded-3xl object-cover sw-terms-photo"
                 />
               </div>
             </div>
@@ -372,7 +372,7 @@ export default function TermsPage() {
                 <img
                   src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1400&q=85"
                   alt="Business professionals working together"
-                  className="h-[430px] w-full rounded-3xl object-cover"
+                  className="h-[430px] w-full rounded-3xl object-cover sw-terms-photo"
                 />
               </div>
 
@@ -483,7 +483,7 @@ export default function TermsPage() {
                 <img
                   src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=85"
                   alt="Business professionals discussing an agreement"
-                  className="h-[430px] w-full rounded-3xl object-cover"
+                  className="h-[430px] w-full rounded-3xl object-cover sw-terms-photo"
                 />
               </div>
             </div>
@@ -569,6 +569,24 @@ export default function TermsPage() {
         </section>
       </main>
 
+      <style>{`
+        @keyframes swTermsPhotoEnter {
+          from { opacity: 0; transform: translateY(18px) scale(0.985); }
+          to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .sw-terms-photo {
+          animation: swTermsPhotoEnter 850ms ease-out both;
+          transition: transform 550ms ease, filter 550ms ease;
+        }
+        .sw-terms-photo:hover {
+          transform: scale(1.045);
+          filter: brightness(1.07) saturate(1.06);
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .sw-terms-photo { animation: none; transition: none; }
+          .sw-terms-photo:hover { transform: none; filter: none; }
+        }
+      `}</style>
       <Footer />
     </>
   );

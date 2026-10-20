@@ -193,7 +193,7 @@ export default function WaterPage() {
                     <img
                       src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=1200&q=85"
                       alt="Clean water and water infrastructure"
-                      className="h-72 w-full object-cover md:h-80"
+                      className="sw-water-photo sw-water-photo-1 h-72 w-full object-cover md:h-80"
                     />
 
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
@@ -279,7 +279,7 @@ export default function WaterPage() {
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="sw-water-photo sw-water-photo-2 h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
 
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-70" />
@@ -329,7 +329,7 @@ export default function WaterPage() {
                   <img
                     src="https://images.unsplash.com/photo-1564419320461-6870880221ad?auto=format&fit=crop&w=1200&q=85"
                     alt="Water use in a commercial environment"
-                    className="h-[380px] w-full object-cover md:h-[460px]"
+                    className="sw-water-photo sw-water-photo-3 h-[380px] w-full object-cover md:h-[460px]"
                   />
                 </div>
               </Reveal>
@@ -452,6 +452,30 @@ export default function WaterPage() {
         </Reveal>
       </main>
 
+      <style jsx global>{`
+        @keyframes swWaterPhotoEnter {
+          from { opacity: 0; transform: translateY(14px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .sw-water-photo {
+          animation: swWaterPhotoEnter 0.8s ease-out both;
+          transition: transform 500ms ease, filter 500ms ease;
+        }
+        .sw-water-photo-1:hover,
+        .sw-water-photo-3:hover {
+          transform: scale(1.035);
+          filter: brightness(1.05) saturate(1.06);
+        }
+        .sw-water-photo-2:hover {
+          filter: brightness(1.05) saturate(1.06);
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .sw-water-photo {
+            animation: none !important;
+            transition: none !important;
+          }
+        }
+      `}</style>
       <Footer />
     </>
   );

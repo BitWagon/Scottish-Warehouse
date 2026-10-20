@@ -41,6 +41,23 @@ export default function ConnectivityPage() {
       <Navbar />
 
       <main>
+        {/* Photo-only animations: existing page content and layout are unchanged. */}
+        <style>{`
+          @keyframes sw-photo-appear {
+            from { opacity: 0; transform: translateY(18px); filter: brightness(0.92); }
+            to { opacity: 1; transform: translateY(0); filter: brightness(1); }
+          }
+          .sw-photo-reveal {
+            animation: sw-photo-appear 850ms ease-out both;
+            transition-property: transform, filter, opacity;
+            transition-duration: 700ms;
+          }
+          .sw-photo-reveal:hover { filter: brightness(1.06) saturate(1.08); }
+          @media (prefers-reduced-motion: reduce) {
+            .sw-photo-reveal { animation: none !important; transition: none !important; }
+          }
+        `}</style>
+
 
         <ServiceHero
           badge="Business Connectivity"
@@ -143,7 +160,7 @@ export default function ConnectivityPage() {
                 <img
                   src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85"
                   alt="Business team working together and communicating"
-                  className="h-[500px] w-full object-cover transition duration-700 hover:scale-105"
+                  className="h-[500px] w-full object-cover transition duration-700 hover:scale-105 sw-photo-reveal"
                 />
 
                 <div className="absolute bottom-6 left-6 right-6 rounded-2xl bg-slate-950/90 p-6 text-white backdrop-blur">
@@ -199,7 +216,7 @@ export default function ConnectivityPage() {
                   <img
                     src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=85"
                     alt="Business broadband and network technology"
-                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105 sw-photo-reveal"
                   />
 
                   <div className="absolute inset-0 bg-slate-950/30" />
@@ -246,7 +263,7 @@ export default function ConnectivityPage() {
                   <img
                     src="https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1200&q=85"
                     alt="Business communication and phone meeting"
-                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105 sw-photo-reveal"
                   />
 
                   <div className="absolute inset-0 bg-slate-950/30" />
@@ -361,7 +378,7 @@ export default function ConnectivityPage() {
                 <img
                   src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=85"
                   alt="Professional business team working with technology"
-                  className="h-[480px] w-full object-cover transition duration-700 hover:scale-105"
+                  className="h-[480px] w-full object-cover transition duration-700 hover:scale-105 sw-photo-reveal"
                 />
 
               </div>
@@ -435,7 +452,7 @@ export default function ConnectivityPage() {
                 <img
                   src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=85"
                   alt="Business professionals collaborating and communicating"
-                  className="absolute inset-0 h-full w-full object-cover"
+                  className="absolute inset-0 h-full w-full object-cover sw-photo-reveal"
                 />
 
                 <div className="absolute inset-0 bg-slate-950/50" />

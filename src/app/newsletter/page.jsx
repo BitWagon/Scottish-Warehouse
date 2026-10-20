@@ -128,7 +128,7 @@ export default function NewsletterPage() {
                   <img
                     src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85"
                     alt="Business professionals discussing business solutions"
-                    className="h-[340px] w-full object-cover md:h-[450px]"
+                    className="h-[340px] w-full object-cover md:h-[450px] sw-newsletter-photo"
                   />
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent" />
@@ -203,7 +203,7 @@ export default function NewsletterPage() {
                     <img
                       src={topic.image}
                       alt={topic.title}
-                      className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                      className="h-full w-full object-cover transition duration-500 group-hover:scale-105 sw-newsletter-photo"
                     />
                     <div className="absolute inset-0 bg-black/20 transition group-hover:bg-green-950/20" />
                     <span className="absolute left-5 top-5 flex h-11 w-11 items-center justify-center rounded-full bg-green-500 font-bold text-black">
@@ -376,6 +376,26 @@ export default function NewsletterPage() {
         </section>
       </main>
 
+      <style>{`
+        @keyframes swNewsletterPhotoEnter {
+          from { opacity: 0; transform: translateY(18px) scale(0.985); }
+          to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .sw-newsletter-photo {
+          animation: swNewsletterPhotoEnter 850ms ease-out both;
+          transition: transform 550ms ease, filter 550ms ease;
+        }
+        .sw-newsletter-photo:hover,
+        .group:hover .sw-newsletter-photo {
+          transform: scale(1.045);
+          filter: brightness(1.07) saturate(1.06);
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .sw-newsletter-photo { animation: none; transition: none; }
+          .sw-newsletter-photo:hover,
+          .group:hover .sw-newsletter-photo { transform: none; filter: none; }
+        }
+      `}</style>
       <Footer />
     </>
   );

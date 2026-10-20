@@ -198,10 +198,12 @@ export default function InsurancePage() {
                 className="relative"
               >
                 <div className="overflow-hidden rounded-[2rem] border border-white/10 shadow-2xl">
-                  <img
+                  <motion.img
                     src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1400&q=85"
                     alt="Business professionals discussing business protection and planning"
                     className="h-[420px] w-full object-cover"
+                    whileHover={{ scale: 1.045, filter: "brightness(1.06) saturate(1.08)" }}
+                    transition={{ duration: 0.45, ease: "easeOut" }}
                   />
                 </div>
 
@@ -320,10 +322,12 @@ export default function InsurancePage() {
                 transition={{ duration: 0.6 }}
                 className="overflow-hidden rounded-[2rem]"
               >
-                <img
+                <motion.img
                   src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1400&q=85"
                   alt="Business professionals reviewing important business information"
                   className="h-[480px] w-full object-cover"
+                  whileHover={{ scale: 1.045, filter: "brightness(1.06) saturate(1.08)" }}
+                  transition={{ duration: 0.45, ease: "easeOut" }}
                 />
               </motion.div>
 
@@ -566,10 +570,12 @@ export default function InsurancePage() {
                 transition={{ duration: 0.6 }}
                 className="overflow-hidden rounded-[2rem]"
               >
-                <img
+                <motion.img
                   src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=85"
                   alt="Professional business team working together"
                   className="h-[460px] w-full object-cover"
+                  whileHover={{ scale: 1.045, filter: "brightness(1.06) saturate(1.08)" }}
+                  transition={{ duration: 0.45, ease: "easeOut" }}
                 />
               </motion.div>
 

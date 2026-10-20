@@ -4,6 +4,24 @@ import Footer from "@/components/layout/Footer";
 export default function CookiePolicyPage() {
   return (
     <>
+      <style>{`
+        @keyframes swPhotoEnter {
+          from { opacity: 0; transform: translateY(18px) scale(0.985); }
+          to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .sw-animated-photo {
+          animation: swPhotoEnter 0.85s ease-out both;
+          transition: transform 0.5s ease, filter 0.5s ease;
+        }
+        .sw-animated-photo:hover {
+          transform: scale(1.045);
+          filter: brightness(1.06) saturate(1.08);
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .sw-animated-photo { animation: none; transition: none; }
+          .sw-animated-photo:hover { transform: none; filter: none; }
+        }
+      `}</style>
       <Navbar />
 
       <main>
@@ -34,7 +52,7 @@ export default function CookiePolicyPage() {
               <img
                 src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1400&q=85"
                 alt="Business professional using a laptop"
-                className="h-[360px] w-full object-cover"
+                className="h-[360px] w-full object-cover sw-animated-photo"
               />
             </div>
           </div>
@@ -47,7 +65,7 @@ export default function CookiePolicyPage() {
               <img
                 src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1400&q=85"
                 alt="Business documents and information"
-                className="h-[420px] w-full object-cover"
+                className="h-[420px] w-full object-cover sw-animated-photo"
               />
             </div>
 
@@ -309,7 +327,7 @@ export default function CookiePolicyPage() {
               <img
                 src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=85"
                 alt="Business team working with digital technology"
-                className="h-[420px] w-full object-cover"
+                className="h-[420px] w-full object-cover sw-animated-photo"
               />
             </div>
           </div>
@@ -322,7 +340,7 @@ export default function CookiePolicyPage() {
               <img
                 src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1400&q=85"
                 alt="Business team discussing website requirements"
-                className="h-[400px] w-full object-cover"
+                className="h-[400px] w-full object-cover sw-animated-photo"
               />
             </div>
 
@@ -486,7 +504,7 @@ export default function CookiePolicyPage() {
               <img
                 src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1400&q=85"
                 alt="Business professionals working with technology"
-                className="h-[420px] w-full object-cover"
+                className="h-[420px] w-full object-cover sw-animated-photo"
               />
             </div>
           </div>

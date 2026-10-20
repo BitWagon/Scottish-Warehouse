@@ -188,6 +188,31 @@ export default function Home() {
       <Navbar />
 
       <main>
+        {/* Photo-only animations: no changes to page content or layout */}
+        <style>{`
+          @keyframes swPhotoReveal {
+            from { opacity: 0; transform: translateY(18px) scale(1.025); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+          }
+          .sw-photo-animate {
+            animation: swPhotoReveal 850ms cubic-bezier(.2,.7,.2,1) both;
+            transition: filter 650ms ease, scale 650ms cubic-bezier(.2,.7,.2,1);
+            will-change: opacity, transform;
+          }
+          .sw-photo-animate:hover { scale: 1.045; filter: saturate(1.08); }
+          .sw-logo-animate {
+            animation: swPhotoReveal 850ms cubic-bezier(.2,.7,.2,1) both;
+            transition: scale 500ms ease;
+          }
+          .sw-logo-animate:hover { scale: 1.035; }
+          @media (prefers-reduced-motion: reduce) {
+            .sw-photo-animate, .sw-logo-animate {
+              animation: none !important;
+              transition: none !important;
+            }
+            .sw-photo-animate:hover, .sw-logo-animate:hover { scale: 1; filter: none; }
+          }
+        `}</style>
         {/* HERO */}
         <section className="relative overflow-hidden bg-gradient-to-br from-green-50 via-white to-emerald-50 text-slate-900">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(22,163,74,0.10),transparent_35%),radial-gradient(circle_at_85%_75%,rgba(16,185,129,0.10),transparent_35%)]" />
@@ -236,7 +261,7 @@ export default function Home() {
                 <img
                   src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85"
                   alt="Professional business team working together"
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover sw-photo-animate"
                 />
 
                 <div className="absolute inset-0 bg-slate-950/40" />
@@ -290,7 +315,7 @@ export default function Home() {
                 <img
                   src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1200&q=85"
                   alt="Professional business team meeting"
-                  className="h-[420px] w-full object-cover transition duration-700 hover:scale-105"
+                  className="h-[420px] w-full object-cover transition duration-700 hover:scale-105 sw-photo-animate"
                 />
               </div>
 
@@ -415,7 +440,7 @@ export default function Home() {
                   <img
                     src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=85"
                     alt="Professional business office"
-                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105 sw-photo-animate"
                   />
                 </div>
 
@@ -448,7 +473,7 @@ export default function Home() {
                   <img
                     src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=85"
                     alt="Business professionals collaborating"
-                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105 sw-photo-animate"
                   />
                 </div>
 
@@ -481,7 +506,7 @@ export default function Home() {
                   <img
                     src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=85"
                     alt="Business team working together"
-                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105 sw-photo-animate"
                   />
                 </div>
 
@@ -578,7 +603,7 @@ export default function Home() {
             <img
               src={provider.image}
               alt={provider.name}
-              className="h-60 w-full object-contain"
+              className="h-60 w-full object-contain sw-logo-animate"
             />
           </div>
         ))}
@@ -708,7 +733,7 @@ export default function Home() {
                   <img
                     src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1600&q=85"
                     alt="Professional business meeting and collaboration"
-                    className="h-[600px] w-full object-cover"
+                    className="h-[600px] w-full object-cover sw-photo-animate"
                   />
                 </div>
 
@@ -794,7 +819,7 @@ export default function Home() {
               <img
                 src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=85"
                 alt="Professional team working in a modern business environment"
-                className="absolute inset-0 h-full w-full object-cover opacity-30"
+                className="absolute inset-0 h-full w-full object-cover opacity-30 sw-photo-animate"
               />
 
               <div className="relative grid gap-10 p-10 md:p-16 lg:grid-cols-2 lg:items-center">
@@ -876,7 +901,7 @@ export default function Home() {
                 <img
                   src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1200&q=85"
                   alt="Professional business team"
-                  className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                  className="h-full w-full object-cover transition duration-700 group-hover:scale-105 sw-photo-animate"
                 />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
@@ -901,7 +926,7 @@ export default function Home() {
                 <img
                   src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85"
                   alt="Business professionals collaborating"
-                  className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                  className="h-full w-full object-cover transition duration-700 group-hover:scale-105 sw-photo-animate"
                 />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />

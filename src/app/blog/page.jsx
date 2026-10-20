@@ -84,6 +84,24 @@ export default function BlogPage() {
       <Navbar />
 
       <main>
+        <style>{`
+          @keyframes swBlogPhotoEnter {
+            from { opacity: 0; transform: translateY(16px) scale(0.98); filter: brightness(0.94); }
+            to { opacity: 1; transform: translateY(0) scale(1); filter: brightness(1); }
+          }
+          .sw-blog-photo {
+            animation: swBlogPhotoEnter 850ms ease-out both;
+            transition: transform 700ms ease, filter 700ms ease;
+          }
+          .sw-blog-photo:hover, .group:hover .sw-blog-photo {
+            transform: scale(1.05);
+            filter: brightness(1.07) saturate(1.06);
+          }
+          @media (prefers-reduced-motion: reduce) {
+            .sw-blog-photo { animation: none; transition: none; }
+          }
+        `}</style>
+
         {/* Hero */}
         <section className="bg-slate-950 py-24 text-white md:py-32">
           <div className="mx-auto max-w-7xl px-6">
@@ -130,7 +148,7 @@ export default function BlogPage() {
                 <img
                   src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=85"
                   alt="Business professionals discussing business decisions"
-                  className="h-[420px] w-full rounded-3xl object-cover shadow-2xl"
+                  className="sw-blog-photo h-[420px] w-full rounded-3xl object-cover shadow-2xl"
                 />
               </div>
             </div>
@@ -145,7 +163,7 @@ export default function BlogPage() {
                 <img
                   src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1400&q=85"
                   alt="Business team working together"
-                  className="h-[430px] w-full rounded-3xl object-cover"
+                  className="sw-blog-photo h-[430px] w-full rounded-3xl object-cover"
                 />
               </div>
 
@@ -223,7 +241,7 @@ export default function BlogPage() {
                     <img
                       src={post.image}
                       alt={post.title}
-                      className="h-56 w-full object-cover transition duration-500 group-hover:scale-105"
+                      className="sw-blog-photo h-56 w-full object-cover transition duration-500 group-hover:scale-105"
                     />
                   </div>
 
@@ -262,7 +280,7 @@ export default function BlogPage() {
                 <img
                   src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1400&q=85"
                   alt="Commercial energy and electricity"
-                  className="h-64 w-full object-cover"
+                  className="sw-blog-photo h-64 w-full object-cover"
                 />
 
                 <div className="p-8">
@@ -295,7 +313,7 @@ export default function BlogPage() {
                 <img
                   src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1400&q=85"
                   alt="Business broadband and connectivity infrastructure"
-                  className="h-64 w-full object-cover"
+                  className="sw-blog-photo h-64 w-full object-cover"
                 />
 
                 <div className="p-8">
@@ -396,7 +414,7 @@ export default function BlogPage() {
                 <img
                   src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1400&q=85"
                   alt="Business professionals reviewing business information"
-                  className="h-[440px] w-full rounded-3xl object-cover"
+                  className="sw-blog-photo h-[440px] w-full rounded-3xl object-cover"
                 />
               </div>
             </div>
@@ -490,7 +508,7 @@ export default function BlogPage() {
                 <img
                   src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=85"
                   alt="Business discussion and consultation"
-                  className="h-[430px] w-full rounded-3xl object-cover"
+                  className="sw-blog-photo h-[430px] w-full rounded-3xl object-cover"
                 />
               </div>
 

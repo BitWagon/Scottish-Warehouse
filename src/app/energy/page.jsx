@@ -23,6 +23,23 @@ export default function EnergyPage() {
       <Navbar />
 
       <main>
+        <style>{`
+          @keyframes swEnergyPhotoEnter {
+            from { opacity: 0; transform: translateY(16px) scale(0.98); filter: brightness(0.94); }
+            to { opacity: 1; transform: translateY(0) scale(1); filter: brightness(1); }
+          }
+          .sw-energy-photo {
+            animation: swEnergyPhotoEnter 850ms ease-out both;
+            transition: transform 700ms ease, filter 700ms ease;
+          }
+          .sw-energy-photo:hover, .group:hover .sw-energy-photo {
+            transform: scale(1.05);
+            filter: brightness(1.07) saturate(1.06);
+          }
+          @media (prefers-reduced-motion: reduce) {
+            .sw-energy-photo { animation: none; transition: none; }
+          }
+        `}</style>
         <ServiceHero
           badge="Business Energy"
           title="Power your business"
@@ -64,7 +81,7 @@ export default function EnergyPage() {
               <img
                 src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1200&q=85"
                 alt="Business energy and electricity infrastructure"
-                className="h-[460px] w-full object-cover transition duration-700 hover:scale-105"
+                className="h-[460px] w-full object-cover transition duration-700 hover:scale-105 sw-energy-photo"
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
@@ -107,7 +124,7 @@ export default function EnergyPage() {
                   <img
                     src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=1200&q=85"
                     alt="Business electricity and power"
-                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105 sw-energy-photo"
                   />
                 </div>
 
@@ -142,7 +159,7 @@ export default function EnergyPage() {
                   <img
                     src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=85"
                     alt="Business energy and gas infrastructure"
-                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105 sw-energy-photo"
                   />
                 </div>
 
@@ -216,7 +233,7 @@ export default function EnergyPage() {
                 <img
                   src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1400&q=85"
                   alt="Modern energy infrastructure"
-                  className="h-[480px] w-full object-cover transition duration-700 hover:scale-105"
+                  className="h-[480px] w-full object-cover transition duration-700 hover:scale-105 sw-energy-photo"
                 />
               </div>
 

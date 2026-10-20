@@ -14,6 +14,25 @@ import {
 export default function FinancePage() {
   return (
     <>
+      <style>{`
+        @keyframes sw-photo-enter {
+          from { opacity: 0; transform: translateY(18px) scale(0.98); }
+          to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .sw-photo-animate {
+          animation: sw-photo-enter 850ms ease-out both;
+          transition: transform 550ms ease, filter 550ms ease;
+          will-change: transform;
+        }
+        .sw-photo-animate:hover {
+          transform: scale(1.045);
+          filter: brightness(1.06) saturate(1.06);
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .sw-photo-animate { animation: none; transition: none; }
+          .sw-photo-animate:hover { transform: none; filter: none; }
+        }
+      `}</style>
       <Navbar />
 
       <main>
@@ -64,7 +83,7 @@ export default function FinancePage() {
                 <img
                   src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1200&q=85"
                   alt="Business professionals discussing finance and planning"
-                  className="h-[430px] w-full object-cover hover:scale-105 transition-transform duration-700"
+                  className="h-[430px] w-full object-cover hover:scale-105 transition-transform duration-700 sw-photo-animate"
                 />
               </div>
             </div>
@@ -191,7 +210,7 @@ export default function FinancePage() {
                 <img
                   src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=85"
                   alt="Business financial planning and reviewing figures"
-                  className="h-[430px] w-full object-cover hover:scale-105 transition-transform duration-700"
+                  className="h-[430px] w-full object-cover hover:scale-105 transition-transform duration-700 sw-photo-animate"
                 />
               </div>
 
@@ -283,7 +302,7 @@ export default function FinancePage() {
                 <img
                   src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=85"
                   alt="Business finance consultation and professional discussion"
-                  className="h-[500px] w-full object-cover hover:scale-105 transition-transform duration-700"
+                  className="h-[500px] w-full object-cover hover:scale-105 transition-transform duration-700 sw-photo-animate"
                 />
               </div>
             </div>

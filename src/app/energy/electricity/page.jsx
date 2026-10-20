@@ -22,6 +22,23 @@ export default function ElectricityPage() {
       <Navbar />
 
       <main>
+        <style>{`
+          @keyframes swElectricityPhotoEnter {
+            from { opacity: 0; transform: translateY(16px) scale(0.98); filter: brightness(0.94); }
+            to { opacity: 1; transform: translateY(0) scale(1); filter: brightness(1); }
+          }
+          .sw-electricity-photo {
+            animation: swElectricityPhotoEnter 850ms ease-out both;
+            transition: transform 700ms ease, filter 700ms ease;
+          }
+          .sw-electricity-photo:hover, .group:hover .sw-electricity-photo {
+            transform: scale(1.05);
+            filter: brightness(1.07) saturate(1.06);
+          }
+          @media (prefers-reduced-motion: reduce) {
+            .sw-electricity-photo { animation: none; transition: none; }
+          }
+        `}</style>
 
         <ServiceHero
           badge="Business Electricity"
@@ -59,7 +76,7 @@ export default function ElectricityPage() {
                 <img
                   src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1200&q=85"
                   alt="Electricity power lines and energy infrastructure"
-                  className="h-[430px] w-full object-cover transition duration-700 hover:scale-105"
+                  className="h-[430px] w-full object-cover transition duration-700 hover:scale-105 sw-electricity-photo"
                 />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
@@ -138,7 +155,7 @@ export default function ElectricityPage() {
                 <img
                   src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=85"
                   alt="Solar panels and electricity generation"
-                  className="h-[430px] w-full object-cover transition duration-700 hover:scale-105"
+                  className="h-[430px] w-full object-cover transition duration-700 hover:scale-105 sw-electricity-photo"
                 />
 
               </div>
@@ -288,7 +305,7 @@ export default function ElectricityPage() {
                 <img
                   src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=1200&q=85"
                   alt="Modern electricity and energy infrastructure"
-                  className="h-[420px] w-full object-cover transition duration-700 hover:scale-105"
+                  className="h-[420px] w-full object-cover transition duration-700 hover:scale-105 sw-electricity-photo"
                 />
 
               </div>
@@ -361,7 +378,7 @@ export default function ElectricityPage() {
                 <img
                   src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1200&q=85"
                   alt="Electricity power infrastructure"
-                  className="absolute inset-0 h-full w-full object-cover"
+                  className="absolute inset-0 h-full w-full object-cover sw-electricity-photo"
                 />
 
                 <div className="absolute inset-0 bg-slate-950/50" />

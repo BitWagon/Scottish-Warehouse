@@ -101,6 +101,25 @@ export default function AboutPage() {
 
   return (
     <>
+      <style>{`
+        @keyframes swPhotoEnter {
+          from { opacity: 0; transform: translateY(20px) scale(1.025); }
+          to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .sw-photo-animate {
+          animation: swPhotoEnter 850ms ease-out both;
+          transition: transform 650ms ease, filter 650ms ease;
+          will-change: transform;
+        }
+        .sw-photo-animate:hover {
+          transform: scale(1.045);
+          filter: brightness(1.06) saturate(1.06);
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .sw-photo-animate { animation: none; transition: none; }
+          .sw-photo-animate:hover { transform: none; filter: none; }
+        }
+      `}</style>
       <Navbar />
 
       <main className="overflow-hidden bg-white text-black">
@@ -251,7 +270,7 @@ Choosing energy, broadband or household utilities often means checking
                 <img
                   src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1400&q=85"
                   alt="Business professionals working together"
-                  className="h-[380px] w-full object-cover md:h-[470px]"
+                  className="h-[380px] w-full object-cover md:h-[470px] sw-photo-animate"
                 />
 
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent p-7 pt-20 md:p-9 md:pt-24">
@@ -492,7 +511,7 @@ A Useful Starting Point for Service Research
               <img
                 src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=85"
                 alt="Business discussion and consultation"
-                className="h-[350px] w-full object-cover md:h-[430px]"
+                className="h-[350px] w-full object-cover md:h-[430px] sw-photo-animate"
               />
             </div>
 

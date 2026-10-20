@@ -185,7 +185,7 @@ export default function QuotePage() {
               <img
                 src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1400&q=85"
                 alt="Business professionals working together"
-                className="relative h-[360px] w-full rounded-3xl object-cover shadow-xl md:h-[480px]"
+                className="relative h-[360px] w-full rounded-3xl object-cover shadow-xl md:h-[480px] sw-quote-photo"
               />
 
               <div className="absolute -right-3 -top-3 rounded-2xl bg-black px-5 py-4 text-white shadow-lg md:right-5 md:top-5">
@@ -348,7 +348,7 @@ export default function QuotePage() {
               <img
                 src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1400&q=85"
                 alt="Business team discussing plans"
-                className="h-[350px] w-full object-cover md:h-[460px]"
+                className="h-[350px] w-full object-cover md:h-[460px] sw-quote-photo"
               />
             </div>
 
@@ -423,6 +423,23 @@ export default function QuotePage() {
         </section>
       </main>
 
+      <style>{`
+        @keyframes swQuotePhotoEnter {
+          from { opacity: 0; transform: translateY(16px) scale(0.98); filter: brightness(0.94); }
+          to { opacity: 1; transform: translateY(0) scale(1); filter: brightness(1); }
+        }
+        .sw-quote-photo {
+          animation: swQuotePhotoEnter 850ms ease-out both;
+          transition: transform 700ms ease, filter 700ms ease;
+        }
+        .sw-quote-photo:hover {
+          transform: scale(1.05);
+          filter: brightness(1.07) saturate(1.06);
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .sw-quote-photo { animation: none; transition: none; }
+        }
+      `}</style>
       <Footer />
     </>
   );

@@ -94,7 +94,7 @@ export default function SupplierLogos() {
                 <img
                   src={supplier.logo}
                   alt={supplier.name}
-                  className="max-h-20 max-w-40 object-contain"
+                  className="supplier-logo-photo max-h-20 max-w-40 object-contain"
                 />
               </div>
             ))}
@@ -102,6 +102,24 @@ export default function SupplierLogos() {
         </div>
 
       </div>
+      <style jsx>{`
+        .supplier-logo-photo {
+          animation: supplierPhotoAppear 750ms ease-out both;
+          transition: transform 350ms ease, filter 350ms ease;
+          will-change: transform;
+        }
+        .supplier-logo-photo:hover {
+          transform: scale(1.08) translateY(-3px);
+          filter: brightness(1.06) saturate(1.12);
+        }
+        @keyframes supplierPhotoAppear {
+          from { opacity: 0; transform: translateY(12px) scale(0.97); }
+          to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .supplier-logo-photo { animation: none; transition: none; }
+        }
+      `}</style>
     </section>
   );
 }

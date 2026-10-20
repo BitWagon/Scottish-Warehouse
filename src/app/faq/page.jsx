@@ -279,7 +279,7 @@ export default function FAQPage() {
               <img
                 src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85"
                 alt="Business professionals working together in an office"
-                className="h-[360px] w-full rounded-3xl object-cover shadow-xl md:h-[460px]"
+                className="h-[360px] w-full rounded-3xl object-cover shadow-xl md:h-[460px] sw-faq-photo"
               />
 
               <div className="absolute -bottom-5 left-4 right-4 rounded-2xl border border-neutral-200 bg-white p-5 shadow-lg sm:left-8 sm:right-8">
@@ -532,6 +532,23 @@ export default function FAQPage() {
         </section>
       </main>
 
+      <style>{`
+        @keyframes swFaqPhotoEnter {
+          from { opacity: 0; transform: translateY(16px) scale(0.98); filter: brightness(0.94); }
+          to { opacity: 1; transform: translateY(0) scale(1); filter: brightness(1); }
+        }
+        .sw-faq-photo {
+          animation: swFaqPhotoEnter 850ms ease-out both;
+          transition: transform 700ms ease, filter 700ms ease;
+        }
+        .sw-faq-photo:hover {
+          transform: scale(1.05);
+          filter: brightness(1.07) saturate(1.06);
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .sw-faq-photo { animation: none; transition: none; }
+        }
+      `}</style>
       <Footer />
     </>
   );

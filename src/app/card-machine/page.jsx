@@ -40,6 +40,25 @@ const features = [
 export default function CardMachinePage() {
   return (
     <>
+      <style>{`
+        @keyframes sw-photo-enter {
+          from { opacity: 0; transform: translateY(18px) scale(0.98); }
+          to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .sw-photo-animate {
+          animation: sw-photo-enter 850ms ease-out both;
+          transition: transform 550ms ease, filter 550ms ease;
+          will-change: transform;
+        }
+        .sw-photo-animate:hover {
+          transform: scale(1.045);
+          filter: brightness(1.06) saturate(1.06);
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .sw-photo-animate { animation: none; transition: none; }
+          .sw-photo-animate:hover { transform: none; filter: none; }
+        }
+      `}</style>
       <Navbar />
 
       <main>
@@ -59,7 +78,7 @@ export default function CardMachinePage() {
                   <img
                     src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=85"
                     alt="Customer using a card payment machine"
-                    className="w-full h-[430px] object-cover hover:scale-105 transition-transform duration-700"
+                    className="w-full h-[430px] object-cover hover:scale-105 transition-transform duration-700 sw-photo-animate"
                   />
                 </div>
               </Reveal>
@@ -233,7 +252,7 @@ export default function CardMachinePage() {
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="h-56 w-full object-cover"
+                    className="h-56 w-full object-cover sw-photo-animate"
                   />
 
                   <div className="p-7">
@@ -336,7 +355,7 @@ export default function CardMachinePage() {
                   <img
                     src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=85"
                     alt="Contactless card payment at a business"
-                    className="h-[430px] w-full object-cover hover:scale-105 transition-transform duration-700"
+                    className="h-[430px] w-full object-cover hover:scale-105 transition-transform duration-700 sw-photo-animate"
                   />
                 </div>
               </Reveal>
