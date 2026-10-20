@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 
 export default function Footer() {
-  const whatsappNumber = "7828728445";
+  const whatsappNumber = "+447828728445";
   const whatsappUrl = `https://wa.me/${whatsappNumber}`;
 
   return (
@@ -159,7 +159,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-14 flex flex-col gap-5 border-t border-white/10 pt-8 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026 Brand solution. All rights reserved.</p>
+          <p>© 2026 Scotish Warehouse. All rights reserved.</p>
 
           <div className="flex flex-wrap gap-5">
             <Link href="/privacy" className="transition hover:text-green-400">

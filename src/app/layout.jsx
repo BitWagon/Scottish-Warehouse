@@ -2,7 +2,10 @@ import "./globals.css";
 import FloatingWhatsApp from "@/components/Floating/WhatsApp"; 
 
 export const metadata = {
-  title: "Your Business Solutions",
+  title: "Scotish warehouse",
+  icons: {
+    icon: "/favicon.ico?v=2",
+  },
   description:
     "Business energy, connectivity, water and payment solutions.",
 };
