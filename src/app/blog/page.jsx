@@ -107,13 +107,13 @@ export default function BlogPage() {
           <div className="mx-auto max-w-7xl px-6">
             <div className="grid items-center gap-12 lg:grid-cols-2">
               <div>
-                <span className="text-sm font-bold uppercase tracking-wider text-blue-400">
+                <span className="text-sm font-bold uppercase tracking-wider text-green-400">
                   Business Insights
                 </span>
 
                 <h1 className="mt-5 max-w-4xl text-4xl font-bold md:text-6xl">
                   Ideas to Help You Make{" "}
-                  <span className="text-blue-400">Better Decisions</span>
+                  <span className="text-green-400">Better Decisions</span>
                 </h1>
 
                 <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
@@ -130,7 +130,7 @@ export default function BlogPage() {
                 <div className="mt-8 flex flex-wrap gap-4">
                   <Link
                     href="/quote"
-                    className="rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-700"
+                    className="rounded-xl bg-green-700 px-6 py-3 font-semibold text-white transition hover:bg-green-800"
                   >
                     Request a Quote
                   </Link>
@@ -168,7 +168,7 @@ export default function BlogPage() {
               </div>
 
               <div>
-                <span className="text-sm font-bold uppercase tracking-wider text-blue-600">
+                <span className="text-sm font-bold uppercase tracking-wider text-green-700">
                   Practical Business Information
                 </span>
 
@@ -217,7 +217,7 @@ export default function BlogPage() {
         <section className="bg-slate-50 py-20">
           <div className="mx-auto max-w-7xl px-6">
             <div className="mx-auto max-w-3xl text-center">
-              <span className="text-sm font-bold uppercase tracking-wider text-blue-600">
+              <span className="text-sm font-bold uppercase tracking-wider text-green-700">
                 Featured Insights
               </span>
 
@@ -246,7 +246,7 @@ export default function BlogPage() {
                   </div>
 
                   <div className="p-7">
-                    <span className="text-sm font-bold text-blue-600">
+                    <span className="text-sm font-bold text-green-700">
                       {post.category}
                     </span>
 
@@ -260,7 +260,7 @@ export default function BlogPage() {
 
                     <Link
                       href="/contact"
-                      className="mt-6 inline-flex items-center gap-2 font-semibold text-blue-600"
+                      className="mt-6 inline-flex items-center gap-2 font-semibold text-green-700"
                     >
                       Discuss Your Requirements
                       <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
@@ -284,7 +284,7 @@ export default function BlogPage() {
                 />
 
                 <div className="p-8">
-                  <span className="text-sm font-bold uppercase tracking-wider text-blue-400">
+                  <span className="text-sm font-bold uppercase tracking-wider text-green-400">
                     Business Energy
                   </span>
 
@@ -301,7 +301,7 @@ export default function BlogPage() {
 
                   <Link
                     href="/energy"
-                    className="mt-6 inline-flex items-center gap-2 font-semibold text-blue-400"
+                    className="mt-6 inline-flex items-center gap-2 font-semibold text-green-400"
                   >
                     Explore Energy Services
                     <ArrowRight className="h-4 w-4" />
@@ -317,7 +317,7 @@ export default function BlogPage() {
                 />
 
                 <div className="p-8">
-                  <span className="text-sm font-bold uppercase tracking-wider text-blue-600">
+                  <span className="text-sm font-bold uppercase tracking-wider text-green-700">
                     Business Connectivity
                   </span>
 
@@ -334,7 +334,7 @@ export default function BlogPage() {
 
                   <Link
                     href="/connectivity"
-                    className="mt-6 inline-flex items-center gap-2 font-semibold text-blue-600"
+                    className="mt-6 inline-flex items-center gap-2 font-semibold text-green-700"
                   >
                     Explore Connectivity
                     <ArrowRight className="h-4 w-4" />
@@ -350,7 +350,7 @@ export default function BlogPage() {
           <div className="mx-auto max-w-7xl px-6">
             <div className="grid items-center gap-12 lg:grid-cols-2">
               <div>
-                <span className="text-sm font-bold uppercase tracking-wider text-blue-400">
+                <span className="text-sm font-bold uppercase tracking-wider text-green-400">
                   Business Decision Making
                 </span>
 
@@ -367,7 +367,7 @@ export default function BlogPage() {
 
                 <div className="mt-8 space-y-5">
                   <div className="flex gap-4">
-                    <div className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-600">
+                    <div className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-green-700">
                       ✓
                     </div>
 
@@ -381,7 +381,7 @@ export default function BlogPage() {
                   </div>
 
                   <div className="flex gap-4">
-                    <div className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-600">
+                    <div className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-green-700">
                       ✓
                     </div>
 
@@ -395,7 +395,7 @@ export default function BlogPage() {
                   </div>
 
                   <div className="flex gap-4">
-                    <div className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-600">
+                    <div className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-green-700">
                       ✓
                     </div>
 
@@ -425,7 +425,7 @@ export default function BlogPage() {
         <section className="bg-white py-20">
           <div className="mx-auto max-w-7xl px-6">
             <div className="mx-auto max-w-3xl text-center">
-              <span className="text-sm font-bold uppercase tracking-wider text-blue-600">
+              <span className="text-sm font-bold uppercase tracking-wider text-green-700">
                 Service Areas
               </span>
 
@@ -481,14 +481,14 @@ export default function BlogPage() {
                 <Link
                   key={service.title}
                   href={service.href}
-                  className="group rounded-2xl border border-slate-200 bg-slate-50 p-6 transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:bg-white hover:shadow-lg"
+                  className="group rounded-2xl border border-slate-200 bg-slate-50 p-6 transition duration-300 hover:-translate-y-1 hover:border-green-200 hover:bg-white hover:shadow-lg"
                 >
                   <div className="flex items-center justify-between gap-4">
                     <h3 className="text-lg font-bold text-slate-900">
                       {service.title}
                     </h3>
 
-                    <ArrowRight className="h-5 w-5 text-blue-600 transition group-hover:translate-x-1" />
+                    <ArrowRight className="h-5 w-5 text-green-700 transition group-hover:translate-x-1" />
                   </div>
 
                   <p className="mt-3 text-sm leading-6 text-slate-600">
@@ -513,7 +513,7 @@ export default function BlogPage() {
               </div>
 
               <div>
-                <span className="text-sm font-bold uppercase tracking-wider text-blue-600">
+                <span className="text-sm font-bold uppercase tracking-wider text-green-700">
                   Need Help?
                 </span>
 
@@ -536,14 +536,14 @@ export default function BlogPage() {
                 <div className="mt-8 flex flex-wrap gap-4">
                   <Link
                     href="/quote"
-                    className="rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-700"
+                    className="rounded-xl bg-green-700 px-6 py-3 font-semibold text-white transition hover:bg-green-800"
                   >
                     Request a Quote
                   </Link>
 
                   <Link
                     href="/contact"
-                    className="rounded-xl border border-slate-300 bg-white px-6 py-3 font-semibold text-slate-900 transition hover:border-blue-300 hover:text-blue-600"
+                    className="rounded-xl border border-slate-300 bg-white px-6 py-3 font-semibold text-slate-900 transition hover:border-green-300 hover:text-green-700"
                   >
                     Contact Us
                   </Link>
@@ -554,13 +554,13 @@ export default function BlogPage() {
         </section>
 
         {/* Final CTA */}
-        <section className="bg-blue-600 py-20 text-white">
+        <section className="bg-green-700 py-20 text-white">
           <div className="mx-auto max-w-4xl px-6 text-center">
             <h2 className="text-3xl font-bold md:text-4xl">
               Ready to Explore Your Business Options?
             </h2>
 
-            <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-blue-100">
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-green-100">
               Use our insights as a starting point, then tell us what your
               business needs and explore suitable service options.
             </p>
@@ -568,7 +568,7 @@ export default function BlogPage() {
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <Link
                 href="/quote"
-                className="rounded-xl bg-white px-7 py-3.5 font-semibold text-blue-600 transition hover:bg-slate-100"
+                className="rounded-xl bg-white px-7 py-3.5 font-semibold text-green-700 transition hover:bg-slate-100"
               >
                 Request a Quote
               </Link>

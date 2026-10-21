@@ -452,7 +452,7 @@ export default function WaterPage() {
         </Reveal>
       </main>
 
-      <style jsx global>{`
+      <style>{`
         @keyframes swWaterPhotoEnter {
           from { opacity: 0; transform: translateY(14px); }
           to { opacity: 1; transform: translateY(0); }
