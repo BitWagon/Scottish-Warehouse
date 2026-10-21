@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect } from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Link from "next/link";
@@ -183,11 +186,63 @@ const extraFeatures = [
 ];
 
 export default function Home() {
+  useEffect(() => {
+    const root = document.querySelector("main");
+    if (!root || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const selectors = [
+      "section h2", "section h3", "section p", "section img",
+      "section .grid > a", "section .grid > div"
+    ].join(", ");
+    const candidates = [...root.querySelectorAll(selectors)];
+    const targets = candidates.filter((element) => {
+      const bounds = element.getBoundingClientRect();
+      return bounds.top > window.innerHeight * 0.82 && bounds.width > 0 && bounds.height > 0;
+    });
+    if (!("IntersectionObserver" in window)) return;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(({ target, isIntersecting }) => {
+        if (!isIntersecting) return;
+        target.classList.add("sw-scroll-visible");
+        observer.unobserve(target);
+      });
+    }, { threshold: 0.08, rootMargin: "0px 0px -35px 0px" });
+    targets.forEach((element, index) => {
+      element.classList.add("sw-scroll-reveal");
+      element.style.setProperty("--sw-delay", `${(index % 4) * 95}ms`);
+      observer.observe(element);
+    });
+    return () => {
+      observer.disconnect();
+      targets.forEach((element) => {
+        element.classList.remove("sw-scroll-reveal", "sw-scroll-visible");
+        element.style.removeProperty("--sw-delay");
+      });
+    };
+  }, []);
   return (
     <>
       <Navbar />
 
       <main>
+        <style>{`
+          main .sw-scroll-reveal {
+            opacity: 0;
+            transform: translate3d(0, 85px, 0);
+            filter: blur(3px);
+            transition: opacity 900ms cubic-bezier(.22,1,.36,1) var(--sw-delay, 0ms),
+              transform 1000ms cubic-bezier(.22,1,.36,1) var(--sw-delay, 0ms),
+              filter 900ms ease var(--sw-delay, 0ms);
+          }
+          main .sw-scroll-reveal.sw-scroll-visible {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+            filter: blur(0);
+          }
+          @media (prefers-reduced-motion: reduce) {
+            main .sw-scroll-reveal { opacity: 1 !important; transform: none !important; filter: none !important; transition: none !important; }
+          }
+        `}</style>
+
         {/* Photo-only animations: no changes to page content or layout */}
         <style>{`
           @keyframes swPhotoReveal {
@@ -834,7 +889,7 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <p className="text-lg leading-8 text-slate-300">
+                 <p className="text-lg leading-8 text-black">
                     Your time is valuable. Instead of managing multiple
                     enquiries across different business services, start with
                     Nexa and explore your options through a simpler process.
